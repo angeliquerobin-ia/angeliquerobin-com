@@ -1,0 +1,9 @@
+/* Une vie plus grande — Webfonts
+   3 familles, toutes disponibles sur Google Fonts :
+   - Playfair Display  (titres, serif — normal & italique)
+   - Anonymous Pro     (corps & labels, monospace — regular & bold)
+   - Parisienne        (accent script manuscrit, à doser)
+
+   Chargées depuis le CDN Google Fonts. Pour un usage 100% hors-ligne,
+   remplacer par des @font-face locaux (voir readme.md > Fontes). */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Parisienne&display=swap');

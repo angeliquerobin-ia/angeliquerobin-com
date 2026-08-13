@@ -1,0 +1,35 @@
+/* Une vie plus grande — Palette
+   8 teintes extraites des templates. Douces, désaturées, naturelles.
+   On travaille par fonds unis : 1 à 2 fonds par carousel. */
+:root {
+  /* Base — teintes brutes */
+  --sauge: #899273;        /* fonds unis, cartes texte */
+  --vert-foret: #2A3315;   /* fond profond, contraste fort */
+  --bleu-ciel: #608999;    /* mer, ciel, sérénité */
+  --bleu-gris: #738699;    /* fonds alternatifs */
+  --taupe-chaud: #9A907C;  /* cartes texte, chaleur */
+  --sable: #A19194;        /* greige neutre */
+  --creme: #F0ECE2;        /* fond clair, respiration */
+  --rose-chair: #E5D2C8;   /* douceur, féminin */
+
+  /* Encre & texte */
+  --encre: #2A3315;              /* texte sombre = vert forêt */
+  --blanc: #FFFFFF;              /* texte sur photo / fond foncé */
+  --voile-fonce: rgba(42, 51, 21, 0.28); /* léger voile sur photo */
+
+  /* Aliases sémantiques — fonds */
+  --surface-clair: var(--creme);      /* respiration, fond par défaut clair */
+  --surface-doux: var(--rose-chair);  /* couverture douce / féminin */
+  --surface-sauge: var(--sauge);      /* carte texte principale */
+  --surface-taupe: var(--taupe-chaud);/* carte texte chaude */
+  --surface-mer: var(--bleu-ciel);    /* sérénité */
+  --surface-alt: var(--bleu-gris);    /* fond alternatif */
+  --surface-profond: var(--vert-foret);/* fond profond, fort contraste */
+  --surface-neutre: var(--sable);     /* greige neutre */
+
+  /* Aliases sémantiques — texte */
+  --text-sur-clair: var(--vert-foret);
+  --text-sur-fonce: var(--creme);
+  --text-sur-photo: var(--blanc);
+  --text-attenue: rgba(42, 51, 21, 0.55);
+}

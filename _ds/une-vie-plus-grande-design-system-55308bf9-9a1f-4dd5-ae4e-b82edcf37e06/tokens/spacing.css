@@ -1,0 +1,31 @@
+/* Une vie plus grande — Espacement & format
+   Principe : « Respiration. Beaucoup de vide. On laisse poser. »
+   Échelle généreuse, pensée pour des marges larges. */
+:root {
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 40px;
+  --space-5: 64px;
+  --space-6: 96px;
+  --space-7: 128px;
+
+  /* Marge de sécurité intérieure des slides (respiration) */
+  --marge-slide: 96px;
+
+  /* Formats natifs */
+  --fmt-ig-w: 1080px;      /* Instagram carousel */
+  --fmt-ig-h: 1350px;
+  --fmt-yt-w: 1280px;      /* Miniature YouTube */
+  --fmt-yt-h: 720px;
+  --fmt-banniere-w: 2560px;/* Bannière de chaîne */
+  --fmt-banniere-h: 1440px;
+
+  /* Rayons — quasi nuls : l'esthétique est carrée, éditoriale.
+     Les cartes du système visuel utilisent un très léger arrondi. */
+  --radius-0: 0px;
+  --radius-carte: 10px;
+
+  /* Barre de progression du carousel (continue, non segmentée) */
+  --progress-h: 6px;
+}

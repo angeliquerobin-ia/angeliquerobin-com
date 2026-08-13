@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/une-vie-plus-grande-design-system-55308bf9-9a1f-4dd5-ae4e-b82edcf37e06/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/une-vie-plus-grande-design-system-55308bf9-9a1f-4dd5-ae4e-b82edcf37e06/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/une-vie-plus-grande-design-system-55308bf9-9a1f-4dd5-ae4e-b82edcf37e06/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/une-vie-plus-grande-design-system-55308bf9-9a1f-4dd5-ae4e-b82edcf37e06/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/une-vie-plus-grande-design-system-55308bf9-9a1f-4dd5-ae4e-b82edcf37e06/styles.css">
+  <link rel="stylesheet" href="responsive.css">
+  <style>
+    body { margin: 0; background: var(--creme); color: #4A382E; font-family: var(--font-corps); --ink: #4A382E; --taupe: #9A907C; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; } a:hover { opacity: 0.75; }
+    * { box-sizing: border-box; }
+    .kicker { font-family: var(--font-corps); font-size: 13px; letter-spacing: 0.32em; text-transform: uppercase; }
+    .lead { font-family: var(--font-titre); font-weight: 400; line-height: 1.14; letter-spacing: -0.01em; }
+    .body { font-family: var(--font-corps); font-size: 17px; line-height: 1.8; letter-spacing: 0.01em; }
+    .navlink { transition: opacity .25s ease; } .navlink:hover { opacity: 0.55; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; font-family: var(--font-corps); font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; padding: 16px 30px; transition: opacity .25s ease; cursor: pointer; } .btn:hover { opacity: 0.82; }
+    .has-dd { position: relative; padding: 6px 0; }
+    .dd-menu { position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background: var(--creme); border: 1px solid rgba(74,56,46,0.14); padding: 8px 0; min-width: 210px; display: none; flex-direction: column; box-shadow: 0 14px 34px rgba(74,56,46,0.14); z-index: 60; }
+    .has-dd:hover .dd-menu { display: flex; }
+    .dd-menu a { padding: 11px 24px; font-size: 14px; letter-spacing: 0.08em; white-space: nowrap; color: var(--ink); }
+    .dd-menu a:hover { opacity: 0.5; }
+    .pilier { padding: 40px 36px; background: var(--creme); border: 1px solid rgba(74,56,46,0.14); }
+    .pilier .num { font-family: var(--font-titre); font-style: italic; font-size: 36px; color: var(--taupe); line-height: 1; margin-bottom: 18px; }
+    .pilier h3 { font-family: var(--font-titre); font-weight: 400; font-size: 26px; margin: 0 0 14px; color: var(--ink); }
+    .pilier p { font-family: var(--font-corps); font-size: 15.5px; line-height: 1.7; margin: 0; color: rgba(74,56,46,0.82); }
+    .piliers-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 1000px; margin: 0 auto; }
+    @media (max-width: 720px) { .piliers-grid { grid-template-columns: 1fr; } }
+    .kit-embed { width: 100%; min-height: 900px; border: 0; background: var(--creme); display: block; }
+  </style>
+</helmet>
+
+<div>
+  <header style="position: sticky; top: 0; z-index: 50; background: rgba(240,236,226,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(74,56,46,0.12);">
+    <nav style="max-width: 1240px; margin: 0 auto; padding: 18px 40px; display: flex; align-items: center; justify-content: space-between; gap: 32px;">
+      <a href="Accueil.dc.html" style="flex: 0 0 auto;"><img src="assets/logo-angelique.png" alt="Angélique Robin Coaching" style="height: 136px; width: auto; display: block;"></a>
+      <div style="display: flex; align-items: center; gap: 26px; flex-wrap: wrap; justify-content: flex-end;">
+        <a class="navlink" href="qui-suis-je.dc.html" style="font-size: 14px; letter-spacing: 0.08em;">Qui suis-je&#8202;?</a>
+        <a class="navlink" href="coaching-de-vie.dc.html" style="font-size: 14px; letter-spacing: 0.08em;">Coaching de vie</a>
+        <div class="has-dd">
+          <a class="navlink" href="#" style="font-size: 14px; letter-spacing: 0.08em;">Accompagnements</a>
+          <div class="dd-menu"><a href="lotus.html">Lotus</a><a href="Coaching-impact.dc.html">Coaching d'impact</a></div>
+        </div>
+        <a class="navlink" href="temoignages.dc.html" style="font-size: 14px; letter-spacing: 0.08em;">Témoignages</a>
+        <a class="navlink" href="podcast.dc.html" style="font-size: 14px; letter-spacing: 0.08em;">Podcast</a>
+        <a class="navlink" href="https://substack.com/@angeliquerobin" target="_blank" rel="noopener" style="font-size: 14px; letter-spacing: 0.08em;">Substack</a>
+        <a class="navlink" href="contact.dc.html" style="font-size: 14px; letter-spacing: 0.08em;">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <section style="max-width: 960px; margin: 0 auto; padding: 96px 40px 40px; text-align: center;">
+    <div class="kicker" style="color: rgba(74,56,46,0.55); margin-bottom: 30px;">Colette IA &middot; bêta</div>
+    <h1 class="lead" style="font-size: clamp(36px, 4.6vw, 62px); margin: 0 0 32px; color: var(--ink);">Deviens visible sans passer ta vie <em>à créer du contenu.</em></h1>
+  </section>
+
+  <section style="max-width: 760px; margin: 0 auto; padding: 40px 40px 96px;">
+    <p class="body" style="color: rgba(74,56,46,0.82); margin: 0 0 22px;">Colette IA est un <strong>accompagnement de groupe en bêta</strong> pour les coachs, thérapeutes et accompagnant·es qui ont besoin de communiquer régulièrement, sans troquer leur métier contre celui de créateur·ice de contenu.</p>
+    <p class="body" style="color: rgba(74,56,46,0.82); margin: 0 0 22px;">Parce que quand on accompagne des humains, on n'a pas envie de passer la moitié de sa semaine derrière un ordinateur à chercher quoi publier.</p>
+    <p class="body" style="color: rgba(74,56,46,0.82); margin: 0 0 22px;">Et pourtant, disparaître des réseaux sociaux peut vite coûter cher : moins de visibilité, moins de demandes, moins de clients.</p>
+    <p class="body" style="color: rgba(74,56,46,0.82); margin: 0;">Colette IA t'aide à construire un <strong>système simple</strong> pour gagner un temps précieux, rester présent·e en ligne et créer ta communication facilement avec l'IA.</p>
+  </section>
+
+  <section style="max-width: 1240px; margin: 0 auto; padding: 0 40px 112px;">
+    <div style="text-align: center; max-width: 40rem; margin: 0 auto 60px;">
+      <div class="kicker" style="color: rgba(74,56,46,0.55); margin-bottom: 24px;">Le programme</div>
+      <h2 class="lead" style="font-size: clamp(30px, 3.6vw, 48px); margin: 0; color: var(--ink);">Quatre <em>piliers</em></h2>
+    </div>
+    <div class="piliers-grid">
+      <div class="pilier"><div class="num">01</div><h3>Le Second Cerveau</h3><p>Pour rassembler tes idées, tes lectures, tes inspirations, tes notes vocales, ta méthode, tes contenus existants et tout ce qui nourrit ton univers.</p></div>
+      <div class="pilier"><div class="num">02</div><h3>Le ruissellement de contenu</h3><p>Pour transformer une idée mère en plusieurs contenus : posts, newsletters, scripts, carrousels et reels Instagram ou podcast.</p></div>
+      <div class="pilier"><div class="num">03</div><h3>L'assistante IA</h3><p>Elle t'aide à la création de visuels, au montage vidéo, à la rédaction et à la correction de tes écrits, avec ta voix. Elle peut aussi nourrir ton Second Cerveau avec une veille automatisée. C'est elle que j'ai appelée Colette.</p></div>
+      <div class="pilier"><div class="num">04</div><h3>Cockpit</h3><p>Mon application d'organisation de contenu, avec calendrier éditorial, studio de rédaction, grille, veille stratégique, statistiques…</p></div>
+    </div>
+  </section>
+
+  <section style="max-width: 1240px; margin: 0 auto; padding: 0 40px 112px;">
+    <div style="background: var(--rose-chair); padding: 80px 60px;">
+      <div style="max-width: 700px; margin: 0 auto;">
+        <p class="body" style="color: rgba(74,56,46,0.82); margin: 0 0 22px;">Avant de lancer la première promo, je vais <strong>écouter les besoins</strong> des personnes intéressées afin de construire un accompagnement vraiment utile, concret et adapté au quotidien des coachs et thérapeutes.</p>
+        <p class="body" style="color: rgba(74,56,46,0.82); margin: 0 0 22px;">La première promotion sera proposée <strong>à petit prix</strong>, en échange de retours sincères pour améliorer le programme.</p>
+        <p class="body" style="color: rgba(74,56,46,0.82); margin: 0;">Si tu veux être parmi les premières personnes informées, inscris-toi à la liste d'attente. C'est là que j'annoncerai les détails, les dates et les conditions de la bêta en priorité.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="max-width: 1080px; margin: 0 auto; padding: 40px 40px 120px;">
+    <div style="text-align: center; max-width: 40rem; margin: 0 auto 48px;">
+      <div class="kicker" style="color: rgba(74,56,46,0.55); margin-bottom: 24px;">Liste d'attente</div>
+      <h2 class="lead" style="font-size: clamp(30px, 3.6vw, 46px); margin: 0; color: var(--ink);">Rejoins la <em>bêta</em></h2>
+    </div>
+    <iframe class="kit-embed" src="https://angeliquerobin.kit.com/coletteialiste" title="Liste d'attente Colette IA" loading="lazy"></iframe>
+    <p class="body" style="text-align: center; font-size: 14px; color: rgba(74,56,46,0.6); margin: 18px 0 0;">Le formulaire ne s'affiche pas ? <a href="https://angeliquerobin.kit.com/coletteialiste" target="_blank" rel="noopener" style="border-bottom: 1px solid rgba(74,56,46,0.35);">Ouvre la page dans un nouvel onglet</a>.</p>
+  </section>
+
+  <footer style="background: var(--taupe); color: var(--creme);">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 80px 40px 40px;">
+      <div style="display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 48px; padding-bottom: 56px; border-bottom: 1px solid rgba(240,236,226,0.22);">
+        <div>
+          <img src="assets/logo-angelique.png" alt="Angélique Robin Coaching" style="height: 180px; width: auto; display: block; margin-bottom: 20px; filter: brightness(0) invert(1); opacity: 0.9;">
+          <p class="body" style="color: rgba(240,236,226,0.8); max-width: 24rem;">Change ton monde intérieur pour transformer ta vie.</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 14px;">
+          <div class="kicker" style="color: rgba(240,236,226,0.65); margin-bottom: 6px;">Naviguer</div>
+          <a class="navlink body" style="font-size: 15px; color: rgba(240,236,226,0.9);" href="qui-suis-je.dc.html">Qui suis-je&#8202;?</a>
+          <a class="navlink body" style="font-size: 15px; color: rgba(240,236,226,0.9);" href="coaching-de-vie.dc.html">Coaching de vie</a>
+          <a class="navlink body" style="font-size: 15px; color: rgba(240,236,226,0.9);" href="lotus.html">Lotus</a>
+          <a class="navlink body" style="font-size: 15px; color: rgba(240,236,226,0.9);" href="Coaching-impact.dc.html">Coaching d'impact</a>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 14px;">
+          <div class="kicker" style="color: rgba(240,236,226,0.65); margin-bottom: 6px;">Aller plus loin</div>
+          <a class="navlink body" style="font-size: 15px; color: rgba(240,236,226,0.9);" href="Diagnostic-clarte.dc.html">Diagnostic clarté</a>
+          <a class="navlink body" style="font-size: 15px; color: rgba(240,236,226,0.9);" href="temoignages.dc.html">Témoignages</a>
+          <a class="navlink body" style="font-size: 15px; color: rgba(240,236,226,0.9);" href="podcast.dc.html">Podcast</a>
+          <a class="navlink body" style="font-size: 15px; color: rgba(240,236,226,0.9);" href="contact.dc.html">Contact</a>
+        </div>
+      </div>
+      <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 30px; flex-wrap: wrap; gap: 16px;">
+        <p class="body" style="font-size: 13px; color: rgba(240,236,226,0.6); margin: 0;">© 2026 Angélique Robin &middot; une vie plus grande</p>
+      </div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{}'>
+class Component extends DCLogic { renderVals() { return {}; } }
+</script>
+</body>
+</html>

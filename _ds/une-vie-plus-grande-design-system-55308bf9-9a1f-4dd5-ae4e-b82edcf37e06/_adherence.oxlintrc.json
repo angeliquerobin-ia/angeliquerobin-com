@@ -1,0 +1,265 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": [
+          {
+            "group": [
+              "assets/**",
+              "components/core/**"
+            ],
+            "message": "Import design-system components from 'index.js', not component internals."
+          }
+        ]
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Playfair Display|Anonymous Pro|Parisienne))/i]",
+        "message": "Font not provided by the design system. Available: Playfair Display, Anonymous Pro, Parisienne."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='BodySegment'] > JSXAttribute > JSXIdentifier[name!=/^(?:text|b|key|ref|className|style|children)$/]",
+        "message": "<BodySegment> doesn't accept that prop. Declared props: text, b."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TitleSegment'] > JSXAttribute > JSXIdentifier[name!=/^(?:text|em|key|ref|className|style|children)$/]",
+        "message": "<TitleSegment> doesn't accept that prop. Declared props: text, em."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='PhotoFrame'] > JSXAttribute > JSXIdentifier[name!=/^(?:src|children|format|veil|align|justify|pad|style|key|ref|className|style|children)$/]",
+        "message": "<PhotoFrame> doesn't accept that prop. Declared props: src, children, format, veil, align, justify, pad, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='PhotoFrame'] > JSXAttribute[name.name='format'] > Literal[value!=/^(?:ig|yt|banniere)$/]",
+        "message": "<PhotoFrame> format must be one of 'ig' | 'yt' | 'banniere'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='ProgressBar'] > JSXAttribute > JSXIdentifier[name!=/^(?:value|tone|style|key|ref|className|style|children)$/]",
+        "message": "<ProgressBar> doesn't accept that prop. Declared props: value, tone, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='ProgressBar'] > JSXAttribute[name.name='tone'] > Literal[value!=/^(?:auto|light|photo)$/]",
+        "message": "<ProgressBar> tone must be one of 'auto' | 'light' | 'photo'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='ScriptAccent'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|size|tone|style|key|ref|className|style|children)$/]",
+        "message": "<ScriptAccent> doesn't accept that prop. Declared props: children, size, tone, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='ScriptAccent'] > JSXAttribute[name.name='size'] > Literal[value!=/^(?:md|lg)$/]",
+        "message": "<ScriptAccent> size must be one of 'md' | 'lg'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='ScriptAccent'] > JSXAttribute[name.name='tone'] > Literal[value!=/^(?:auto|light|dark|photo)$/]",
+        "message": "<ScriptAccent> tone must be one of 'auto' | 'light' | 'dark' | 'photo'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Slide'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|surface|format|align|justify|pad|style|key|ref|className|style|children)$/]",
+        "message": "<Slide> doesn't accept that prop. Declared props: children, surface, format, align, justify, pad, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Slide'] > JSXAttribute[name.name='format'] > Literal[value!=/^(?:ig|yt|banniere)$/]",
+        "message": "<Slide> format must be one of 'ig' | 'yt' | 'banniere'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TopLabel'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|tone|align|style|key|ref|className|style|children)$/]",
+        "message": "<TopLabel> doesn't accept that prop. Declared props: children, tone, align, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TopLabel'] > JSXAttribute[name.name='tone'] > Literal[value!=/^(?:auto|light|dark|photo)$/]",
+        "message": "<TopLabel> tone must be one of 'auto' | 'light' | 'dark' | 'photo'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TopLabel'] > JSXAttribute[name.name='align'] > Literal[value!=/^(?:center|left)$/]",
+        "message": "<TopLabel> align must be one of 'center' | 'left'."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {
+      "BodySegment": {
+        "replaces": []
+      },
+      "TitleSegment": {
+        "replaces": []
+      },
+      "PhotoFrame": {
+        "replaces": []
+      },
+      "ProgressBar": {
+        "replaces": []
+      },
+      "ScriptAccent": {
+        "replaces": []
+      },
+      "Slide": {
+        "replaces": []
+      },
+      "TopLabel": {
+        "replaces": []
+      }
+    },
+    "tokens": [
+      "--blanc",
+      "--bleu-ciel",
+      "--bleu-gris",
+      "--creme",
+      "--encre",
+      "--fmt-banniere-h",
+      "--fmt-banniere-w",
+      "--fmt-ig-h",
+      "--fmt-ig-w",
+      "--fmt-yt-h",
+      "--fmt-yt-w",
+      "--font-corps",
+      "--font-script",
+      "--font-titre",
+      "--fs-corps",
+      "--fs-corps-lg",
+      "--fs-label",
+      "--fs-script",
+      "--fs-titre-l",
+      "--fs-titre-m",
+      "--fs-titre-s",
+      "--fs-titre-xl",
+      "--lh-corps",
+      "--lh-label",
+      "--lh-titre",
+      "--ls-corps",
+      "--ls-label",
+      "--ls-titre",
+      "--marge-slide",
+      "--progress-h",
+      "--radius-0",
+      "--radius-carte",
+      "--rose-chair",
+      "--sable",
+      "--sauge",
+      "--space-1",
+      "--space-2",
+      "--space-3",
+      "--space-4",
+      "--space-5",
+      "--space-6",
+      "--space-7",
+      "--surface-alt",
+      "--surface-clair",
+      "--surface-doux",
+      "--surface-mer",
+      "--surface-neutre",
+      "--surface-profond",
+      "--surface-sauge",
+      "--surface-taupe",
+      "--taupe-chaud",
+      "--text-attenue",
+      "--text-sur-clair",
+      "--text-sur-fonce",
+      "--text-sur-photo",
+      "--vert-foret",
+      "--voile-fonce",
+      "--w-corps",
+      "--w-corps-gras",
+      "--w-titre",
+      "--w-titre-medium"
+    ],
+    "tokenKinds": {
+      "--sauge": "color",
+      "--vert-foret": "color",
+      "--bleu-ciel": "color",
+      "--bleu-gris": "color",
+      "--taupe-chaud": "color",
+      "--sable": "color",
+      "--creme": "color",
+      "--rose-chair": "color",
+      "--encre": "color",
+      "--blanc": "color",
+      "--voile-fonce": "color",
+      "--surface-clair": "color",
+      "--surface-doux": "color",
+      "--surface-sauge": "color",
+      "--surface-taupe": "color",
+      "--surface-mer": "color",
+      "--surface-alt": "color",
+      "--surface-profond": "color",
+      "--surface-neutre": "color",
+      "--text-sur-clair": "font",
+      "--text-sur-fonce": "font",
+      "--text-sur-photo": "font",
+      "--text-attenue": "font",
+      "--font-titre": "font",
+      "--font-corps": "font",
+      "--font-script": "font",
+      "--w-corps": "font",
+      "--w-corps-gras": "font",
+      "--w-titre": "font",
+      "--w-titre-medium": "font",
+      "--fs-script": "spacing",
+      "--fs-label": "spacing",
+      "--fs-corps": "spacing",
+      "--fs-corps-lg": "spacing",
+      "--fs-titre-s": "spacing",
+      "--fs-titre-m": "spacing",
+      "--fs-titre-l": "spacing",
+      "--fs-titre-xl": "spacing",
+      "--lh-titre": "font",
+      "--lh-corps": "font",
+      "--lh-label": "font",
+      "--ls-label": "spacing",
+      "--ls-titre": "spacing",
+      "--ls-corps": "spacing",
+      "--space-1": "spacing",
+      "--space-2": "spacing",
+      "--space-3": "spacing",
+      "--space-4": "spacing",
+      "--space-5": "spacing",
+      "--space-6": "spacing",
+      "--space-7": "spacing",
+      "--marge-slide": "spacing",
+      "--fmt-ig-w": "spacing",
+      "--fmt-ig-h": "spacing",
+      "--fmt-yt-w": "spacing",
+      "--fmt-yt-h": "spacing",
+      "--fmt-banniere-w": "spacing",
+      "--fmt-banniere-h": "spacing",
+      "--radius-0": "radius",
+      "--radius-carte": "radius",
+      "--progress-h": "spacing"
+    },
+    "fontFamilies": [
+      "Anonymous Pro",
+      "Parisienne",
+      "Playfair Display"
+    ]
+  }
+}
