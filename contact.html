@@ -81,7 +81,7 @@
   </section>
 
   <section style="max-width: 640px; margin: 0 auto; padding: 40px 40px 120px;">
-    <form action="https://formspree.io/f/mqpzllez" method="POST" style="display: flex; flex-direction: column; gap: 22px;">
+    <form id="contact-form" action="https://formspree.io/f/mqpzllez" method="POST" style="display: flex; flex-direction: column; gap: 22px;">
       <div class="row-2">
         <div class="field">
           <label for="prenom">Prénom</label>
@@ -108,7 +108,14 @@
         <button type="submit" class="btn" style="background: var(--taupe); color: var(--creme); cursor: pointer;">Envoyer</button>
       </div>
     </form>
-    <p class="body" style="font-size: 13px; color: rgba(74,56,46,0.55); margin: 28px 0 0; text-align: center;">Ou écris-moi directement à <a href="mailto:contact@angeliquerobin.com" style="border-bottom: 1px solid rgba(74,56,46,0.35);">contact@angeliquerobin.com</a></p>
+    <div id="contact-success" style="display: none; text-align: center; padding: 40px 20px;">
+      <p class="lead" style="font-size: clamp(20px, 2.2vw, 26px); margin: 0 0 12px; color: var(--ink);">Merci, ton message est <em>bien parti</em>&nbsp;!</p>
+      <p class="body" style="color: rgba(74,56,46,0.75); margin: 0;">Je te réponds sous vingt-quatre heures.</p>
+    </div>
+    <div id="contact-error" style="display: none; text-align: center; padding: 20px 0 0;">
+      <p class="body" style="color: #b3452c; margin: 0;">Une erreur est survenue. Réessaie, ou écris-moi directement à <a href="mailto:contact@angeliquerobin.com" style="border-bottom: 1px solid rgba(179,69,44,0.4);">contact@angeliquerobin.com</a></p>
+    </div>
+    <p id="contact-fallback" class="body" style="font-size: 13px; color: rgba(74,56,46,0.55); margin: 28px 0 0; text-align: center;">Ou écris-moi directement à <a href="mailto:contact@angeliquerobin.com" style="border-bottom: 1px solid rgba(74,56,46,0.35);">contact@angeliquerobin.com</a></p>
   </section>
 
   <footer style="background: var(--taupe); color: var(--creme);">
@@ -144,5 +151,6 @@
 class Component extends DCLogic { renderVals() { return {}; } }
 </script>
 <script src="mobile-nav.js?v=2"></script>
+<script src="contact-form.js"></script>
 </body>
 </html>
