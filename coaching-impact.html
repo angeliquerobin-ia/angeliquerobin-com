@@ -52,6 +52,7 @@
     .cal-embed { width: 100%; min-height: 720px; background: var(--creme); border: 1px solid rgba(74,56,46,0.14); }
     .testi-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
     .testi-third { grid-column: 1 / -1; }
+    @media (max-width: 820px) { .testi-grid { grid-template-columns: 1fr; } .testi-third { grid-column: auto; } }
   </style>
   <script type="text/javascript">
     (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
@@ -124,7 +125,7 @@
       </div>
       <div>
         <div class="kicker" style="color: rgba(74,56,46,0.55); margin-bottom: 20px;">Ce n'est pas pour toi si</div>
-        <h3 class="lead" style="font-size: 30px; margin: 0 0 30px; color: var(--ink);">Un autre chemin sera <em>plus juste</em></h3>
+        <h3 class="lead" style="font-size: 30px; margin: 0 0 30px; color: var(--ink);">Tu te reconnais <em>là</em></h3>
         <ul class="bullet-list cross-list">
           <li>Tu traverses une souffrance psychologique profonde (un·e thérapeute sera plus adapté·e)</li>
           <li>Tu cherches un suivi plus long, à propos de plusieurs problématiques imbriquées. Dans ce cas, découvre <a href="lotus.html" style="border-bottom: 1px solid rgba(74,56,46,0.4);">Lotus, mon accompagnement de 8 semaines</a>.</li>
