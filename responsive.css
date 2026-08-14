@@ -34,7 +34,7 @@
     justify-content: space-between !important;
     gap: 12px !important;
   }
-  header nav a img { height: 60px !important; }
+  header nav a img { height: 90px !important; }
 
   .mobile-menu-btn {
     display: flex !important;
@@ -136,7 +136,7 @@
 
 /* ===== SMALL MOBILE (≤ 480px) ===== */
 @media (max-width: 480px) {
-  header nav a img { height: 52px !important; }
+  header nav a img { height: 78px !important; }
 
   /* Un peu plus de compacité sur titres immenses */
   h1.lead { font-size: clamp(32px, 9vw, 46px) !important; }
