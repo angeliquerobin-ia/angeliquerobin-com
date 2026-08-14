@@ -4,6 +4,7 @@
     if (!form || form.dataset.wired) return;
     form.dataset.wired = '1';
 
+    var hero = document.getElementById('contact-hero');
     var success = document.getElementById('contact-success');
     var error = document.getElementById('contact-error');
     var fallback = document.getElementById('contact-fallback');
@@ -25,6 +26,7 @@
           if (response.ok) {
             form.style.display = 'none';
             if (fallback) fallback.style.display = 'none';
+            if (hero) hero.style.display = 'none';
             success.style.display = 'block';
           } else {
             error.style.display = 'block';
