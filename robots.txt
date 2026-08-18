@@ -35,4 +35,4 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-Sitemap: https://angeliquerobin.com/sitemap.xml
+Sitemap: https://www.angeliquerobin.com/sitemap.xml

@@ -14,7 +14,7 @@
 ## Offres d'accompagnement
 
 ### Lotus — Accompagnement individuel · 660 €
-- **URL** : https://angeliquerobin.com/lotus
+- **URL** : https://www.angeliquerobin.com/lotus.html
 - **Format** : 8 séances individuelles d'1 heure en visio, une par semaine, sur 8 semaines
 - **Prix** : 660 € (paiement en 2x possible)
 - **Inclus** : espace personnel (résumés + replays), suivi Telegram du lundi au vendredi 9h–17h
@@ -27,7 +27,7 @@
   5. Tu as toutes les clefs pour avancer (plan d'action)
 
 ### Coaching d'impact — Séance unique · 90 €
-- **URL** : https://angeliquerobin.com/coaching-impact
+- **URL** : https://www.angeliquerobin.com/coaching-impact.html
 - **Format** : 1 heure en visio
 - **Prix** : 90 €
 - **Pour qui** : besoin de débloquer une décision, lever une peur, retrouver son élan sur un point précis
@@ -37,12 +37,12 @@
 - Trois séances d'1 heure pour traverser une problématique circonscrite
 
 ### Diagnostic clarté — 20 min offertes
-- **URL** : https://angeliquerobin.com/diagnostic-clarte
+- **URL** : https://www.angeliquerobin.com/lotus.html#reservation
 - **Format** : 20 minutes gratuites en visio, sans engagement
 - **Objectif** : faire le point sur ta situation et voir si l'accompagnement Lotus est fait pour toi
 
 ### Colette IA — Programme bêta pour coachs & thérapeutes
-- **URL** : https://angeliquerobin.com/colette-ia
+- **URL** : https://www.angeliquerobin.com/colette-ia.html
 - **Pour qui** : coachs, thérapeutes, accompagnant·es qui veulent rester visibles en ligne sans y passer leurs journées
 - **4 piliers** : Second cerveau, ruissellement de contenu, assistante IA (Colette), Cockpit (application d'organisation de contenu)
 - **Statut** : bêta, à petit prix, liste d'attente ouverte
@@ -50,7 +50,7 @@
 ## Podcast
 
 **Une vie plus grande** — le podcast d'Angélique Robin
-- **URL** : https://angeliquerobin.com/podcast
+- **URL** : https://www.angeliquerobin.com/podcast.html
 - **Rythme** : chaque dimanche
 - **Thèmes** : connaissance de soi, libération des freins intérieurs, courage de recréer une vie qui nous ressemble
 - **Formats** : défi personnel documenté sur un an, interviews de personnes inspirantes, épisodes courts « Micro-Doses »
@@ -84,7 +84,7 @@ Ce qui distingue Angélique Robin des autres coachs de vie :
 
 ## Ressources principales
 
-- Site : https://angeliquerobin.com
-- Podcast : https://angeliquerobin.com/podcast
+- Site : https://www.angeliquerobin.com
+- Podcast : https://www.angeliquerobin.com/podcast
 - Substack : https://substack.com/@angeliquerobin
 - Certificat HEC : https://drive.google.com/file/d/1C6YlVnEZOZBhrRkadnh4V5oZ57tsnrCU/view
