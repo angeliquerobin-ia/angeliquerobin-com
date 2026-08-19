@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "static-site",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["server.js"],
+      "port": 8811,
+      "env": { "PORT": "8811" }
+    }
+  ]
+}

@@ -43,6 +43,7 @@
     .has-dd:hover .dd-menu { display: flex; }
     .dd-menu a { padding: 11px 24px; font-size: 14px; letter-spacing: 0.08em; white-space: nowrap; color: var(--ink); text-decoration: none; }
     .dd-menu a:hover { opacity: 0.5; }
+    #newsletter-email::placeholder { color: rgba(240,236,226,0.5); }
     .legal h2 { font-family: var(--font-titre); font-weight: 400; font-size: 24px; margin: 44px 0 14px; color: var(--ink); }
     .legal p, .legal li { font-family: var(--font-corps); font-size: 16px; line-height: 1.75; color: rgba(74,56,46,0.85); margin: 0 0 14px; }
     .legal ul { padding-left: 22px; margin: 0 0 14px; }
@@ -110,7 +111,7 @@
 
   <footer style="background: var(--taupe); color: var(--creme);">
     <div style="max-width: 1240px; margin: 0 auto; padding: 80px 40px 40px;">
-      <div style="display: grid; grid-template-columns: 1.4fr 1fr 1fr; align-items: end; gap: 48px; padding-bottom: 56px; border-bottom: 1px solid rgba(240,236,226,0.22);">
+      <div style="display: grid; grid-template-columns: 1.15fr 0.8fr 0.8fr 1fr; align-items: end; gap: 48px; padding-bottom: 56px; border-bottom: 1px solid rgba(240,236,226,0.22);">
         <div>
           <img src="assets/logo-angelique.webp" alt="Angélique Robin Coaching" style="height: 180px; width: auto; display: block; margin-top: -43px; margin-bottom: 20px; filter: brightness(0) invert(1); opacity: 0.9;">
           <p class="body" style="color: rgba(240,236,226,0.8); max-width: 24rem;">Change ton monde intérieur pour transformer ta vie.</p>
@@ -130,6 +131,16 @@
           <a class="navlink body" style="font-size: 15px; color: rgba(240,236,226,0.9); text-decoration: none;" href="blog.html">Blog</a>
           <a class="navlink body" style="font-size: 15px; color: rgba(240,236,226,0.9); text-decoration: none;" href="contact.html">Contact</a>
         </div>
+        <div style="display: flex; flex-direction: column; gap: 14px;">
+          <div class="kicker" style="color: rgba(240,236,226,0.65); margin-bottom: 6px;">Newsletter Lotus</div>
+          <p class="body" style="font-size: 14px; color: rgba(240,236,226,0.75); margin: 0;">Reçois mes réflexions par email.</p>
+          <form id="newsletter-form" style="display: flex; gap: 8px;">
+            <input id="newsletter-email" name="email" type="email" required placeholder="Ton e-mail" style="flex: 1; min-width: 0; font-family: var(--font-corps); font-size: 14px; padding: 10px 12px; background: transparent; border: 1px solid rgba(240,236,226,0.35); color: var(--creme); border-radius: 0; outline: none;">
+            <button type="submit" class="btn" style="background: var(--creme); color: var(--taupe); border: 0; padding: 10px 16px; font-size: 12px; cursor: pointer; flex: 0 0 auto;">OK</button>
+          </form>
+          <p id="newsletter-success" class="body" style="display: none; font-size: 13px; color: rgba(240,236,226,0.9); margin: 0;">Merci, c'est fait&nbsp;!</p>
+          <p id="newsletter-error" class="body" style="display: none; font-size: 13px; color: #e8a894; margin: 0;"></p>
+        </div>
       </div>
       <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 30px; flex-wrap: wrap; gap: 16px;">
         <p class="body" style="font-size: 13px; color: rgba(240,236,226,0.6); margin: 0;">© 2026 Angélique Robin &middot; une vie plus grande &middot; Dernière mise à jour : août 2026</p>
@@ -147,5 +158,6 @@
 class Component extends DCLogic { renderVals() { return {}; } }
 </script>
 <script src="mobile-nav.js?v=2"></script>
+<script src="lumail-forms.js"></script>
 </body>
 </html>

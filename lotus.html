@@ -26,6 +26,7 @@
 <link rel="stylesheet" href="_ds/une-vie-plus-grande-design-system-55308bf9-9a1f-4dd5-ae4e-b82edcf37e06/styles.css">
 <link rel="stylesheet" href="responsive.css">
 <script src="mobile-nav.js?v=2" defer></script>
+<script src="lumail-forms.js" defer></script>
 <script src="image-slot.js"></script>
 <script type="text/javascript">
   (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ar); p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
@@ -52,6 +53,7 @@
   .has-dd:hover .dd-menu { display: flex; }
   .dd-menu a { padding: 11px 24px; font-size: 14px; letter-spacing: 0.08em; white-space: nowrap; color: var(--ink); }
   .dd-menu a:hover { opacity: 0.5; }
+    #newsletter-email::placeholder { color: rgba(240,236,226,0.5); }
   .lotus-bullet { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 20px; }
   .lotus-bullet li { padding-left: 30px; position: relative; font-family: var(--font-corps); font-size: 17px; line-height: 1.7; color: rgba(74,56,46,0.85); }
   .lotus-bullet li::before { content: "◎"; position: absolute; left: 0; top: 2px; color: var(--taupe); font-size: 16px; }
@@ -292,7 +294,7 @@
 
 <footer style="background: var(--taupe); color: var(--creme);">
   <div style="max-width: 1240px; margin: 0 auto; padding: 80px 40px 40px;">
-    <div style="display: grid; grid-template-columns: 1.4fr 1fr 1fr; align-items: end; gap: 48px; padding-bottom: 56px; border-bottom: 1px solid rgba(240,236,226,0.22);">
+    <div style="display: grid; grid-template-columns: 1.15fr 0.8fr 0.8fr 1fr; align-items: end; gap: 48px; padding-bottom: 56px; border-bottom: 1px solid rgba(240,236,226,0.22);">
       <div>
         <img src="assets/logo-angelique.webp" alt="Angélique Robin Coaching" style="height: 180px; width: auto; display: block; margin-top: -43px; margin-bottom: 20px; filter: brightness(0) invert(1); opacity: 0.9;">
         <p class="body" style="color: rgba(240,236,226,0.8); max-width: 24rem;">Change ton monde intérieur pour transformer ta vie.</p>
@@ -312,6 +314,16 @@
         <a class="navlink body" style="font-size: 15px; color: rgba(240,236,226,0.9);" href="blog.html">Blog</a>
         <a class="navlink body" style="font-size: 15px; color: rgba(240,236,226,0.9);" href="contact.html">Contact</a>
       </div>
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+          <div class="kicker" style="color: rgba(240,236,226,0.65); margin-bottom: 6px;">Newsletter Lotus</div>
+          <p class="body" style="font-size: 14px; color: rgba(240,236,226,0.75); margin: 0;">Reçois mes réflexions par email.</p>
+          <form id="newsletter-form" style="display: flex; gap: 8px;">
+            <input id="newsletter-email" name="email" type="email" required placeholder="Ton e-mail" style="flex: 1; min-width: 0; font-family: var(--font-corps); font-size: 14px; padding: 10px 12px; background: transparent; border: 1px solid rgba(240,236,226,0.35); color: var(--creme); border-radius: 0; outline: none;">
+            <button type="submit" class="btn" style="background: var(--creme); color: var(--taupe); border: 0; padding: 10px 16px; font-size: 12px; cursor: pointer; flex: 0 0 auto;">OK</button>
+          </form>
+          <p id="newsletter-success" class="body" style="display: none; font-size: 13px; color: rgba(240,236,226,0.9); margin: 0;">Merci, c'est fait&nbsp;!</p>
+          <p id="newsletter-error" class="body" style="display: none; font-size: 13px; color: #e8a894; margin: 0;"></p>
+        </div>
     </div>
     <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 30px; flex-wrap: wrap; gap: 16px;">
       <p class="body" style="font-size: 13px; color: rgba(240,236,226,0.6); margin: 0;">© 2026 Angélique Robin · une vie plus grande · Dernière mise à jour : août 2026</p>
