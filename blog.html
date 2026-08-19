@@ -3,42 +3,23 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Une vie plus grande · Le podcast d'Angélique Robin</title>
-<meta name="description" content="Le podcast qui t'invite à créer une vie alignée à qui tu es. Chaque dimanche : connaissance de soi et courage de changer de vie.">
+<title>Blog · Angélique Robin — Coach de vie & développement personnel</title>
+<meta name="description" content="Pensées pour entrepreneur·es en quête d'alignement, d'impact et de souveraineté intérieure. Le blog d'Angélique Robin, coach de vie.">
 <meta name="author" content="Angélique Robin">
-<link rel="canonical" href="https://www.angeliquerobin.com/podcast.html">
+<link rel="canonical" href="https://angeliquerobin.com/blog.html">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:site_name" content="Angélique Robin">
-<meta property="og:title" content="Une vie plus grande · Le podcast">
-<meta property="og:description" content="Chaque dimanche, un pas vers une vie alignée à qui tu es vraiment. Le podcast d'Angélique Robin.">
-<meta property="og:url" content="https://www.angeliquerobin.com/podcast.html">
-<meta property="og:image" content="https://www.angeliquerobin.com/assets/og-podcast.jpg">
+<meta property="og:title" content="Blog · Angélique Robin">
+<meta property="og:description" content="Pensées pour entrepreneur·es en quête d'alignement, d'impact et de souveraineté intérieure.">
+<meta property="og:url" content="https://angeliquerobin.com/blog.html">
+<meta property="og:image" content="https://angeliquerobin.com/assets/og-default.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Une vie plus grande · Le podcast">
-<meta name="twitter:description" content="Chaque dimanche, un pas vers une vie alignée à qui tu es vraiment. Le podcast d'Angélique Robin.">
-<meta name="twitter:image" content="https://www.angeliquerobin.com/assets/og-podcast.jpg">
+<meta name="twitter:title" content="Blog · Angélique Robin">
+<meta name="twitter:description" content="Pensées pour entrepreneur·es en quête d'alignement, d'impact et de souveraineté intérieure.">
+<meta name="twitter:image" content="https://angeliquerobin.com/assets/og-default.jpg">
 <link rel="icon" type="image/png" href="/assets/favicon.png">
 <script src="./support.js"></script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "PodcastSeries",
-  "name": "Une vie plus grande",
-  "description": "Le podcast qui invite à créer une vie alignée à qui tu es vraiment. Chaque dimanche : connaissance de soi, libération des freins intérieurs, courage de changer de vie.",
-  "url": "https://www.angeliquerobin.com/podcast.html",
-  "image": "https://www.angeliquerobin.com/assets/couverture-podcast.jpg",
-  "author": {
-    "@type": "Person",
-    "name": "Angélique Robin",
-    "url": "https://www.angeliquerobin.com/qui-suis-je.html"
-  },
-  "sameAs": [
-    "https://www.youtube.com/@unevieplusgrande",
-    "https://open.spotify.com/show/1DWCxZJTaZaXtd5wIFI4FF"
-  ]
-}
-</script>
 </head>
 <body>
 <x-dc>
@@ -64,6 +45,21 @@
     .has-dd:hover .dd-menu { display: flex; }
     .dd-menu a { padding: 11px 24px; font-size: 14px; letter-spacing: 0.08em; white-space: nowrap; color: var(--ink); }
     .dd-menu a:hover { opacity: 0.5; }
+    .blog-filters { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+    .filter-btn { font-family: var(--font-corps); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; padding: 11px 22px; border: 1px solid rgba(74,56,46,0.28); background: transparent; color: var(--ink); cursor: pointer; transition: all .2s ease; }
+    .filter-btn:hover { border-color: var(--taupe); }
+    .filter-btn.active { background: var(--taupe); border-color: var(--taupe); color: var(--creme); }
+    .blog-card { display: flex; flex-direction: column; height: 100%; }
+    .blog-card:hover .blog-card-img img { opacity: 0.85; transform: scale(1.03); }
+    .blog-card-img { position: relative; aspect-ratio: 4/3; width: 100%; overflow: hidden; background: var(--taupe); }
+    .blog-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; filter: saturate(0.7) contrast(0.97); transition: opacity .3s ease, transform .5s ease; }
+    .blog-card-body { padding: 26px 2px 0; display: flex; flex-direction: column; flex: 1; }
+    .blog-tag { display: block; font-family: var(--font-corps); font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--taupe); margin-bottom: 14px; }
+    .blog-card h2 { font-family: var(--font-titre); font-weight: 400; font-size: 22px; line-height: 1.3; color: var(--ink); margin: 0 0 12px; }
+    .blog-card p { font-family: var(--font-corps); font-size: 15px; line-height: 1.7; color: rgba(74,56,46,0.72); margin: 0 0 22px; }
+    .blog-meta { margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .blog-date { font-family: var(--font-corps); font-size: 12px; letter-spacing: 0.05em; color: rgba(74,56,46,0.5); }
+    .blog-cta { font-family: var(--font-titre); font-style: italic; font-size: 14px; color: var(--sauge); white-space: nowrap; }
   </style>
 </helmet>
 
@@ -80,32 +76,62 @@
         </div>
         <a class="navlink" href="temoignages.html" style="font-size: 14px; letter-spacing: 0.08em;">Témoignages</a>
         <a class="navlink" href="podcast.html" style="font-size: 14px; letter-spacing: 0.08em;">Podcast</a>
-        <a class="navlink" href="blog.html" style="font-size: 14px; letter-spacing: 0.08em;">Blog</a>
+        <a class="navlink" href="blog.html" style="font-size: 14px; letter-spacing: 0.08em; opacity: 0.55;">Blog</a>
         <a class="navlink" href="contact.html" style="font-size: 14px; letter-spacing: 0.08em;">Contact</a>
       </div>
     </nav>
   </header>
 
-  <section style="max-width: 900px; margin: 0 auto; padding: 96px 40px 40px; text-align: center;">
-    <div class="kicker" style="color: rgba(74,56,46,0.55); margin-bottom: 30px;">Le podcast</div>
-    <h1 class="lead" style="font-size: clamp(34px, 4.2vw, 56px); margin: 0; color: var(--ink);">Une vie <em>plus grande</em></h1>
+  <section style="max-width: 800px; margin: 0 auto; padding: 96px 40px 40px; text-align: center;">
+    <div class="kicker" style="color: rgba(74,56,46,0.55); margin-bottom: 30px;">Le blog</div>
+    <h1 class="lead" style="font-size: clamp(34px, 4.2vw, 56px); margin: 0 0 30px; color: var(--ink);">Des mots pour <em>éclairer le chemin</em>.</h1>
+    <p class="body" style="max-width: 34rem; margin: 0 auto 40px; color: rgba(74,56,46,0.75);">Ici, je partage ce que la vie met sur ma route&nbsp;: mes prises de conscience, mes traversées, et ce qu'elles peuvent t'apprendre sur toi aussi.</p>
+    <div class="blog-filters">
+      <button class="filter-btn active" data-filter="all">Tous</button>
+      <button class="filter-btn" data-filter="relations">Relations</button>
+      <button class="filter-btn" data-filter="entrepreneuriat">Entrepreneuriat</button>
+      <button class="filter-btn" data-filter="transition">Transition de vie</button>
+    </div>
   </section>
 
-  <section style="max-width: 1080px; margin: 0 auto; padding: 40px 40px 80px;">
-    <div style="display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 64px; align-items: center;">
-      <div style="position: relative; aspect-ratio: 1/1; width: 100%; overflow: hidden;">
-        <img src="assets/couverture-podcast.jpg" alt="Couverture du podcast Une vie plus grande" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-      </div>
-      <div>
-        <p class="body" style="color: rgba(74,56,46,0.85); margin: 0 0 22px;">Une vie plus grande, c'est le podcast qui t'invite à créer une vie <strong>alignée à qui tu es vraiment</strong>. Une vie où tu ne te contentes plus d'avancer en pilote automatique, où tu oses faire des choix qui te ressemblent, où tu construis pierre après pierre une vie qui te met vraiment en joie.</p>
-        <p class="body" style="color: rgba(74,56,46,0.82); margin: 0 0 22px;">Chaque dimanche, nous explorons ensemble ce qui crée une vie alignée à ses plus hautes valeurs&nbsp;: la <em style="font-family: var(--font-titre);">connaissance de soi</em>, la <em style="font-family: var(--font-titre);">libération de ce qui nous entrave</em>, et le <em style="font-family: var(--font-titre);">courage de recréer une vie qui nous ressemble</em>.</p>
-        <p class="body" style="color: rgba(74,56,46,0.82); margin: 0 0 22px;">Au programme&nbsp;: mon défi personnel documenté sur un an, des rencontres avec des personnes inspirantes, et les <strong>Micro-Doses</strong>, des épisodes courts et directement applicables pour toi.</p>
-        <p class="body" style="color: rgba(74,56,46,0.7); margin: 0 0 32px; font-size: 15px;">Retrouve le podcast sur Apple Podcasts, Deezer, et toutes les plateformes de podcast.</p>
-        <div style="display: flex; gap: 16px; flex-wrap: wrap;">
-          <a href="https://www.youtube.com/@unevieplusgrande" target="_blank" rel="noopener" class="btn" style="background: var(--taupe); color: var(--creme);">Regarder sur YouTube</a>
-          <a href="https://open.spotify.com/show/1DWCxZJTaZaXtd5wIFI4FF?si=MP9FsfXeT0W40VKPE11Glg" target="_blank" rel="noopener" class="btn" style="background: transparent; color: var(--ink); border: 1px solid rgba(74,56,46,0.3);">Écouter sur Spotify</a>
+  <section style="max-width: 1240px; margin: 0 auto; padding: 40px 40px 120px;">
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px;">
+      <a class="blog-card" href="blog-cadeau-mal-emballe.html" data-category="relations">
+        <div class="blog-card-img"><img src="assets/blog-relations.jpg" alt="" loading="lazy"></div>
+        <div class="blog-card-body">
+          <span class="blog-tag">Relations</span>
+          <h2>Le cadeau mal emballé des relations douloureuses.</h2>
+          <p>La face cachée de tous nos conflits&nbsp;: et si chaque personne qui t'a blessé·e avait simplement accepté un rôle dans ta pièce&nbsp;?</p>
+          <div class="blog-meta">
+            <span class="blog-date">24 mai 2026</span>
+            <span class="blog-cta">Lire l'article →</span>
+          </div>
         </div>
-      </div>
+      </a>
+      <a class="blog-card" href="blog-eveil-entrepreneuriat.html" data-category="entrepreneuriat">
+        <div class="blog-card-img"><img src="assets/blog-eveil-entrepreneuriat.jpg" alt="" loading="lazy"></div>
+        <div class="blog-card-body">
+          <span class="blog-tag">Entrepreneuriat</span>
+          <h2>De l'éveil et de l'entrepreneuriat</h2>
+          <p>L'éveil est un point de départ et l'entrepreneuriat est son terrain d'expression. Ce que les invités de Chroniques Cosmiques ont tous en commun.</p>
+          <div class="blog-meta">
+            <span class="blog-date">20 mai 2026</span>
+            <span class="blog-cta">Lire l'article →</span>
+          </div>
+        </div>
+      </a>
+      <a class="blog-card" href="blog-10-jours.html" data-category="transition">
+        <div class="blog-card-img"><img src="assets/blog-10-jours.webp" alt="" loading="lazy"></div>
+        <div class="blog-card-body">
+          <span class="blog-tag">Transition de vie</span>
+          <h2>Ces 10 derniers jours ont court-circuité celle que j'étais.</h2>
+          <p>Quand le chaos redessine&nbsp;: trois deuils, une grand-mère, et un retour à l'essentiel que je n'attendais pas.</p>
+          <div class="blog-meta">
+            <span class="blog-date">18 mai 2026</span>
+            <span class="blog-cta">Lire l'article →</span>
+          </div>
+        </div>
+      </a>
     </div>
   </section>
 
@@ -133,7 +159,7 @@
         </div>
       </div>
       <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 30px; flex-wrap: wrap; gap: 16px;">
-        <p class="body" style="font-size: 13px; color: rgba(240,236,226,0.6); margin: 0;">© 2026 Angélique Robin &middot; une vie plus grande &middot; Dernière mise à jour : août 2026</p>
+        <p class="body" style="font-size: 13px; color: rgba(240,236,226,0.6); margin: 0;">© 2026 Angélique Robin &middot; une vie plus grande</p>
         <div style="display: flex; gap: 20px; flex-wrap: wrap;">
           <a class="navlink body" href="mentions-legales.html" style="font-size: 13px; color: rgba(240,236,226,0.6);">Mentions légales</a>
           <a class="navlink body" href="cgv.html" style="font-size: 13px; color: rgba(240,236,226,0.6);">CGV</a>
@@ -148,5 +174,19 @@
 class Component extends DCLogic { renderVals() { return {}; } }
 </script>
 <script src="mobile-nav.js?v=2"></script>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest('.filter-btn');
+    if (!btn) return;
+    var f = btn.getAttribute('data-filter');
+    document.querySelectorAll('.filter-btn').forEach(function (b) { b.classList.remove('active'); });
+    btn.classList.add('active');
+    document.querySelectorAll('.blog-card').forEach(function (c) {
+      c.style.display = (f === 'all' || c.getAttribute('data-category') === f) ? '' : 'none';
+    });
+  });
+})();
+</script>
 </body>
 </html>

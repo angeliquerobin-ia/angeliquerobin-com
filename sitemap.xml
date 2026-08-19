@@ -41,6 +41,26 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.angeliquerobin.com/blog.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.angeliquerobin.com/blog-cadeau-mal-emballe.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.angeliquerobin.com/blog-eveil-entrepreneuriat.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.angeliquerobin.com/blog-10-jours.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://www.angeliquerobin.com/contact.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
