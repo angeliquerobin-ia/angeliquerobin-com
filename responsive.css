@@ -104,6 +104,12 @@
     padding: 44px 22px !important;
   }
 
+  /* Sections "taupe" pleine largeur (ex. Trois façons de cheminer) */
+  div[style*="padding: 112px 40px"] { padding: 56px 20px !important; }
+
+  /* Titres de section : marge basse réduite avant les cards */
+  div[style*="margin: 0 auto 72px"] { margin-bottom: 40px !important; }
+
   /* Cards taupe (offres) */
   .offer-card { padding: 40px 28px !important; }
 
