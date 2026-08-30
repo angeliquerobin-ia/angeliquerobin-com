@@ -164,12 +164,50 @@ async function handleSubscribe(req, res) {
   }
 }
 
+function resolveCleanUrl(pathname) {
+  if (pathname === '/') return { file: '/accueil.html' };
+
+  // /blog/slug → blog-slug.html
+  const blogMatch = pathname.match(/^\/blog\/([a-z0-9-]+)$/);
+  if (blogMatch) return { file: `/blog-${blogMatch[1]}.html` };
+
+  // URL has an extension → it's a direct file request (asset, etc.)
+  if (path.extname(pathname)) return { file: pathname };
+
+  // /page → page.html
+  return { file: `${pathname}.html` };
+}
+
+function redirectOldUrl(pathname) {
+  // /accueil.html → /
+  if (pathname === '/accueil.html') return '/';
+
+  // /blog-slug.html → /blog/slug
+  const blogMatch = pathname.match(/^\/blog-([a-z0-9-]+)\.html$/);
+  if (blogMatch) return `/blog/${blogMatch[1]}`;
+
+  // /page.html → /page (only for known HTML pages, not assets)
+  const htmlMatch = pathname.match(/^\/([a-z0-9-]+)\.html$/);
+  if (htmlMatch) return `/${htmlMatch[1]}`;
+
+  return null;
+}
+
 function serveStatic(req, res, pathname) {
-  if (pathname === '/') pathname = '/accueil.html';
+  const redirect = redirectOldUrl(pathname);
+  if (redirect) {
+    const qs = req.url.includes('?') ? req.url.slice(req.url.indexOf('?')) : '';
+    const hash = '';
+    res.writeHead(301, { Location: redirect + qs });
+    res.end();
+    return;
+  }
+
+  const { file } = resolveCleanUrl(pathname);
 
   let decoded;
   try {
-    decoded = decodeURIComponent(pathname);
+    decoded = decodeURIComponent(file);
   } catch (err) {
     res.writeHead(400);
     res.end('Bad request');
