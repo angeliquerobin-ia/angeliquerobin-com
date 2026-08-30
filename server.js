@@ -165,7 +165,6 @@ async function handleSubscribe(req, res) {
 }
 
 const NESTED_ROUTES = {
-  '/quatre-saisons/quiz': '/quatre-saisons-quiz.html',
 };
 
 function resolveCleanUrl(pathname) {
