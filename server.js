@@ -164,8 +164,15 @@ async function handleSubscribe(req, res) {
   }
 }
 
+const NESTED_ROUTES = {
+  '/quatre-saisons/quiz': '/quatre-saisons-quiz.html',
+};
+
 function resolveCleanUrl(pathname) {
   if (pathname === '/') return { file: '/accueil.html' };
+
+  // Nested routes (e.g. /quatre-saisons/quiz)
+  if (NESTED_ROUTES[pathname]) return { file: NESTED_ROUTES[pathname] };
 
   // /blog/slug → blog-slug.html
   const blogMatch = pathname.match(/^\/blog\/([a-z0-9-]+)$/);
