@@ -184,9 +184,25 @@ function resolveCleanUrl(pathname) {
   return { file: `${pathname}.html` };
 }
 
+const LEGACY_REDIRECTS = {
+  '/coaching-spirituel': '/coaching-de-vie',
+  '/coaching-innerpreneur': '/coaching-impact',
+  '/quisuisje': '/qui-suis-je',
+  '/Suis-moi': '/contact',
+  '/feed': '/blog',
+};
+
 function redirectOldUrl(pathname) {
-  // /accueil.html → /
-  if (pathname === '/accueil.html') return '/';
+  // Trailing slash → strip it (/lotus/ → /lotus)
+  if (pathname !== '/' && pathname.endsWith('/')) {
+    return pathname.slice(0, -1);
+  }
+
+  // /accueil.html or /index.html → /
+  if (pathname === '/accueil.html' || pathname === '/index.html') return '/';
+
+  // Old WordPress URLs → closest equivalent
+  if (LEGACY_REDIRECTS[pathname]) return LEGACY_REDIRECTS[pathname];
 
   // /blog-slug.html → /blog/slug
   const blogMatch = pathname.match(/^\/blog-([a-z0-9-]+)\.html$/);
