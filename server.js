@@ -34,7 +34,7 @@ const LUMAIL_ENDPOINT = 'https://lumail.io/api/v1/subscribers';
 
 // Un tag = une liste Lumail. On restreint volontairement aux tags connus
 // pour empêcher un appel /api/subscribe forgé d'écrire vers une liste arbitraire.
-const ALLOWED_TAGS = new Set(['colette-ia-liste', 'Newsletter Lotus']);
+const ALLOWED_TAGS = new Set(['colette-ia-liste', 'Newsletter Lotus', 'Le Café du Dimanche']);
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const MIME = {

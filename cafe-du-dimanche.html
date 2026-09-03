@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Le Café du Dimanche — Newsletter d'Angélique Robin</title>
+<meta name="description" content="Chaque dimanche, une réflexion pour cheminer. La newsletter d'Angélique Robin, coach de vie certifiée.">
+<meta name="author" content="Angélique Robin">
+<link rel="canonical" href="https://www.angeliquerobin.com/cafe-du-dimanche">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Angélique Robin">
+<meta property="og:title" content="Le Café du Dimanche — Newsletter d'Angélique Robin">
+<meta property="og:description" content="Chaque dimanche, une réflexion pour cheminer. La newsletter d'Angélique Robin, coach de vie certifiée.">
+<meta property="og:url" content="https://www.angeliquerobin.com/cafe-du-dimanche">
+<meta property="og:image" content="https://www.angeliquerobin.com/assets/og-default.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Le Café du Dimanche — Newsletter d'Angélique Robin">
+<meta name="twitter:description" content="Chaque dimanche, une réflexion pour cheminer.">
+<meta name="twitter:image" content="https://www.angeliquerobin.com/assets/og-default.jpg">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Anonymous+Pro:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --sauge: #899273;
+    --vert-foret: #37431b;
+    --bleu-ciel: #8cbad5;
+    --marron: #403831;
+    --taupe: #a19184;
+    --beige: #f0ece2;
+    --chair: #e6d2c8;
+    --blanc: #ffffff;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--beige);
+    color: var(--marron);
+    font-family: 'Anonymous Pro', monospace;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .page {
+    width: 100%;
+    max-width: 540px;
+    padding: 60px 28px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 36px;
+  }
+  .logo {
+    height: 80px;
+    width: auto;
+    opacity: 0.85;
+  }
+  .kicker {
+    font-family: 'Anonymous Pro', monospace;
+    font-size: 12px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--taupe);
+  }
+  .title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: clamp(2rem, 6vw, 2.8rem);
+    line-height: 1.15;
+    text-align: center;
+    color: var(--marron);
+  }
+  .title em {
+    font-style: italic;
+    color: var(--sauge);
+  }
+  .desc {
+    font-size: 16px;
+    line-height: 1.75;
+    text-align: center;
+    color: var(--taupe);
+    max-width: 420px;
+  }
+  .form-wrap {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .form-wrap input[type="email"] {
+    width: 100%;
+    font-family: 'Anonymous Pro', monospace;
+    font-size: 15px;
+    padding: 14px 16px;
+    background: var(--blanc);
+    border: 1px solid var(--taupe);
+    color: var(--marron);
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .form-wrap input[type="email"]:focus {
+    border-color: var(--sauge);
+  }
+  .form-wrap input[type="email"]::placeholder {
+    color: var(--taupe);
+    opacity: 0.7;
+  }
+  .form-wrap button {
+    width: 100%;
+    font-family: 'Anonymous Pro', monospace;
+    font-size: 13px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 16px 30px;
+    background: var(--sauge);
+    color: var(--blanc);
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.25s ease;
+  }
+  .form-wrap button:hover { opacity: 0.82; }
+  .form-wrap button:disabled { opacity: 0.5; cursor: default; }
+  .success {
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: center;
+    color: var(--sauge);
+  }
+  .error {
+    font-size: 14px;
+    text-align: center;
+    color: #c27055;
+  }
+  .note {
+    font-size: 13px;
+    color: var(--taupe);
+    text-align: center;
+    opacity: 0.7;
+  }
+  .back {
+    font-size: 13px;
+    color: var(--taupe);
+    text-decoration: none;
+    border-bottom: 1px solid var(--taupe);
+    padding-bottom: 1px;
+    transition: color 0.15s, border-color 0.15s;
+  }
+  .back:hover { color: var(--sauge); border-color: var(--sauge); }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <a href="/"><img class="logo" src="/assets/logo-angelique.webp" alt="Angélique Robin"></a>
+
+  <div class="kicker">Newsletter</div>
+
+  <h1 class="title">Le Café <em>du Dimanche</em></h1>
+
+  <p class="desc">
+    Chaque dimanche, une réflexion qui fait du bien.<br>
+    Pas de recette miracle, pas de méthode en 5 étapes.<br>
+    Juste un moment pour toi, avec une idée qui ouvre.
+  </p>
+
+  <form id="newsletter-form" class="form-wrap">
+    <input id="newsletter-email" name="email" type="email" required placeholder="Ton adresse email">
+    <button type="submit">Je m'inscris</button>
+  </form>
+
+  <p id="newsletter-success" class="success" style="display: none;">
+    C'est fait ! Vérifie ta boîte mail pour confirmer ton inscription.
+  </p>
+  <p id="newsletter-error" class="error" style="display: none;"></p>
+
+  <p class="note">Gratuit, chaque dimanche. Désinscription en un clic.</p>
+
+  <a class="back" href="/">angeliquerobin.com</a>
+</div>
+
+<script src="lumail-forms.js"></script>
+</body>
+</html>

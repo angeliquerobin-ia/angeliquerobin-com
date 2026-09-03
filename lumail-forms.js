@@ -86,7 +86,7 @@
       btn.textContent = '…';
       if (error) error.style.display = 'none';
 
-      submit({ email: email, tag: 'Newsletter Lotus' })
+      submit({ email: email, tag: 'Le Café du Dimanche' })
         .then(function (result) {
           if (result.ok) {
             form.style.display = 'none';
