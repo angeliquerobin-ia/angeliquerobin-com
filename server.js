@@ -185,7 +185,8 @@ function resolveCleanUrl(pathname) {
 }
 
 const LEGACY_REDIRECTS = {
-  '/coaching-spirituel': '/coaching-de-vie',
+  '/coaching-spirituel': '/lotus',
+  '/coaching-de-vie': '/lotus',
   '/coaching-innerpreneur': '/coaching-impact',
   '/quisuisje': '/qui-suis-je',
   '/Suis-moi': '/contact',
