@@ -22,19 +22,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Anonymous+Pro:wght@400;700&display=swap" rel="stylesheet">
 <style>
   :root {
+    --vert-nuit: #212B13;
+    --vert-profond: #3A4D22;
     --sauge: #899273;
-    --vert-foret: #37431b;
-    --bleu-ciel: #8cbad5;
-    --marron: #403831;
-    --taupe: #a19184;
-    --beige: #f0ece2;
-    --chair: #e6d2c8;
-    --blanc: #ffffff;
+    --jaune: #FBF1BC;
+    --creme: #F0ECE2;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
-    background: var(--beige);
-    color: var(--marron);
+    background: var(--creme);
+    color: var(--vert-nuit);
     font-family: 'Anonymous Pro', monospace;
     -webkit-font-smoothing: antialiased;
     min-height: 100vh;
@@ -60,27 +57,26 @@
   .kicker {
     font-family: 'Anonymous Pro', monospace;
     font-size: 12px;
-    letter-spacing: 0.32em;
+    letter-spacing: 0.35em;
     text-transform: uppercase;
-    color: var(--taupe);
+    color: var(--vert-profond);
   }
   .title {
     font-family: 'Playfair Display', serif;
-    font-weight: 400;
+    font-weight: 600;
     font-size: clamp(2rem, 6vw, 2.8rem);
     line-height: 1.15;
     text-align: center;
-    color: var(--marron);
+    color: var(--vert-nuit);
   }
   .title em {
     font-style: italic;
-    color: var(--sauge);
   }
   .desc {
-    font-size: 16px;
-    line-height: 1.75;
+    font-size: 15px;
+    line-height: 1.85;
     text-align: center;
-    color: var(--taupe);
+    color: var(--vert-profond);
     max-width: 420px;
   }
   .form-wrap {
@@ -94,29 +90,31 @@
     width: 100%;
     font-family: 'Anonymous Pro', monospace;
     font-size: 15px;
-    padding: 14px 16px;
-    background: var(--blanc);
-    border: 1px solid var(--taupe);
-    color: var(--marron);
+    padding: 14px 4px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid var(--vert-nuit);
+    color: var(--vert-nuit);
     outline: none;
     transition: border-color 0.2s;
   }
   .form-wrap input[type="email"]:focus {
-    border-color: var(--sauge);
+    border-color: var(--vert-profond);
   }
   .form-wrap input[type="email"]::placeholder {
-    color: var(--taupe);
+    color: var(--vert-profond);
     opacity: 0.7;
   }
   .form-wrap button {
     width: 100%;
     font-family: 'Anonymous Pro', monospace;
     font-size: 13px;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.22em;
     text-transform: uppercase;
     padding: 16px 30px;
-    background: var(--sauge);
-    color: var(--blanc);
+    min-height: 56px;
+    background: var(--vert-profond);
+    color: var(--jaune);
     border: none;
     cursor: pointer;
     transition: opacity 0.25s ease;
@@ -127,28 +125,27 @@
     font-size: 15px;
     line-height: 1.6;
     text-align: center;
-    color: var(--sauge);
+    color: var(--vert-profond);
   }
   .error {
     font-size: 14px;
     text-align: center;
-    color: #c27055;
+    color: var(--vert-nuit);
   }
   .note {
     font-size: 13px;
-    color: var(--taupe);
+    color: var(--vert-profond);
     text-align: center;
-    opacity: 0.7;
   }
   .back {
     font-size: 13px;
-    color: var(--taupe);
+    color: var(--vert-profond);
     text-decoration: none;
-    border-bottom: 1px solid var(--taupe);
+    border-bottom: 1px solid var(--vert-profond);
     padding-bottom: 1px;
     transition: color 0.15s, border-color 0.15s;
   }
-  .back:hover { color: var(--sauge); border-color: var(--sauge); }
+  .back:hover { color: var(--vert-nuit); border-color: var(--vert-nuit); }
 </style>
 </head>
 <body>

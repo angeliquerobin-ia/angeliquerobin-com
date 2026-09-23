@@ -53,8 +53,9 @@
   <link rel="stylesheet" href="_ds/une-vie-plus-grande-design-system-55308bf9-9a1f-4dd5-ae4e-b82edcf37e06/tokens/spacing.css">
   <link rel="stylesheet" href="_ds/une-vie-plus-grande-design-system-55308bf9-9a1f-4dd5-ae4e-b82edcf37e06/styles.css">
   <link rel="stylesheet" href="responsive.css">
+  <link rel="stylesheet" href="charte.css">
   <style>
-    body { margin: 0; background: var(--creme); color: #4A382E; font-family: var(--font-corps); --ink: #4A382E; --taupe: #9A907C; -webkit-font-smoothing: antialiased; }
+    body { margin: 0; background: var(--creme); color: var(--vert-nuit); font-family: var(--font-corps);  -webkit-font-smoothing: antialiased; }
     a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
     * { box-sizing: border-box; }
     .kicker { font-family: var(--font-corps); font-size: 13px; letter-spacing: 0.32em; text-transform: uppercase; }
@@ -62,20 +63,20 @@
     .body { font-family: var(--font-corps); font-size: 17px; line-height: 1.8; letter-spacing: 0.01em; }
     .navlink { transition: opacity .25s ease; } .navlink:hover { opacity: 0.55; }
     .has-dd { position: relative; padding: 6px 0; }
-    .dd-menu { position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background: var(--creme); border: 1px solid rgba(74,56,46,0.14); padding: 8px 0; min-width: 210px; display: none; flex-direction: column; box-shadow: 0 14px 34px rgba(74,56,46,0.14); z-index: 60; }
+    .dd-menu { position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background: var(--creme); border: 1px solid var(--sauge); padding: 8px 0; min-width: 210px; display: none; flex-direction: column; z-index: 60; }
     .has-dd:hover .dd-menu { display: flex; }
     .dd-menu a { padding: 11px 24px; font-size: 14px; letter-spacing: 0.08em; white-space: nowrap; color: var(--ink); text-decoration: none; }
     .dd-menu a:hover { opacity: 0.5; }
-    #newsletter-email::placeholder { color: rgba(240,236,226,0.5); }
+    #newsletter-email::placeholder { color: rgba(255,255,255,0.6); }
     .legal h2 { font-family: var(--font-titre); font-weight: 400; font-size: 24px; margin: 44px 0 14px; color: var(--ink); }
-    .legal p, .legal li { font-family: var(--font-corps); font-size: 16px; line-height: 1.75; color: rgba(74,56,46,0.85); margin: 0 0 14px; }
+    .legal p, .legal li { font-family: var(--font-corps); font-size: 15px; line-height: 1.75; color: var(--vert-profond); margin: 0 0 14px; }
     .legal ul { padding-left: 22px; margin: 0 0 14px; }
-    .flag { background: var(--rose-chair); padding: 18px 22px; margin: 0 0 14px; font-size: 14px; }
+    .flag { background: var(--sauge); padding: 18px 22px; margin: 0 0 14px; font-size: 14px; }
   </style>
 </helmet>
 
 <div>
-  <header style="position: sticky; top: 0; z-index: 50; background: rgba(240,236,226,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(74,56,46,0.12);">
+  <header style="position: sticky; top: 0; z-index: 50; background: rgba(240,236,226,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--sauge);">
     <nav style="max-width: 1240px; margin: 0 auto; padding: 18px 40px; display: flex; align-items: center; justify-content: space-between; gap: 32px;">
       <a href="/" style="flex: 0 0 auto;"><img src="assets/logo-angelique.webp" alt="Angélique Robin Coaching" style="height: 136px; width: auto; display: block;"></a>
       <div style="display: flex; align-items: center; gap: 26px; flex-wrap: wrap; justify-content: flex-end;">
@@ -94,7 +95,7 @@
   </header>
 
   <section style="max-width: 900px; margin: 0 auto; padding: 96px 40px 20px; text-align: center;">
-    <div class="kicker" style="color: rgba(74,56,46,0.55); margin-bottom: 28px;">Informations légales</div>
+    <div class="kicker label" style=" margin-bottom: 28px;">Informations légales</div>
     <h1 class="lead" style="font-size: clamp(34px, 4.2vw, 56px); margin: 0; color: var(--ink);">Conditions générales <em>de vente</em></h1>
   </section>
 
@@ -132,44 +133,44 @@
     <p>En cas de litige, une solution amiable sera recherchée en priorité, par email à <a href="mailto:contact@angeliquerobin.com">contact@angeliquerobin.com</a>. Conformément à l'article L. 616-1 du Code de la consommation, le client consommateur dispose du droit de recourir à un médiateur de la consommation en cas de litige non résolu à l'amiable. Angélique Robin n'a pas encore désigné de médiateur de la consommation à ce jour ; les coordonnées d'un médiateur seront communiquées sur cette page dès qu'un dispositif sera mis en place. Pour tout litige, le client peut également recourir à la plateforme européenne de règlement en ligne des litiges : <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">ec.europa.eu/consumers/odr</a>. Les présentes CGV sont soumises au droit français.</p>
   </section>
 
-  <footer style="background: var(--taupe); color: var(--creme);">
+  <footer class="fond-vert">
     <div style="max-width: 1240px; margin: 0 auto; padding: 80px 40px 40px;">
-      <div style="display: grid; grid-template-columns: 1.15fr 0.8fr 0.8fr 1fr; align-items: end; gap: 48px; padding-bottom: 56px; border-bottom: 1px solid rgba(240,236,226,0.22);">
+      <div style="display: grid; grid-template-columns: 1.15fr 0.8fr 0.8fr 1fr; align-items: end; gap: 48px; padding-bottom: 56px; border-bottom: 2px solid var(--sauge);">
         <div>
           <img src="assets/logo-angelique.webp" alt="Angélique Robin Coaching" style="height: 180px; width: auto; display: block; margin-top: -43px; margin-bottom: 20px; filter: brightness(0) invert(1); opacity: 0.9;">
-          <p class="body" style="color: rgba(240,236,226,0.8); max-width: 24rem;">Change ton monde intérieur pour transformer ta vie.</p>
+          <p class="body" style="color: var(--blanc); max-width: 24rem;">Change ton monde intérieur pour transformer ta vie.</p>
         </div>
         <div style="display: flex; flex-direction: column; gap: 14px;">
-          <div class="kicker" style="color: rgba(240,236,226,0.65); margin-bottom: 6px;">Naviguer</div>
-          <a class="navlink body" style="font-size: 15px; color: rgba(240,236,226,0.9); text-decoration: none;" href="/qui-suis-je">Qui suis-je&#8202;?</a>
-          <a class="navlink body" style="font-size: 15px; color: rgba(240,236,226,0.9); text-decoration: none;" href="/lotus">Lotus</a>
-          <a class="navlink body" style="font-size: 15px; color: rgba(240,236,226,0.9); text-decoration: none;" href="/coaching-impact">Coaching d'impact</a>
+          <div class="kicker" style="color: var(--aura); margin-bottom: 6px;">Naviguer</div>
+          <a class="navlink body" style="font-size: 15px; color: var(--blanc); text-decoration: none;" href="/qui-suis-je">Qui suis-je&#8202;?</a>
+          <a class="navlink body" style="font-size: 15px; color: var(--blanc); text-decoration: none;" href="/lotus">Lotus</a>
+          <a class="navlink body" style="font-size: 15px; color: var(--blanc); text-decoration: none;" href="/coaching-impact">Coaching d'impact</a>
         </div>
         <div style="display: flex; flex-direction: column; gap: 14px;">
-          <div class="kicker" style="color: rgba(240,236,226,0.65); margin-bottom: 6px;">Aller plus loin</div>
-          <a class="navlink body" style="font-size: 15px; color: rgba(240,236,226,0.9); text-decoration: none;" href="/lotus#reservation">Diagnostic clarté</a>
-          <a class="navlink body" style="font-size: 15px; color: rgba(240,236,226,0.9); text-decoration: none;" href="/podcast">Podcast</a>
-          <a class="navlink body" style="font-size: 15px; color: rgba(240,236,226,0.9); text-decoration: none;" href="/blog">Blog</a>
-          <a class="navlink body" style="font-size: 15px; color: rgba(240,236,226,0.9);" href="/quatre-saisons">Quiz</a>
-          <a class="navlink body" style="font-size: 15px; color: rgba(240,236,226,0.9); text-decoration: none;" href="/contact">Contact</a>
+          <div class="kicker" style="color: var(--aura); margin-bottom: 6px;">Aller plus loin</div>
+          <a class="navlink body" style="font-size: 15px; color: var(--blanc); text-decoration: none;" href="/lotus#reservation">Diagnostic clarté</a>
+          <a class="navlink body" style="font-size: 15px; color: var(--blanc); text-decoration: none;" href="/podcast">Podcast</a>
+          <a class="navlink body" style="font-size: 15px; color: var(--blanc); text-decoration: none;" href="/blog">Blog</a>
+          <a class="navlink body" style="font-size: 15px; color: var(--blanc);" href="/quatre-saisons">Quiz</a>
+          <a class="navlink body" style="font-size: 15px; color: var(--blanc); text-decoration: none;" href="/contact">Contact</a>
         </div>
         <div style="display: flex; flex-direction: column; gap: 14px;">
-          <div class="kicker" style="color: rgba(240,236,226,0.65); margin-bottom: 6px;">Le Café du Dimanche</div>
-          <p class="body" style="font-size: 14px; color: rgba(240,236,226,0.75); margin: 0;">Chaque dimanche, une réflexion pour cheminer.</p>
+          <div class="kicker" style="color: var(--aura); margin-bottom: 6px;">Le Café du Dimanche</div>
+          <p class="body" style="font-size: 14px; color: var(--blanc); margin: 0;">Chaque dimanche, une réflexion pour cheminer.</p>
           <form id="newsletter-form" style="display: flex; gap: 8px;">
-            <input id="newsletter-email" name="email" type="email" required placeholder="Ton e-mail" style="flex: 1; min-width: 0; font-family: var(--font-corps); font-size: 14px; padding: 10px 12px; background: transparent; border: 1px solid rgba(240,236,226,0.35); color: var(--creme); border-radius: 0; outline: none;">
-            <button type="submit" class="btn" style="background: var(--creme); color: var(--taupe); border: 0; padding: 10px 16px; font-size: 12px; cursor: pointer; flex: 0 0 auto;">OK</button>
+            <input id="newsletter-email" name="email" type="email" required placeholder="Ton e-mail" style="flex: 1; min-width: 0; font-family: var(--font-corps); font-size: 14px; padding: 10px 12px; background: transparent; border: none; border-bottom: 2px solid var(--blanc); color: var(--blanc); border-radius: 0; outline: none;">
+            <button type="submit" class="btn btn--clair" style="min-height: 0; padding: 10px 16px; font-size: 12px; cursor: pointer; flex: 0 0 auto;">OK</button>
           </form>
-          <p id="newsletter-success" class="body" style="display: none; font-size: 13px; color: rgba(240,236,226,0.9); margin: 0;">Merci, c'est fait&nbsp;!</p>
-          <p id="newsletter-error" class="body" style="display: none; font-size: 13px; color: #e8a894; margin: 0;"></p>
+          <p id="newsletter-success" class="body" style="display: none; font-size: 13px; color: var(--blanc); margin: 0;">Merci, c'est fait&nbsp;!</p>
+          <p id="newsletter-error" class="body" style="display: none; font-size: 13px; color: var(--jaune); margin: 0;"></p>
         </div>
       </div>
       <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 30px; flex-wrap: wrap; gap: 16px;">
-        <p class="body" style="font-size: 13px; color: rgba(240,236,226,0.6); margin: 0;">© 2026 Angélique Robin &middot; une vie plus grande &middot; Dernière mise à jour : août 2026</p>
+        <p class="body" style="font-size: 13px; color: var(--blanc); margin: 0;">© 2026 Angélique Robin &middot; une vie plus grande &middot; Dernière mise à jour : août 2026</p>
         <div style="display: flex; gap: 20px; flex-wrap: wrap;">
-          <a class="navlink body" href="/mentions-legales" style="font-size: 13px; color: rgba(240,236,226,0.6); text-decoration: none;">Mentions légales</a>
-          <a class="navlink body" href="/cgv" style="font-size: 13px; color: rgba(240,236,226,0.6); text-decoration: none;">CGV</a>
-          <a class="navlink body" href="/cgu" style="font-size: 13px; color: rgba(240,236,226,0.6); text-decoration: none;">CGU</a>
+          <a class="navlink body" href="/mentions-legales" style="font-size: 13px; color: var(--blanc); text-decoration: none;">Mentions légales</a>
+          <a class="navlink body" href="/cgv" style="font-size: 13px; color: var(--blanc); text-decoration: none;">CGV</a>
+          <a class="navlink body" href="/cgu" style="font-size: 13px; color: var(--blanc); text-decoration: none;">CGU</a>
         </div>
       </div>
     </div>

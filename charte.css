@@ -1,0 +1,78 @@
+/* Design system, Une vie plus grande. Angélique Robin.
+   Feuille commune à toutes les pages : les couleurs se changent ici. */
+
+:root {
+  /* Palette. Aucune autre couleur ne doit être introduite. */
+  --vert-nuit: #212B13;      /* texte uniquement, jamais un fond */
+  --vert-profond: #3A4D22;   /* couleur principale, fonds et boutons sur clair */
+  --sauge: #899273;          /* fond de section et touches */
+  --jaune: #FBF1BC;          /* accent, titres sur vert sombre, texte des boutons */
+  --aura: #BAAFDE;           /* accent, fond de section et aplats */
+  --creme: #F0ECE2;          /* le papier, fond de page */
+  --blanc: #FFFFFF;          /* joker, texte sur vert sombre */
+
+  /* Alias utilisés par les pages existantes */
+  --ink: var(--vert-nuit);
+  --encre: var(--vert-nuit);
+
+  /* Typographie */
+  --titre: 'Playfair Display', Georgia, serif;
+  --texte: 'Anonymous Pro', ui-monospace, monospace;
+}
+
+html { background: var(--creme); }
+body { background: var(--creme); color: var(--vert-nuit); }
+
+/* Titres : romain 600, l'italique ne sert qu'à mettre en valeur */
+h1.lead, h2.lead { font-weight: 600; }
+
+/* Label de section : filet de 44 x 4 px, puis texte entre crochets */
+.label {
+  --filet: var(--sauge);
+  font-size: 13px;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--vert-profond);
+}
+.label::before {
+  content: "[\00a0";
+  padding-left: 60px;
+  background: linear-gradient(var(--filet), var(--filet)) left center / 44px 4px no-repeat;
+}
+.label::after { content: "\00a0]"; }
+
+/* Boutons. Jamais de contour, jamais de coins arrondis, jamais d'ombre. */
+.btn {
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  letter-spacing: 0.22em;
+  min-height: 56px;
+  background: var(--vert-profond);
+  color: var(--jaune);
+}
+.btn--clair { background: var(--jaune); color: var(--vert-nuit); }
+
+/* Fonds de section */
+.fond-vert { background: var(--vert-profond); color: var(--blanc); }
+.fond-vert .label { color: var(--aura); }
+.fond-sauge { background: var(--sauge); color: var(--vert-nuit); }
+.fond-sauge .label { color: var(--vert-nuit); --filet: var(--vert-nuit); }
+.fond-aura { background: var(--aura); color: var(--vert-nuit); }
+.fond-aura .label { --filet: var(--vert-profond); }
+
+/* Carte posée sur un fond coloré : crème, bandeau supérieur de 10 px */
+.carte { background: var(--creme); border-top: 10px solid var(--bandeau, var(--vert-profond)); }
+
+/* Témoignage : un filet sauge, pas un encart */
+.temoignage { background: none !important; border-left: 4px solid var(--sauge); padding: 0 0 0 28px !important; }
+
+/* Champ de formulaire : une ligne, pas une boîte */
+.champ { border: none !important; border-bottom: 2px solid currentColor !important; border-radius: 0; background: none; }
+
+/* Texte courant : une seule taille partout (hors pied de page) */
+.body:not(footer *) { font-size: 15px !important; line-height: 1.85; }
+
+/* Sur sauge et sur aura, tout le texte courant passe en vert nuit (lisibilité) */
+:is(.fond-sauge, .fond-aura) :is(p, li, h1, h2, h3, blockquote, figcaption, .num, .lead) { color: var(--vert-nuit) !important; }
+:is(.fond-sauge, .fond-aura) :is(p, li) a:not(.btn) { color: inherit; }

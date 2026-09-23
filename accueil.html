@@ -68,10 +68,11 @@
   <link rel="stylesheet" href="_ds/une-vie-plus-grande-design-system-55308bf9-9a1f-4dd5-ae4e-b82edcf37e06/tokens/spacing.css">
   <link rel="stylesheet" href="_ds/une-vie-plus-grande-design-system-55308bf9-9a1f-4dd5-ae4e-b82edcf37e06/styles.css">
   <link rel="stylesheet" href="responsive.css">
+  <link rel="stylesheet" href="charte.css">
   <script src="_ds/une-vie-plus-grande-design-system-55308bf9-9a1f-4dd5-ae4e-b82edcf37e06/_ds_bundle.js"></script>
   <script src="./image-slot.js"></script>
   <style>
-    body { margin: 0; background: var(--creme); color: #4A382E; font-family: var(--font-corps); --ink: #4A382E; --taupe: #9A907C; -webkit-font-smoothing: antialiased; }
+    body { margin: 0; background: var(--creme); color: var(--vert-nuit); font-family: var(--font-corps); -webkit-font-smoothing: antialiased; }
     a { color: inherit; text-decoration: none; }
     * { box-sizing: border-box; }
     .kicker { font-family: var(--font-corps); font-size: 13px; letter-spacing: 0.32em; text-transform: uppercase; }
@@ -81,18 +82,18 @@
     .btn { display: inline-flex; align-items: center; justify-content: center; font-family: var(--font-corps); font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; padding: 16px 30px; transition: opacity .25s ease; cursor: pointer; } .btn:hover { opacity: 0.82; }
     .offer-num { font-family: var(--font-titre); font-style: italic; }
     .has-dd { position: relative; padding: 6px 0; }
-    .dd-menu { position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background: var(--creme); border: 1px solid rgba(74,56,46,0.14); padding: 8px 0; min-width: 210px; display: none; flex-direction: column; box-shadow: 0 14px 34px rgba(74,56,46,0.14); z-index: 60; }
+    .dd-menu { position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background: var(--creme); border: 1px solid var(--sauge); padding: 8px 0; min-width: 210px; display: none; flex-direction: column; z-index: 60; }
     .has-dd:hover .dd-menu { display: flex; }
     .dd-menu a { padding: 11px 24px; font-size: 14px; letter-spacing: 0.08em; white-space: nowrap; color: var(--ink); }
     .dd-menu a:hover { opacity: 0.5; }
-    #newsletter-email::placeholder { color: rgba(240,236,226,0.5); }
-    .offer-card { background: var(--taupe); padding: 52px 44px; display: flex; flex-direction: column; }
+    #newsletter-email::placeholder { color: rgba(255,255,255,0.6); }
+    .offer-card { padding: 42px 44px 52px; display: flex; flex-direction: column; }
     .offer-card .offer-cta { margin-top: auto; padding-top: 30px; }
   </style>
 </helmet>
 
 <div>
-  <header style="position: sticky; top: 0; z-index: 50; background: rgba(240,236,226,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(74,56,46,0.12);">
+  <header style="position: sticky; top: 0; z-index: 50; background: rgba(240,236,226,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--sauge);">
     <nav style="max-width: 1240px; margin: 0 auto; padding: 18px 40px; display: flex; align-items: center; justify-content: space-between; gap: 32px;">
       <a href="#top" style="flex: 0 0 auto;"><img src="assets/logo-angelique.webp" alt="Angélique Robin Coaching" style="height: 136px; width: auto; display: block;"></a>
       <div style="display: flex; align-items: center; gap: 26px; flex-wrap: wrap; justify-content: flex-end;">
@@ -115,13 +116,13 @@
 
   <section id="top" style="max-width: 1240px; margin: 0 auto; padding: 96px 40px 112px; display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 72px; align-items: center;">
     <div>
-      <div class="kicker" style="color: rgba(74,56,46,0.55); margin-bottom: 34px;">Coaching de vie</div>
+      <div class="kicker label" style=" margin-bottom: 34px;">Coaching de vie</div>
       <h1 class="lead" style="font-size: clamp(34px, 4.2vw, 56px); margin: 0 0 34px; color: var(--ink);">Une vie plus grande, c'est une vie que tu crées <em>en fonction de tes plus hautes valeurs.</em></h1>
-      <p class="body" style="max-width: 30rem; margin: 0 0 20px; color: rgba(74,56,46,0.82);">Tes plus hautes valeurs sont <strong>ton moteur intérieur</strong>. Là où va ton temps, ton argent, tes pensées, ton énergie. Quand tu construis ta vie à partir de là, tes décisions, ton travail, tes relations deviennent plus fluides.</p>
-      <p class="body" style="max-width: 30rem; margin: 0 0 20px; color: rgba(74,56,46,0.82);">La procrastination, les blocages, tout ce qui se répète et qui te draine, ce sont les symptômes d'une vie qui s'est éloignée de ce qui est important pour toi.</p>
-      <p class="body" style="max-width: 30rem; margin: 0 0 40px; color: rgba(74,56,46,0.82);">Le coaching t'aide à retrouver tes valeurs, ta raison d'être, et à construire une suite en phase avec qui tu es vraiment.</p>
+      <p class="body" style="max-width: 30rem; margin: 0 0 20px; color: var(--vert-profond);">Tes plus hautes valeurs sont <strong>ton moteur intérieur</strong>. Là où va ton temps, ton argent, tes pensées, ton énergie. Quand tu construis ta vie à partir de là, tes décisions, ton travail, tes relations deviennent plus fluides.</p>
+      <p class="body" style="max-width: 30rem; margin: 0 0 20px; color: var(--vert-profond);">La procrastination, les blocages, tout ce qui se répète et qui te draine, ce sont les symptômes d'une vie qui s'est éloignée de ce qui est important pour toi.</p>
+      <p class="body" style="max-width: 30rem; margin: 0 0 40px; color: var(--vert-profond);">Le coaching t'aide à retrouver tes valeurs, ta raison d'être, et à construire une suite en phase avec qui tu es vraiment.</p>
       <div style="display: flex; gap: 16px; flex-wrap: wrap;">
-        <a href="/lotus" class="btn" style="background: var(--taupe); color: var(--creme);">Découvrir Lotus</a>
+        <a href="/lotus" class="btn">Découvrir Lotus</a>
       </div>
     </div>
     <div style="position: relative; aspect-ratio: 4/5; width: 100%;">
@@ -130,54 +131,54 @@
   </section>
 
   <section style="max-width: 1240px; margin: 0 auto; padding: 0 40px 112px;">
-    <div style="background: var(--rose-chair); padding: 96px 60px;">
+    <div class="fond-sauge" style="padding: 96px 60px;">
       <div style="max-width: 720px; margin: 0 auto;">
-        <div class="kicker" style="color: rgba(74,56,46,0.55); margin-bottom: 48px; text-align: center;">Un de mes postulats</div>
-        <p class="lead" style="font-size: clamp(24px, 2.6vw, 34px); line-height: 1.35; margin: 0 0 40px; color: var(--ink); text-align: center;">Change ton monde intérieur<br><em>pour transformer ta vie.</em></p>
-        <p class="body" style="color: rgba(74,56,46,0.82); margin: 0 0 22px; text-align: center;">Parce que ta vie extérieure est souvent le reflet de tes croyances, de ce que tu t'autorises, de ce que tu portes encore de ton passé.</p>
-        <p class="body" style="color: rgba(74,56,46,0.82); margin: 0 0 22px; text-align: center;">Quand tu équilibres tes perceptions sur tes expériences passées et sur qui tu es, tu changes ton regard sur ta vie. Les charges s'apaisent, et tu peux construire depuis un monde intérieur apaisé.</p>
-        <p class="body" style="color: rgba(74,56,46,0.82); margin: 0 0 44px; text-align: center;">Et c'est depuis cet endroit-là que tout peut vraiment changer.</p>
-        <div style="text-align: center;"><a href="/lotus" class="btn" style="background: var(--taupe); color: var(--creme);">Découvrir Lotus</a></div>
+        <div class="kicker label" style=" margin-bottom: 48px; text-align: center;">Un de mes postulats</div>
+        <p class="lead" style="font-size: clamp(24px, 2.6vw, 34px); line-height: 1.35; margin: 0 0 40px; color: var(--vert-nuit); text-align: center;">Change ton monde intérieur<br><em>pour transformer ta vie.</em></p>
+        <p class="body" style="color: var(--vert-nuit); margin: 0 0 22px; text-align: center;">Parce que ta vie extérieure est souvent le reflet de tes croyances, de ce que tu t'autorises, de ce que tu portes encore de ton passé.</p>
+        <p class="body" style="color: var(--vert-nuit); margin: 0 0 22px; text-align: center;">Quand tu équilibres tes perceptions sur tes expériences passées et sur qui tu es, tu changes ton regard sur ta vie. Les charges s'apaisent, et tu peux construire depuis un monde intérieur apaisé.</p>
+        <p class="body" style="color: var(--vert-nuit); margin: 0 0 44px; text-align: center;">Et c'est depuis cet endroit-là que tout peut vraiment changer.</p>
+        <div style="text-align: center;"><a href="/lotus" class="btn">Découvrir Lotus</a></div>
       </div>
     </div>
   </section>
 
   <section style="max-width: 760px; margin: 0 auto; padding: 40px 40px 112px; text-align: center;">
-    <div class="kicker" style="color: rgba(74,56,46,0.55); margin-bottom: 28px;">Qui je suis</div>
+    <div class="kicker label" style=" margin-bottom: 28px;">Qui je suis</div>
     <h2 class="lead" style="font-size: clamp(26px, 3vw, 40px); margin: 0 0 32px; color: var(--ink);">De la quête de moi-même à <em>l'alignement</em></h2>
-    <p class="body" style="color: rgba(74,56,46,0.82); margin: 0 0 20px;">Pendant longtemps, j'ai cru que je devais rentrer dans le moule.</p>
-    <p class="body" style="color: rgba(74,56,46,0.82); margin: 0 0 20px;">Jusqu'à ce que je comprenne que mon décalage était en réalité <strong>ma boussole</strong>.</p>
-    <p class="body" style="color: rgba(74,56,46,0.82); margin: 0 0 36px;">Mon chemin m'a menée de la quête de moi-même à ma raison d'être, jusqu'à la sortie du mode pilote automatique. C'est depuis cet espace intérieur aligné que j'ai créé plusieurs entreprises, dont fait partie mon accompagnement de coaching.</p>
-    <a href="/qui-suis-je" class="navlink" style="font-family: var(--font-titre); font-style: italic; font-size: 20px; color: var(--ink); border-bottom: 1px solid rgba(74,56,46,0.35); padding-bottom: 4px;">Découvrir mon histoire →</a>
+    <p class="body" style="color: var(--vert-profond); margin: 0 0 20px;">Pendant longtemps, j'ai cru que je devais rentrer dans le moule.</p>
+    <p class="body" style="color: var(--vert-profond); margin: 0 0 20px;">Jusqu'à ce que je comprenne que mon décalage était en réalité <strong>ma boussole</strong>.</p>
+    <p class="body" style="color: var(--vert-profond); margin: 0 0 36px;">Mon chemin m'a menée de la quête de moi-même à ma raison d'être, jusqu'à la sortie du mode pilote automatique. C'est depuis cet espace intérieur aligné que j'ai créé plusieurs entreprises, dont fait partie mon accompagnement de coaching.</p>
+    <a href="/qui-suis-je" class="navlink" style="font-family: var(--font-titre); font-style: italic; font-size: 20px; color: var(--ink); border-bottom: 1px solid var(--vert-profond); padding-bottom: 4px;">Découvrir mon histoire →</a>
   </section>
 
-  <section style="background: var(--taupe); color: var(--creme);">
+  <section class="fond-aura">
     <div style="max-width: 1240px; margin: 0 auto; padding: 112px 40px;">
       <div style="text-align: center; max-width: 42rem; margin: 0 auto 72px;">
-        <div class="kicker" style="color: rgba(240,236,226,0.7); margin-bottom: 24px;">Travailler ensemble</div>
-        <h2 class="lead" style="font-size: clamp(26px, 3vw, 40px); margin: 0 0 22px; color: var(--creme);">Trois façons de <em>cheminer</em> avec moi</h2>
+        <div class="kicker label" style=" margin-bottom: 24px;">Travailler ensemble</div>
+        <h2 class="lead" style="font-size: clamp(26px, 3vw, 40px); margin: 0 0 22px; color: var(--vert-nuit);">Trois façons de <em>cheminer</em> avec moi</h2>
       </div>
-      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: rgba(240,236,226,0.18);">
-        <div class="offer-card">
-          <div class="offer-num" style="font-size: 36px; color: rgba(240,236,226,0.6); margin-bottom: 28px;">01</div>
-          <h3 class="lead" style="font-size: 30px; margin: 0 0 18px; color: var(--creme);">Le coaching de vie</h3>
-          <p class="body" style="color: rgba(240,236,226,0.82); margin: 0 0 22px;">Le programme <strong>Lotus</strong>&nbsp;: un accompagnement de deux mois pour te retrouver en profondeur et transformer durablement ta façon d'habiter ta vie.</p>
-          <p class="kicker" style="color: rgba(240,236,226,0.6); margin: 0;">Programme Lotus &middot; 2 mois</p>
-          <div class="offer-cta"><a href="/lotus" class="navlink" style="font-family: var(--font-titre); font-style: italic; font-size: 18px; color: var(--creme); border-bottom: 1px solid rgba(240,236,226,0.5); padding-bottom: 3px;">En savoir plus →</a></div>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px;">
+        <div class="offer-card carte" style="--bandeau: var(--vert-profond);">
+          <div class="offer-num" style="font-size: 36px; color: var(--vert-profond); margin-bottom: 28px;">01</div>
+          <h3 class="lead" style="font-size: 30px; margin: 0 0 18px; color: var(--vert-nuit);">Le coaching de vie</h3>
+          <p class="body" style="color: var(--vert-profond); margin: 0 0 22px;">Le programme <strong>Lotus</strong>&nbsp;: un accompagnement de deux mois pour te retrouver en profondeur et transformer durablement ta façon d'habiter ta vie.</p>
+          <p class="kicker" style="color: var(--vert-profond); margin: 0;">Programme Lotus &middot; 2 mois</p>
+          <div class="offer-cta"><a href="/lotus" class="navlink" style="font-family: var(--font-titre); font-style: italic; font-size: 18px; color: var(--vert-profond); border-bottom: 1px solid var(--vert-profond); padding-bottom: 3px;">En savoir plus →</a></div>
         </div>
-        <div class="offer-card">
-          <div class="offer-num" style="font-size: 36px; color: rgba(240,236,226,0.6); margin-bottom: 28px;">02</div>
-          <h3 class="lead" style="font-size: 30px; margin: 0 0 18px; color: var(--creme);">Le coaching d'impact</h3>
-          <p class="body" style="color: rgba(240,236,226,0.82); margin: 0 0 22px;">Une seule séance, un seul déblocage. Pour lever ce qui te retient, ici et maintenant, avec clarté.</p>
-          <p class="kicker" style="color: rgba(240,236,226,0.6); margin: 0;">Une séance &middot; un déclic</p>
-          <div class="offer-cta"><a href="/coaching-impact" class="navlink" style="font-family: var(--font-titre); font-style: italic; font-size: 18px; color: var(--creme); border-bottom: 1px solid rgba(240,236,226,0.5); padding-bottom: 3px;">En savoir plus →</a></div>
+        <div class="offer-card carte" style="--bandeau: var(--sauge);">
+          <div class="offer-num" style="font-size: 36px; color: var(--vert-profond); margin-bottom: 28px;">02</div>
+          <h3 class="lead" style="font-size: 30px; margin: 0 0 18px; color: var(--vert-nuit);">Le coaching d'impact</h3>
+          <p class="body" style="color: var(--vert-profond); margin: 0 0 22px;">Une seule séance, un seul déblocage. Pour lever ce qui te retient, ici et maintenant, avec clarté.</p>
+          <p class="kicker" style="color: var(--vert-profond); margin: 0;">Une séance &middot; un déclic</p>
+          <div class="offer-cta"><a href="/coaching-impact" class="navlink" style="font-family: var(--font-titre); font-style: italic; font-size: 18px; color: var(--vert-profond); border-bottom: 1px solid var(--vert-profond); padding-bottom: 3px;">En savoir plus →</a></div>
         </div>
-        <div class="offer-card">
-          <div class="offer-num" style="font-size: 36px; color: rgba(240,236,226,0.6); margin-bottom: 28px;">03</div>
-          <h3 class="lead" style="font-size: 30px; margin: 0 0 18px; color: var(--creme);">Colette IA</h3>
-          <p class="body" style="color: rgba(240,236,226,0.82); margin: 0 0 22px;">Un programme pour les coachs et thérapeutes&nbsp;: installe ton <strong>Second cerveau</strong> et ton ruissellement de contenu, assisté par l'IA.</p>
-          <p class="kicker" style="color: rgba(240,236,226,0.6); margin: 0;">Programme &middot; bêta</p>
-          <div class="offer-cta"><a href="/colette-ia" class="navlink" style="font-family: var(--font-titre); font-style: italic; font-size: 18px; color: var(--creme); border-bottom: 1px solid rgba(240,236,226,0.5); padding-bottom: 3px;">En savoir plus →</a></div>
+        <div class="offer-card carte" style="--bandeau: var(--vert-nuit);">
+          <div class="offer-num" style="font-size: 36px; color: var(--vert-profond); margin-bottom: 28px;">03</div>
+          <h3 class="lead" style="font-size: 30px; margin: 0 0 18px; color: var(--vert-nuit);">Colette IA</h3>
+          <p class="body" style="color: var(--vert-profond); margin: 0 0 22px;">Un programme pour les coachs et thérapeutes&nbsp;: installe ton <strong>Second cerveau</strong> et ton ruissellement de contenu, assisté par l'IA.</p>
+          <p class="kicker" style="color: var(--vert-profond); margin: 0;">Programme &middot; bêta</p>
+          <div class="offer-cta"><a href="/colette-ia" class="navlink" style="font-family: var(--font-titre); font-style: italic; font-size: 18px; color: var(--vert-profond); border-bottom: 1px solid var(--vert-profond); padding-bottom: 3px;">En savoir plus →</a></div>
         </div>
       </div>
     </div>
@@ -185,82 +186,82 @@
 
   <section style="max-width: 1240px; margin: 0 auto; padding: 112px 40px;">
     <div style="text-align: center; max-width: 40rem; margin: 0 auto 68px;">
-      <div class="kicker" style="color: rgba(74,56,46,0.55); margin-bottom: 24px;">Ils l'ont vécu</div>
+      <div class="kicker label" style=" margin-bottom: 24px;">Ils l'ont vécu</div>
       <h2 class="lead" style="font-size: clamp(26px, 3vw, 40px); margin: 0 0 20px; color: var(--ink);">Les mots de <em>mes clients</em></h2>
     </div>
     <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;">
-      <figure style="margin: 0; background: var(--rose-chair); padding: 44px 36px; display: flex; flex-direction: column;">
-        <blockquote class="body" style="font-size: 16px; line-height: 1.7; margin: 0 0 24px; color: var(--ink); flex: 1 0 auto;">« Je vous recommande Angélique, <em>pépite de coach</em> qui vous accompagne à aborder vos projets de manière efficace, avec en bonus un pas de plus vers la découverte de vous-même. »</blockquote>
-        <figcaption><div class="body" style="font-size: 15px; font-weight: 700; color: var(--ink);">Sarah&nbsp;P.</div></figcaption>
+      <figure class="temoignage" style="margin: 0; display: flex; flex-direction: column;">
+        <blockquote class="body" style="margin: 0 0 24px; color: var(--vert-nuit); flex: 1 0 auto;">« Je vous recommande Angélique, <em>pépite de coach</em> qui vous accompagne à aborder vos projets de manière efficace, avec en bonus un pas de plus vers la découverte de vous-même. »</blockquote>
+        <figcaption><div class="kicker" style="font-size: 12px; color: var(--vert-profond);">Sarah&nbsp;P.</div></figcaption>
       </figure>
-      <figure style="margin: 0; background: var(--rose-chair); padding: 44px 36px; display: flex; flex-direction: column;">
-        <blockquote class="body" style="font-size: 16px; line-height: 1.7; margin: 0 0 24px; color: var(--ink); flex: 1 0 auto;">« Je remercie Angélique pour son <em>écoute attentive</em>, son professionnalisme, toutes les ressources et connaissances qu'elle a pu mettre à mon service. Ce fut un travail riche et intense qui porte ses fruits. »</blockquote>
-        <figcaption><div class="body" style="font-size: 15px; font-weight: 700; color: var(--ink);">Laure&nbsp;P.</div></figcaption>
+      <figure class="temoignage" style="margin: 0; display: flex; flex-direction: column;">
+        <blockquote class="body" style="margin: 0 0 24px; color: var(--vert-nuit); flex: 1 0 auto;">« Je remercie Angélique pour son <em>écoute attentive</em>, son professionnalisme, toutes les ressources et connaissances qu'elle a pu mettre à mon service. Ce fut un travail riche et intense qui porte ses fruits. »</blockquote>
+        <figcaption><div class="kicker" style="font-size: 12px; color: var(--vert-profond);">Laure&nbsp;P.</div></figcaption>
       </figure>
-      <figure style="margin: 0; background: var(--rose-chair); padding: 44px 36px; display: flex; flex-direction: column;">
-        <blockquote class="body" style="font-size: 16px; line-height: 1.7; margin: 0 0 24px; color: var(--ink); flex: 1 0 auto;">« Elle m'a aidée avec <em>patience et bienveillance</em> à faire le bilan sur ma situation et ce que je souhaitais vraiment pour la suite. Aujourd'hui, j'ai le courage de prendre un nouveau départ en toute confiance. »</blockquote>
-        <figcaption><div class="body" style="font-size: 15px; font-weight: 700; color: var(--ink);">Karine&nbsp;B.</div></figcaption>
+      <figure class="temoignage" style="margin: 0; display: flex; flex-direction: column;">
+        <blockquote class="body" style="margin: 0 0 24px; color: var(--vert-nuit); flex: 1 0 auto;">« Elle m'a aidée avec <em>patience et bienveillance</em> à faire le bilan sur ma situation et ce que je souhaitais vraiment pour la suite. Aujourd'hui, j'ai le courage de prendre un nouveau départ en toute confiance. »</blockquote>
+        <figcaption><div class="kicker" style="font-size: 12px; color: var(--vert-profond);">Karine&nbsp;B.</div></figcaption>
       </figure>
     </div>
     <div style="text-align: center; margin-top: 52px;">
-      <a href="/temoignages" class="navlink" style="font-family: var(--font-titre); font-style: italic; font-size: 20px; color: var(--ink); border-bottom: 1px solid rgba(74,56,46,0.35); padding-bottom: 4px;">Voir tous les témoignages →</a>
+      <a href="/temoignages" class="navlink" style="font-family: var(--font-titre); font-style: italic; font-size: 20px; color: var(--ink); border-bottom: 1px solid var(--vert-profond); padding-bottom: 4px;">Voir tous les témoignages →</a>
     </div>
   </section>
 
   <section style="max-width: 1240px; margin: 0 auto; padding: 40px 40px 112px;">
-    <div style="background: var(--rose-chair); padding: 72px 60px; max-width: 960px; margin: 0 auto;">
+    <div class="fond-sauge" style="padding: 72px 60px; max-width: 960px; margin: 0 auto;">
       <div style="display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 52px; align-items: center;">
         <div style="position: relative; aspect-ratio: 1/1; width: 100%;">
           <img src="assets/couverture-podcast.webp" alt="Couverture du podcast Une vie plus grande" style="width: 100%; height: 100%; object-fit: cover; display: block;">
         </div>
         <div>
-          <div class="kicker" style="color: rgba(74,56,46,0.55); margin-bottom: 20px;">Le podcast</div>
+          <div class="kicker label" style=" margin-bottom: 20px;">Le podcast</div>
           <h2 class="lead" style="font-size: clamp(26px, 3vw, 40px); margin: 0 0 22px; color: var(--ink);">Une vie <em>plus grande</em></h2>
-          <p class="body" style="color: rgba(74,56,46,0.82); margin: 0 0 30px; font-size: 16px;">Une vie plus grande, c'est le podcast qui t'invite à créer une vie alignée à qui tu es vraiment. Une vie où tu ne te contentes plus d'avancer en pilote automatique, où tu oses faire des choix qui te ressemblent, où tu construis pierre après pierre une vie qui te met vraiment en joie.</p>
-          <a href="/podcast" class="btn" style="background: var(--taupe); color: var(--creme);">En savoir plus</a>
+          <p class="body" style="color: var(--vert-nuit); margin: 0 0 30px; font-size: 16px;">Une vie plus grande, c'est le podcast qui t'invite à créer une vie alignée à qui tu es vraiment. Une vie où tu ne te contentes plus d'avancer en pilote automatique, où tu oses faire des choix qui te ressemblent, où tu construis pierre après pierre une vie qui te met vraiment en joie.</p>
+          <a href="/podcast" class="btn">En savoir plus</a>
         </div>
       </div>
     </div>
   </section>
 
-  <footer style="background: var(--taupe); color: var(--creme);">
+  <footer class="fond-vert">
     <div style="max-width: 1240px; margin: 0 auto; padding: 80px 40px 40px;">
-      <div style="display: grid; grid-template-columns: 1.15fr 0.8fr 0.8fr 1fr; align-items: end; gap: 48px; padding-bottom: 56px; border-bottom: 1px solid rgba(240,236,226,0.22);">
+      <div style="display: grid; grid-template-columns: 1.15fr 0.8fr 0.8fr 1fr; align-items: end; gap: 48px; padding-bottom: 56px; border-bottom: 2px solid var(--sauge);">
         <div>
           <img src="assets/logo-angelique.webp" alt="Angélique Robin Coaching" style="height: 180px; width: auto; display: block; margin-top: -43px; margin-bottom: 20px; filter: brightness(0) invert(1); opacity: 0.9;">
-          <p class="body" style="color: rgba(240,236,226,0.8); max-width: 24rem;">Change ton monde intérieur pour transformer ta vie.</p>
+          <p class="body" style="color: var(--blanc); max-width: 24rem;">Change ton monde intérieur pour transformer ta vie.</p>
         </div>
         <div style="display: flex; flex-direction: column; gap: 14px;">
-          <div class="kicker" style="color: rgba(240,236,226,0.65); margin-bottom: 6px;">Naviguer</div>
-          <a class="navlink body" style="font-size: 15px; color: rgba(240,236,226,0.9);" href="/qui-suis-je">Qui suis-je&#8202;?</a>
-          <a class="navlink body" style="font-size: 15px; color: rgba(240,236,226,0.9);" href="/lotus">Lotus</a>
-          <a class="navlink body" style="font-size: 15px; color: rgba(240,236,226,0.9);" href="/coaching-impact">Coaching d'impact</a>
+          <div class="kicker" style="color: var(--aura); margin-bottom: 6px;">Naviguer</div>
+          <a class="navlink body" style="font-size: 15px; color: var(--blanc);" href="/qui-suis-je">Qui suis-je&#8202;?</a>
+          <a class="navlink body" style="font-size: 15px; color: var(--blanc);" href="/lotus">Lotus</a>
+          <a class="navlink body" style="font-size: 15px; color: var(--blanc);" href="/coaching-impact">Coaching d'impact</a>
         </div>
         <div style="display: flex; flex-direction: column; gap: 14px;">
-          <div class="kicker" style="color: rgba(240,236,226,0.65); margin-bottom: 6px;">Aller plus loin</div>
-          <a class="navlink body" style="font-size: 15px; color: rgba(240,236,226,0.9);" href="/lotus#reservation">Diagnostic clarté</a>
-          <a class="navlink body" style="font-size: 15px; color: rgba(240,236,226,0.9);" href="/podcast">Podcast</a>
-          <a class="navlink body" style="font-size: 15px; color: rgba(240,236,226,0.9);" href="/blog">Blog</a>
-          <a class="navlink body" style="font-size: 15px; color: rgba(240,236,226,0.9);" href="/quatre-saisons">Quiz</a>
-          <a class="navlink body" style="font-size: 15px; color: rgba(240,236,226,0.9);" href="/contact">Contact</a>
+          <div class="kicker" style="color: var(--aura); margin-bottom: 6px;">Aller plus loin</div>
+          <a class="navlink body" style="font-size: 15px; color: var(--blanc);" href="/lotus#reservation">Diagnostic clarté</a>
+          <a class="navlink body" style="font-size: 15px; color: var(--blanc);" href="/podcast">Podcast</a>
+          <a class="navlink body" style="font-size: 15px; color: var(--blanc);" href="/blog">Blog</a>
+          <a class="navlink body" style="font-size: 15px; color: var(--blanc);" href="/quatre-saisons">Quiz</a>
+          <a class="navlink body" style="font-size: 15px; color: var(--blanc);" href="/contact">Contact</a>
         </div>
         <div style="display: flex; flex-direction: column; gap: 14px;">
-          <div class="kicker" style="color: rgba(240,236,226,0.65); margin-bottom: 6px;">Le Café du Dimanche</div>
-          <p class="body" style="font-size: 14px; color: rgba(240,236,226,0.75); margin: 0;">Chaque dimanche, une réflexion pour cheminer.</p>
+          <div class="kicker" style="color: var(--aura); margin-bottom: 6px;">Le Café du Dimanche</div>
+          <p class="body" style="font-size: 14px; color: var(--blanc); margin: 0;">Chaque dimanche, une réflexion pour cheminer.</p>
           <form id="newsletter-form" style="display: flex; gap: 8px;">
-            <input id="newsletter-email" name="email" type="email" required placeholder="Ton e-mail" style="flex: 1; min-width: 0; font-family: var(--font-corps); font-size: 14px; padding: 10px 12px; background: transparent; border: 1px solid rgba(240,236,226,0.35); color: var(--creme); border-radius: 0; outline: none;">
-            <button type="submit" class="btn" style="background: var(--creme); color: var(--taupe); border: 0; padding: 10px 16px; font-size: 12px; cursor: pointer; flex: 0 0 auto;">OK</button>
+            <input id="newsletter-email" name="email" type="email" required placeholder="Ton e-mail" style="flex: 1; min-width: 0; font-family: var(--font-corps); font-size: 14px; padding: 10px 12px; background: transparent; border: none; border-bottom: 2px solid var(--blanc); color: var(--blanc); border-radius: 0; outline: none;">
+            <button type="submit" class="btn btn--clair" style="min-height: 0; padding: 10px 16px; font-size: 12px; cursor: pointer; flex: 0 0 auto;">OK</button>
           </form>
-          <p id="newsletter-success" class="body" style="display: none; font-size: 13px; color: rgba(240,236,226,0.9); margin: 0;">Merci, c'est fait&nbsp;!</p>
-          <p id="newsletter-error" class="body" style="display: none; font-size: 13px; color: #e8a894; margin: 0;"></p>
+          <p id="newsletter-success" class="body" style="display: none; font-size: 13px; color: var(--blanc); margin: 0;">Merci, c'est fait&nbsp;!</p>
+          <p id="newsletter-error" class="body" style="display: none; font-size: 13px; color: var(--jaune); margin: 0;"></p>
         </div>
       </div>
       <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 30px; flex-wrap: wrap; gap: 16px;">
-        <p class="body" style="font-size: 13px; color: rgba(240,236,226,0.6); margin: 0;">© 2026 Angélique Robin &middot; une vie plus grande &middot; Dernière mise à jour : août 2026</p>
+        <p class="body" style="font-size: 13px; color: var(--blanc); margin: 0;">© 2026 Angélique Robin &middot; une vie plus grande &middot; Dernière mise à jour : août 2026</p>
         <div style="display: flex; gap: 20px; flex-wrap: wrap;">
-          <a class="navlink body" href="/mentions-legales" style="font-size: 13px; color: rgba(240,236,226,0.6);">Mentions légales</a>
-          <a class="navlink body" href="/cgv" style="font-size: 13px; color: rgba(240,236,226,0.6);">CGV</a>
-          <a class="navlink body" href="/cgu" style="font-size: 13px; color: rgba(240,236,226,0.6);">CGU</a>
+          <a class="navlink body" href="/mentions-legales" style="font-size: 13px; color: var(--blanc);">Mentions légales</a>
+          <a class="navlink body" href="/cgv" style="font-size: 13px; color: var(--blanc);">CGV</a>
+          <a class="navlink body" href="/cgu" style="font-size: 13px; color: var(--blanc);">CGU</a>
         </div>
       </div>
     </div>

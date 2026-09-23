@@ -59,8 +59,9 @@
   <link rel="stylesheet" href="_ds/une-vie-plus-grande-design-system-55308bf9-9a1f-4dd5-ae4e-b82edcf37e06/tokens/spacing.css">
   <link rel="stylesheet" href="_ds/une-vie-plus-grande-design-system-55308bf9-9a1f-4dd5-ae4e-b82edcf37e06/styles.css">
   <link rel="stylesheet" href="responsive.css">
+  <link rel="stylesheet" href="charte.css">
   <style>
-    body { margin: 0; background: var(--creme); color: #4A382E; font-family: var(--font-corps); --ink: #4A382E; --taupe: #9A907C; -webkit-font-smoothing: antialiased; }
+    body { margin: 0; background: var(--creme); color: var(--vert-nuit); font-family: var(--font-corps);  -webkit-font-smoothing: antialiased; }
     a { color: inherit; text-decoration: none; } a:hover { opacity: 0.75; }
     * { box-sizing: border-box; }
     .kicker { font-family: var(--font-corps); font-size: 13px; letter-spacing: 0.32em; text-transform: uppercase; }
@@ -69,28 +70,28 @@
     .navlink { transition: opacity .25s ease; } .navlink:hover { opacity: 0.55; }
     .btn { display: inline-flex; align-items: center; justify-content: center; font-family: var(--font-corps); font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; padding: 16px 30px; transition: opacity .25s ease; cursor: pointer; } .btn:hover { opacity: 0.82; }
     .has-dd { position: relative; padding: 6px 0; }
-    .dd-menu { position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background: var(--creme); border: 1px solid rgba(74,56,46,0.14); padding: 8px 0; min-width: 210px; display: none; flex-direction: column; box-shadow: 0 14px 34px rgba(74,56,46,0.14); z-index: 60; }
+    .dd-menu { position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background: var(--creme); border: 1px solid var(--sauge); padding: 8px 0; min-width: 210px; display: none; flex-direction: column; z-index: 60; }
     .has-dd:hover .dd-menu { display: flex; }
     .dd-menu a { padding: 11px 24px; font-size: 14px; letter-spacing: 0.08em; white-space: nowrap; color: var(--ink); }
     .dd-menu a:hover { opacity: 0.5; }
-    #newsletter-email::placeholder { color: rgba(240,236,226,0.5); }
-    .pilier { padding: 40px 36px; background: var(--creme); border: 1px solid rgba(74,56,46,0.14); }
-    .pilier .num { font-family: var(--font-titre); font-style: italic; font-size: 36px; color: var(--taupe); line-height: 1; margin-bottom: 18px; }
+    #newsletter-email::placeholder { color: rgba(255,255,255,0.6); }
+    .pilier { padding: 40px 36px; background: var(--creme); border: 1px solid var(--sauge); }
+    .pilier .num { font-family: var(--font-titre); font-style: italic; font-size: 36px; color: var(--vert-profond); line-height: 1; margin-bottom: 18px; }
     .pilier h3 { font-family: var(--font-titre); font-weight: 400; font-size: 26px; margin: 0 0 14px; color: var(--ink); }
-    .pilier p { font-family: var(--font-corps); font-size: 15.5px; line-height: 1.7; margin: 0; color: rgba(74,56,46,0.82); }
+    .pilier p { font-family: var(--font-corps); font-size: 15px; line-height: 1.7; margin: 0; color: var(--vert-profond); }
     .piliers-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 1000px; margin: 0 auto; }
     @media (max-width: 720px) { .piliers-grid { grid-template-columns: 1fr; } }
     .field { display: flex; flex-direction: column; gap: 8px; }
-    .field label { font-family: var(--font-corps); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(74,56,46,0.65); }
-    .field input { font-family: var(--font-corps); font-size: 16px; padding: 14px 16px; background: var(--creme); border: 1px solid rgba(74,56,46,0.22); color: var(--ink); border-radius: 0; outline: none; transition: border-color .2s ease; }
-    .field input:focus { border-color: var(--taupe); }
+    .field label { font-family: var(--font-corps); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--vert-profond); }
+    .field input { font-family: var(--font-corps); font-size: 16px; padding: 14px 4px; background: transparent; border: none; border-bottom: 2px solid var(--vert-nuit); color: var(--ink); border-radius: 0; outline: none; transition: border-color .2s ease; }
+    .field input:focus { border-color: var(--vert-profond); }
     .row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
     @media (max-width: 640px) { .row-2 { grid-template-columns: 1fr; } }
   </style>
 </helmet>
 
 <div>
-  <header style="position: sticky; top: 0; z-index: 50; background: rgba(240,236,226,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(74,56,46,0.12);">
+  <header style="position: sticky; top: 0; z-index: 50; background: rgba(240,236,226,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--sauge);">
     <nav style="max-width: 1240px; margin: 0 auto; padding: 18px 40px; display: flex; align-items: center; justify-content: space-between; gap: 32px;">
       <a href="/" style="flex: 0 0 auto;"><img src="assets/logo-angelique.webp" alt="Angélique Robin Coaching" style="height: 136px; width: auto; display: block;"></a>
       <div style="display: flex; align-items: center; gap: 26px; flex-wrap: wrap; justify-content: flex-end;">
@@ -109,20 +110,20 @@
   </header>
 
   <section style="max-width: 960px; margin: 0 auto; padding: 96px 40px 40px; text-align: center;">
-    <div class="kicker" style="color: rgba(74,56,46,0.55); margin-bottom: 30px;">Colette IA &middot; bêta</div>
+    <div class="kicker label" style=" margin-bottom: 30px;">Colette IA &middot; bêta</div>
     <h1 class="lead" style="font-size: clamp(34px, 4.2vw, 56px); margin: 0 0 32px; color: var(--ink);">Deviens visible sans passer ta vie <em>à créer du contenu.</em></h1>
   </section>
 
   <section style="max-width: 760px; margin: 0 auto; padding: 40px 40px 96px;">
-    <p class="body" style="color: rgba(74,56,46,0.82); margin: 0 0 22px;">Colette IA est un <strong>accompagnement de groupe en bêta</strong> pour les coachs, thérapeutes et accompagnant·es qui ont besoin de communiquer régulièrement, sans troquer leur métier contre celui de créateur·ice de contenu.</p>
-    <p class="body" style="color: rgba(74,56,46,0.82); margin: 0 0 22px;">Parce que quand on accompagne des humains, on n'a pas envie de passer la moitié de sa semaine derrière un ordinateur à chercher quoi publier.</p>
-    <p class="body" style="color: rgba(74,56,46,0.82); margin: 0 0 22px;">Et pourtant, disparaître des réseaux sociaux peut vite coûter cher : moins de visibilité, moins de demandes, moins de clients.</p>
-    <p class="body" style="color: rgba(74,56,46,0.82); margin: 0;">Colette IA t'aide à construire un <strong>système simple</strong> pour gagner un temps précieux, rester présent·e en ligne et créer ta communication facilement avec l'IA.</p>
+    <p class="body" style="color: var(--vert-profond); margin: 0 0 22px;">Colette IA est un <strong>accompagnement de groupe en bêta</strong> pour les coachs, thérapeutes et accompagnant·es qui ont besoin de communiquer régulièrement, sans troquer leur métier contre celui de créateur·ice de contenu.</p>
+    <p class="body" style="color: var(--vert-profond); margin: 0 0 22px;">Parce que quand on accompagne des humains, on n'a pas envie de passer la moitié de sa semaine derrière un ordinateur à chercher quoi publier.</p>
+    <p class="body" style="color: var(--vert-profond); margin: 0 0 22px;">Et pourtant, disparaître des réseaux sociaux peut vite coûter cher : moins de visibilité, moins de demandes, moins de clients.</p>
+    <p class="body" style="color: var(--vert-profond); margin: 0;">Colette IA t'aide à construire un <strong>système simple</strong> pour gagner un temps précieux, rester présent·e en ligne et créer ta communication facilement avec l'IA.</p>
   </section>
 
   <section style="max-width: 1240px; margin: 0 auto; padding: 0 40px 112px;">
     <div style="text-align: center; max-width: 40rem; margin: 0 auto 60px;">
-      <div class="kicker" style="color: rgba(74,56,46,0.55); margin-bottom: 24px;">Le programme</div>
+      <div class="kicker label" style=" margin-bottom: 24px;">Le programme</div>
       <h2 class="lead" style="font-size: clamp(26px, 3vw, 40px); margin: 0; color: var(--ink);">Quatre <em>piliers</em></h2>
     </div>
     <div class="piliers-grid">
@@ -134,18 +135,18 @@
   </section>
 
   <section style="max-width: 1240px; margin: 0 auto; padding: 0 40px 112px;">
-    <div style="background: var(--rose-chair); padding: 80px 60px;">
+    <div class="fond-sauge" style="padding: 80px 60px;">
       <div style="max-width: 700px; margin: 0 auto;">
-        <p class="body" style="color: rgba(74,56,46,0.82); margin: 0 0 22px;">Avant de lancer la première promo, je vais <strong>écouter les besoins</strong> des personnes intéressées afin de construire un accompagnement vraiment utile, concret et adapté au quotidien des coachs et thérapeutes.</p>
-        <p class="body" style="color: rgba(74,56,46,0.82); margin: 0 0 22px;">La première promotion sera proposée <strong>à petit prix</strong>, en échange de retours sincères pour améliorer le programme.</p>
-        <p class="body" style="color: rgba(74,56,46,0.82); margin: 0;">Si tu veux être parmi les premières personnes informées, inscris-toi à la liste d'attente. C'est là que j'annoncerai les détails, les dates et les conditions de la bêta en priorité.</p>
+        <p class="body" style="color: var(--vert-nuit); margin: 0 0 22px;">Avant de lancer la première promo, je vais <strong>écouter les besoins</strong> des personnes intéressées afin de construire un accompagnement vraiment utile, concret et adapté au quotidien des coachs et thérapeutes.</p>
+        <p class="body" style="color: var(--vert-nuit); margin: 0 0 22px;">La première promotion sera proposée <strong>à petit prix</strong>, en échange de retours sincères pour améliorer le programme.</p>
+        <p class="body" style="color: var(--vert-nuit); margin: 0;">Si tu veux être parmi les premières personnes informées, inscris-toi à la liste d'attente. C'est là que j'annoncerai les détails, les dates et les conditions de la bêta en priorité.</p>
       </div>
     </div>
   </section>
 
   <section id="contact" style="max-width: 1080px; margin: 0 auto; padding: 40px 40px 120px;">
     <div style="text-align: center; max-width: 40rem; margin: 0 auto 48px;">
-      <div class="kicker" style="color: rgba(74,56,46,0.55); margin-bottom: 24px;">Liste d'attente</div>
+      <div class="kicker label" style=" margin-bottom: 24px;">Liste d'attente</div>
       <h2 class="lead" style="font-size: clamp(26px, 3vw, 40px); margin: 0; color: var(--ink);">Rejoins la <em>bêta</em></h2>
     </div>
     <form id="colette-waitlist-form" style="display: flex; flex-direction: column; gap: 22px; max-width: 560px; margin: 0 auto;">
@@ -164,57 +165,57 @@
         <input id="colette-email" name="email" type="email" required>
       </div>
       <div style="padding-top: 8px; text-align: center;">
-        <button type="submit" class="btn" style="background: var(--taupe); color: var(--creme); border: 0; cursor: pointer;">Mets-moi sur la liste</button>
+        <button type="submit" class="btn" style="cursor: pointer;">Mets-moi sur la liste</button>
       </div>
     </form>
-    <p class="body" style="text-align: center; font-size: 14px; color: rgba(74,56,46,0.6); margin: 18px 0 0; max-width: 560px; margin-left: auto; margin-right: auto;">Rejoins la liste d'attente du programme Colette IA. Tu recevras les informations d'ouverture par email et tu pourras te désinscrire à tout moment.</p>
+    <p class="body" style="text-align: center; font-size: 14px; color: var(--vert-profond); margin: 18px 0 0; max-width: 560px; margin-left: auto; margin-right: auto;">Rejoins la liste d'attente du programme Colette IA. Tu recevras les informations d'ouverture par email et tu pourras te désinscrire à tout moment.</p>
     <div id="colette-waitlist-success" style="display: none; text-align: center; padding: 40px 20px;">
       <p class="lead" style="font-size: clamp(20px, 2.2vw, 26px); margin: 0 0 12px; color: var(--ink);">Merci, tu es sur la <em>liste</em>&nbsp;!</p>
-      <p class="body" style="color: rgba(74,56,46,0.75); margin: 0;">Tu recevras les informations d'ouverture par email.</p>
+      <p class="body" style="color: var(--vert-profond); margin: 0;">Tu recevras les informations d'ouverture par email.</p>
     </div>
     <div id="colette-waitlist-error" style="display: none; text-align: center; padding: 20px 0 0; max-width: 560px; margin: 0 auto;">
-      <p class="body" style="color: #b3452c; margin: 0;">Une erreur est survenue. Réessaie, ou écris-moi directement à <a href="mailto:contact@angeliquerobin.com" style="border-bottom: 1px solid rgba(179,69,44,0.4);">contact@angeliquerobin.com</a></p>
+      <p class="body" style="color: var(--vert-nuit); margin: 0;">Une erreur est survenue. Réessaie, ou écris-moi directement à <a href="mailto:contact@angeliquerobin.com" style="border-bottom: 1px solid var(--vert-nuit);">contact@angeliquerobin.com</a></p>
     </div>
   </section>
 
-  <footer style="background: var(--taupe); color: var(--creme);">
+  <footer class="fond-vert">
     <div style="max-width: 1240px; margin: 0 auto; padding: 80px 40px 40px;">
-      <div style="display: grid; grid-template-columns: 1.15fr 0.8fr 0.8fr 1fr; align-items: end; gap: 48px; padding-bottom: 56px; border-bottom: 1px solid rgba(240,236,226,0.22);">
+      <div style="display: grid; grid-template-columns: 1.15fr 0.8fr 0.8fr 1fr; align-items: end; gap: 48px; padding-bottom: 56px; border-bottom: 2px solid var(--sauge);">
         <div>
           <img src="assets/logo-angelique.webp" alt="Angélique Robin Coaching" style="height: 180px; width: auto; display: block; margin-top: -43px; margin-bottom: 20px; filter: brightness(0) invert(1); opacity: 0.9;">
-          <p class="body" style="color: rgba(240,236,226,0.8); max-width: 24rem;">Change ton monde intérieur pour transformer ta vie.</p>
+          <p class="body" style="color: var(--blanc); max-width: 24rem;">Change ton monde intérieur pour transformer ta vie.</p>
         </div>
         <div style="display: flex; flex-direction: column; gap: 14px;">
-          <div class="kicker" style="color: rgba(240,236,226,0.65); margin-bottom: 6px;">Naviguer</div>
-          <a class="navlink body" style="font-size: 15px; color: rgba(240,236,226,0.9);" href="/qui-suis-je">Qui suis-je&#8202;?</a>
-          <a class="navlink body" style="font-size: 15px; color: rgba(240,236,226,0.9);" href="/lotus">Lotus</a>
-          <a class="navlink body" style="font-size: 15px; color: rgba(240,236,226,0.9);" href="/coaching-impact">Coaching d'impact</a>
+          <div class="kicker" style="color: var(--aura); margin-bottom: 6px;">Naviguer</div>
+          <a class="navlink body" style="font-size: 15px; color: var(--blanc);" href="/qui-suis-je">Qui suis-je&#8202;?</a>
+          <a class="navlink body" style="font-size: 15px; color: var(--blanc);" href="/lotus">Lotus</a>
+          <a class="navlink body" style="font-size: 15px; color: var(--blanc);" href="/coaching-impact">Coaching d'impact</a>
         </div>
         <div style="display: flex; flex-direction: column; gap: 14px;">
-          <div class="kicker" style="color: rgba(240,236,226,0.65); margin-bottom: 6px;">Aller plus loin</div>
-          <a class="navlink body" style="font-size: 15px; color: rgba(240,236,226,0.9);" href="/lotus#reservation">Diagnostic clarté</a>
-          <a class="navlink body" style="font-size: 15px; color: rgba(240,236,226,0.9);" href="/podcast">Podcast</a>
-          <a class="navlink body" style="font-size: 15px; color: rgba(240,236,226,0.9);" href="/blog">Blog</a>
-          <a class="navlink body" style="font-size: 15px; color: rgba(240,236,226,0.9);" href="/quatre-saisons">Quiz</a>
-          <a class="navlink body" style="font-size: 15px; color: rgba(240,236,226,0.9);" href="/contact">Contact</a>
+          <div class="kicker" style="color: var(--aura); margin-bottom: 6px;">Aller plus loin</div>
+          <a class="navlink body" style="font-size: 15px; color: var(--blanc);" href="/lotus#reservation">Diagnostic clarté</a>
+          <a class="navlink body" style="font-size: 15px; color: var(--blanc);" href="/podcast">Podcast</a>
+          <a class="navlink body" style="font-size: 15px; color: var(--blanc);" href="/blog">Blog</a>
+          <a class="navlink body" style="font-size: 15px; color: var(--blanc);" href="/quatre-saisons">Quiz</a>
+          <a class="navlink body" style="font-size: 15px; color: var(--blanc);" href="/contact">Contact</a>
         </div>
         <div style="display: flex; flex-direction: column; gap: 14px;">
-          <div class="kicker" style="color: rgba(240,236,226,0.65); margin-bottom: 6px;">Le Café du Dimanche</div>
-          <p class="body" style="font-size: 14px; color: rgba(240,236,226,0.75); margin: 0;">Chaque dimanche, une réflexion pour cheminer.</p>
+          <div class="kicker" style="color: var(--aura); margin-bottom: 6px;">Le Café du Dimanche</div>
+          <p class="body" style="font-size: 14px; color: var(--blanc); margin: 0;">Chaque dimanche, une réflexion pour cheminer.</p>
           <form id="newsletter-form" style="display: flex; gap: 8px;">
-            <input id="newsletter-email" name="email" type="email" required placeholder="Ton e-mail" style="flex: 1; min-width: 0; font-family: var(--font-corps); font-size: 14px; padding: 10px 12px; background: transparent; border: 1px solid rgba(240,236,226,0.35); color: var(--creme); border-radius: 0; outline: none;">
-            <button type="submit" class="btn" style="background: var(--creme); color: var(--taupe); border: 0; padding: 10px 16px; font-size: 12px; cursor: pointer; flex: 0 0 auto;">OK</button>
+            <input id="newsletter-email" name="email" type="email" required placeholder="Ton e-mail" style="flex: 1; min-width: 0; font-family: var(--font-corps); font-size: 14px; padding: 10px 12px; background: transparent; border: none; border-bottom: 2px solid var(--blanc); color: var(--blanc); border-radius: 0; outline: none;">
+            <button type="submit" class="btn btn--clair" style="min-height: 0; padding: 10px 16px; font-size: 12px; cursor: pointer; flex: 0 0 auto;">OK</button>
           </form>
-          <p id="newsletter-success" class="body" style="display: none; font-size: 13px; color: rgba(240,236,226,0.9); margin: 0;">Merci, c'est fait&nbsp;!</p>
-          <p id="newsletter-error" class="body" style="display: none; font-size: 13px; color: #e8a894; margin: 0;"></p>
+          <p id="newsletter-success" class="body" style="display: none; font-size: 13px; color: var(--blanc); margin: 0;">Merci, c'est fait&nbsp;!</p>
+          <p id="newsletter-error" class="body" style="display: none; font-size: 13px; color: var(--jaune); margin: 0;"></p>
         </div>
       </div>
       <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 30px; flex-wrap: wrap; gap: 16px;">
-        <p class="body" style="font-size: 13px; color: rgba(240,236,226,0.6); margin: 0;">© 2026 Angélique Robin &middot; une vie plus grande &middot; Dernière mise à jour : août 2026</p>
+        <p class="body" style="font-size: 13px; color: var(--blanc); margin: 0;">© 2026 Angélique Robin &middot; une vie plus grande &middot; Dernière mise à jour : août 2026</p>
         <div style="display: flex; gap: 20px; flex-wrap: wrap;">
-          <a class="navlink body" href="/mentions-legales" style="font-size: 13px; color: rgba(240,236,226,0.6);">Mentions légales</a>
-          <a class="navlink body" href="/cgv" style="font-size: 13px; color: rgba(240,236,226,0.6);">CGV</a>
-          <a class="navlink body" href="/cgu" style="font-size: 13px; color: rgba(240,236,226,0.6);">CGU</a>
+          <a class="navlink body" href="/mentions-legales" style="font-size: 13px; color: var(--blanc);">Mentions légales</a>
+          <a class="navlink body" href="/cgv" style="font-size: 13px; color: var(--blanc);">CGV</a>
+          <a class="navlink body" href="/cgu" style="font-size: 13px; color: var(--blanc);">CGU</a>
         </div>
       </div>
     </div>

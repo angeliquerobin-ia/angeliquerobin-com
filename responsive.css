@@ -50,7 +50,7 @@
     margin-left: auto;
     cursor: pointer;
   }
-  .mobile-menu-btn span { display: block; width: 100%; height: 2px; background: var(--ink, #4A382E); }
+  .mobile-menu-btn span { display: block; width: 100%; height: 2px; background: var(--ink, #212B13); }
 
   .nav-links {
     display: none !important;
@@ -62,16 +62,15 @@
     align-items: stretch !important;
     width: auto !important;
     background: var(--creme) !important;
-    border-top: 1px solid rgba(74,56,46,0.12);
-    box-shadow: 0 14px 34px rgba(74,56,46,0.14);
+    border-top: 1px solid rgba(33,43,19,0.12);
     padding: 16px 24px 24px !important;
     gap: 2px !important;
   }
   .nav-links.nav-open { display: flex !important; }
-  .nav-links a.navlink { width: 100%; padding: 12px 0 !important; font-size: 15px !important; border-bottom: 1px solid rgba(74,56,46,0.08); }
+  .nav-links a.navlink { width: 100%; padding: 12px 0 !important; font-size: 15px !important; border-bottom: 1px solid rgba(33,43,19,0.08); }
 
   .has-dd { width: 100%; padding: 0 !important; }
-  .has-dd > a.navlink { border-bottom: 1px solid rgba(74,56,46,0.08); }
+  .has-dd > a.navlink { border-bottom: 1px solid rgba(33,43,19,0.08); }
   .has-dd .dd-menu {
     position: static !important;
     transform: none !important;
@@ -84,7 +83,7 @@
     min-width: 0 !important;
   }
   .has-dd.open .dd-menu { display: flex !important; }
-  .has-dd .dd-menu a { padding: 10px 0 !important; font-size: 14px !important; border-bottom: 1px solid rgba(74,56,46,0.08); }
+  .has-dd .dd-menu a { padding: 10px 0 !important; font-size: 14px !important; border-bottom: 1px solid rgba(33,43,19,0.08); }
 
   /* Padding sections */
   section {
