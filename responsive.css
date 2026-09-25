@@ -117,7 +117,7 @@
   .testi { padding: 32px 24px !important; }
 
   /* Grands nombres (prix) */
-  .lead[style*="clamp(72px"] { font-size: 64px !important; }
+  .lead[style*="clamp(48px"] { font-size: 48px !important; }
 
   /* Étape (page Lotus) */
   .etape { grid-template-columns: 1fr !important; gap: 12px !important; padding: 32px 0 !important; }
@@ -144,7 +144,7 @@
   header nav a img { height: 78px !important; }
 
   /* Un peu plus de compacité sur titres immenses */
-  h1.lead { font-size: clamp(32px, 9vw, 46px) !important; }
+  h1.lead { font-size: clamp(28px, 8vw, 38px) !important; }
 
   /* Boutons plus étroits pour éviter overflow */
   .btn { padding: 14px 22px !important; font-size: 12px !important; letter-spacing: 0.14em !important; }
