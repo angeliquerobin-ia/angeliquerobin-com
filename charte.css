@@ -48,10 +48,11 @@ h1.lead, h2.lead { font-weight: 600; }
   box-shadow: none !important;
   letter-spacing: 0.22em;
   min-height: 56px;
-  background: var(--vert-profond);
-  color: var(--jaune);
+  background: var(--aura);
+  color: var(--vert-nuit);
 }
-.btn--clair { background: var(--jaune); color: var(--vert-nuit); }
+/* Sur vert profond et sur indigo, le bouton passe en jaune beurre */
+.btn--clair, :is(.fond-vert, .fond-aura) .btn { background: var(--jaune) !important; color: var(--vert-nuit) !important; }
 
 /* Fonds de section */
 .fond-vert { background: var(--vert-profond); color: var(--blanc); }
@@ -76,3 +77,8 @@ h1.lead, h2.lead { font-weight: 600; }
 /* Sur sauge et sur aura, tout le texte courant passe en vert nuit (lisibilité) */
 :is(.fond-sauge, .fond-aura) :is(p, li, h1, h2, h3, blockquote, figcaption, .num, .lead) { color: var(--vert-nuit) !important; }
 :is(.fond-sauge, .fond-aura) :is(p, li) a:not(.btn) { color: inherit; }
+
+/* Sur vert profond : titres jaune beurre, texte blanc, labels indigo */
+.fond-vert :is(h1, h2, h3, .lead, .num) { color: var(--jaune) !important; }
+.fond-vert :is(p, li, blockquote, figcaption) { color: var(--blanc) !important; }
+.fond-vert :is(p, li) a:not(.btn) { color: var(--jaune); }
