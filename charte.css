@@ -91,3 +91,4 @@ h1.lead, h2.lead { font-weight: 600; }
 
 /* Pied de page : titres de colonnes en jaune beurre */
 footer .kicker { color: var(--jaune) !important; }
+.fond-vert li::before { color: var(--jaune) !important; }
