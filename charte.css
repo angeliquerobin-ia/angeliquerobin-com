@@ -60,7 +60,7 @@ h1.lead, h2.lead { font-weight: 600; }
 .fond-sauge { background: var(--sauge); color: var(--vert-nuit); }
 .fond-sauge .label { color: var(--jaune); --filet: var(--jaune); }
 .fond-aura { background: var(--aura); color: var(--vert-nuit); }
-.fond-aura .label { --filet: var(--vert-profond); }
+.fond-aura .label { color: var(--jaune); --filet: var(--jaune); }
 
 /* Carte posée sur un fond coloré : crème, bandeau supérieur de 10 px */
 .carte { background: var(--creme); border-top: 10px solid var(--bandeau, var(--vert-profond)); }
