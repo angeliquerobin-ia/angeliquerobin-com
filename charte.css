@@ -82,3 +82,6 @@ h1.lead, h2.lead { font-weight: 600; }
 .fond-vert :is(h1, h2, h3, .lead, .num) { color: var(--jaune) !important; }
 .fond-vert :is(p, li, blockquote, figcaption) { color: var(--blanc) !important; }
 .fond-vert :is(p, li) a:not(.btn) { color: var(--jaune); }
+
+/* Sur indigo aura : titres en jaune beurre (choix d'Angélique), sauf dans les cartes crème */
+.fond-aura :is(h1, h2, h3, .lead):not(.carte *) { color: var(--jaune) !important; }
