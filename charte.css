@@ -58,7 +58,7 @@ h1.lead, h2.lead { font-weight: 600; }
 .fond-vert { background: var(--vert-profond); color: var(--blanc); }
 .fond-vert .label { color: var(--jaune); --filet: var(--jaune); }
 .fond-sauge { background: var(--sauge); color: var(--vert-nuit); }
-.fond-sauge .label { color: var(--vert-nuit); --filet: var(--vert-nuit); }
+.fond-sauge .label { color: var(--jaune); --filet: var(--jaune); }
 .fond-aura { background: var(--aura); color: var(--vert-nuit); }
 .fond-aura .label { --filet: var(--vert-profond); }
 
@@ -75,8 +75,13 @@ h1.lead, h2.lead { font-weight: 600; }
 .body:not(footer *) { font-size: 15px !important; line-height: 1.85; }
 
 /* Sur sauge et sur aura, tout le texte courant passe en vert nuit (lisibilité) */
-:is(.fond-sauge, .fond-aura) :is(p, li, h1, h2, h3, blockquote, figcaption, .num, .lead) { color: var(--vert-nuit) !important; }
-:is(.fond-sauge, .fond-aura) :is(p, li) a:not(.btn) { color: inherit; }
+.fond-aura :is(p, li, h1, h2, h3, blockquote, figcaption, .num, .lead) { color: var(--vert-nuit) !important; }
+/* Sur sauge : titres et chiffres jaune beurre, texte blanc (choix d'Angélique) */
+.fond-sauge :is(h1, h2, h3, .lead, .num) { color: var(--jaune) !important; }
+.fond-sauge :is(p, li, blockquote, figcaption) { color: var(--blanc) !important; }
+.fond-sauge li::before { color: var(--jaune) !important; }
+.fond-aura :is(p, li) a:not(.btn) { color: inherit; }
+.fond-sauge :is(p, li) a:not(.btn) { color: var(--jaune); }
 
 /* Sur vert profond : titres jaune beurre, texte blanc, labels indigo */
 .fond-vert :is(h1, h2, h3, .lead, .num) { color: var(--jaune) !important; }
