@@ -56,7 +56,7 @@ h1.lead, h2.lead { font-weight: 600; }
 
 /* Fonds de section */
 .fond-vert { background: var(--vert-profond); color: var(--blanc); }
-.fond-vert .label { color: var(--aura); }
+.fond-vert .label { color: var(--jaune); --filet: var(--jaune); }
 .fond-sauge { background: var(--sauge); color: var(--vert-nuit); }
 .fond-sauge .label { color: var(--vert-nuit); --filet: var(--vert-nuit); }
 .fond-aura { background: var(--aura); color: var(--vert-nuit); }
