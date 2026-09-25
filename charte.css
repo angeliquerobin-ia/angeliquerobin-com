@@ -88,3 +88,6 @@ h1.lead, h2.lead { font-weight: 600; }
 
 /* Sur vert profond : boutons en indigo aura (choix d'Angélique) */
 .fond-vert .btn:not(footer *) { background: var(--aura) !important; color: var(--vert-nuit) !important; }
+
+/* Pied de page : titres de colonnes en jaune beurre */
+footer .kicker { color: var(--jaune) !important; }
