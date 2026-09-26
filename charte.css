@@ -49,7 +49,7 @@ h1.lead, h2.lead { font-weight: 600; }
   letter-spacing: 0.22em;
   min-height: 56px;
   background: var(--aura);
-  color: var(--vert-nuit);
+  color: var(--jaune);
 }
 /* Sur vert profond et sur indigo, le bouton passe en jaune beurre */
 .btn--clair, :is(.fond-vert, .fond-aura) .btn { background: var(--jaune) !important; color: var(--vert-nuit) !important; }
@@ -91,8 +91,8 @@ h1.lead, h2.lead { font-weight: 600; }
 /* Sur indigo aura : titres en jaune beurre (choix d'Angélique), sauf dans les cartes crème */
 .fond-aura :is(h1, h2, h3, .lead):not(.carte *) { color: var(--jaune) !important; }
 
-/* Sur vert profond : boutons en indigo aura (choix d'Angélique) */
-.fond-vert .btn:not(footer *) { background: var(--aura) !important; color: var(--vert-nuit) !important; }
+/* Sur vert profond : boutons en indigo aura, texte jaune (choix d'Angélique) */
+.fond-vert .btn:not(footer *) { background: var(--aura) !important; color: var(--jaune) !important; }
 
 /* Pied de page : titres de colonnes en jaune beurre */
 footer .kicker { color: var(--jaune) !important; }
