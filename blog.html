@@ -93,9 +93,9 @@
     .dd-menu a:hover { opacity: 0.5; }
     #newsletter-email::placeholder { color: rgba(255,255,255,0.6); }
     .blog-filters { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
-    .filter-btn { font-family: var(--font-corps); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; padding: 11px 22px; border: 1px solid var(--aura); background: var(--aura); color: var(--vert-nuit); cursor: pointer; transition: all .2s ease; }
-    .filter-btn:hover { border-color: var(--vert-nuit); }
-    .filter-btn.active { background: var(--aura); border-color: var(--vert-nuit); color: var(--vert-nuit); font-weight: 700; }
+    .filter-btn { font-family: var(--font-corps); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; padding: 12px 22px; border: none; border-radius: 0; background: var(--aura); color: var(--jaune); font-weight: 700; cursor: pointer; transition: background .2s ease, opacity .2s ease; }
+    .filter-btn:hover { opacity: 0.85; }
+    .filter-btn.active { background: var(--sauge); color: var(--jaune); }
     .blog-card { display: flex; flex-direction: column; height: 100%; }
     .blog-card:hover .blog-card-img img { opacity: 0.85; transform: scale(1.03); }
     .blog-card-img { position: relative; aspect-ratio: 4/3; width: 100%; overflow: hidden; background: var(--sauge); }
