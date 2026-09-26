@@ -50,9 +50,10 @@ h1.lead, h2.lead { font-weight: 600; }
   min-height: 56px;
   background: var(--aura);
   color: var(--jaune);
+  font-weight: 700;
 }
 /* Sur vert profond et sur indigo, le bouton passe en jaune beurre */
-.btn--clair, :is(.fond-vert, .fond-aura) .btn { background: var(--jaune) !important; color: var(--vert-nuit) !important; }
+.btn--clair, :is(.fond-vert, .fond-aura) .btn { background: var(--jaune) !important; color: var(--vert-nuit) !important; font-weight: 400 !important; }
 
 /* Fonds de section */
 .fond-vert { background: var(--vert-profond); color: var(--blanc); }
@@ -92,7 +93,7 @@ h1.lead, h2.lead { font-weight: 600; }
 .fond-aura :is(h1, h2, h3, .lead):not(.carte *) { color: var(--jaune) !important; }
 
 /* Sur vert profond : boutons en indigo aura, texte jaune (choix d'Angélique) */
-.fond-vert .btn:not(footer *) { background: var(--aura) !important; color: var(--jaune) !important; }
+.fond-vert .btn:not(footer *) { background: var(--aura) !important; color: var(--jaune) !important; font-weight: 700 !important; }
 
 /* Pied de page : titres de colonnes en jaune beurre */
 footer .kicker { color: var(--jaune) !important; }
