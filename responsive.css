@@ -11,7 +11,7 @@
   header nav { padding: 14px 24px !important; gap: 20px !important; }
   header nav > div { gap: 16px 18px !important; }
   header nav a.navlink { font-size: 13px !important; letter-spacing: 0.06em !important; }
-  header nav a img { height: 58px !important; }
+  header nav a img { height: 48px !important; }
 
   /* Réduit les grands paddings de section */
   section { padding-left: 28px !important; padding-right: 28px !important; }
