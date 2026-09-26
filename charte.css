@@ -66,8 +66,8 @@ h1.lead, h2.lead { font-weight: 600; }
 /* Carte posée sur un fond coloré : crème, bandeau supérieur de 10 px */
 .carte { background: var(--creme); border-top: 10px solid var(--bandeau, var(--vert-profond)); }
 
-/* Témoignage : un filet sauge, pas un encart */
-.temoignage { background: none !important; border-left: 4px solid var(--sauge); padding: 0 0 0 28px !important; }
+/* Témoignage : un filet jaune, pas un encart */
+.temoignage { background: none !important; border-left: 4px solid var(--jaune); padding: 0 0 0 28px !important; }
 
 /* Champ de formulaire : une ligne, pas une boîte */
 .champ { border: none !important; border-bottom: 2px solid currentColor !important; border-radius: 0; background: none; }
