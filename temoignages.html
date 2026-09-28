@@ -78,6 +78,7 @@
     .testi blockquote { font-family: var(--font-corps); font-size: 15px; line-height: 1.85; margin: 0 0 32px; color: var(--vert-nuit); flex: 1 0 auto; }
     .testi figcaption { font-family: var(--font-corps); font-weight: 700; font-size: 15px; }
     .testi.fond-aura figcaption { color: var(--jaune) !important; }
+    .testi figcaption::before { content: ""; display: inline-block; width: 44px; height: 4px; background: var(--jaune); vertical-align: middle; margin-right: 16px; }
     .testi.pleine { grid-column: 1 / -1; }
     .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
     .grid-2 > .testi { height: 100%; }
