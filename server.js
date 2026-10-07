@@ -184,46 +184,42 @@ function resolveCleanUrl(pathname) {
   return { file: `${pathname}.html` };
 }
 
-const LEGACY_REDIRECTS = {
-  '/coaching-spirituel': '/lotus',
-  '/coaching-de-vie': '/lotus',
-  '/coaching-innerpreneur': '/coaching-impact',
-  '/quisuisje': '/qui-suis-je',
-  '/Suis-moi': '/contact',
-  '/feed': '/blog',
-};
+// Anciennes adresses supprimées volontairement (ancien WordPress, pages .html) :
+// on répond 410 pour que Google les retire de son index, sans renvoi.
+const GONE_PATHS = new Set([
+  '/coaching-spirituel',
+  '/coaching-de-vie',
+  '/coaching-innerpreneur',
+  '/quisuisje',
+  '/Suis-moi',
+  '/feed',
+]);
 
-// Toutes les règles sont appliquées d'un coup pour renvoyer une seule 301
-// vers l'URL finale (Google déconseille les chaînes de redirections).
+function isGoneUrl(pathname) {
+  const p = pathname !== '/' && pathname.endsWith('/') ? pathname.slice(0, -1) : pathname;
+  return GONE_PATHS.has(p) || /\.(html|php)$/.test(p);
+}
+
+// Trailing slash → strip it (/lotus/ → /lotus) : même page, simple normalisation.
 function redirectOldUrl(pathname) {
-  let target = pathname;
+  if (pathname !== '/' && pathname.endsWith('/')) return pathname.slice(0, -1);
+  return null;
+}
 
-  // Trailing slash → strip it (/lotus/ → /lotus)
-  if (target !== '/' && target.endsWith('/')) target = target.slice(0, -1);
-
-  if (target === '/accueil.html' || target === '/index.html') {
-    // /accueil.html or /index.html → /
-    target = '/';
-  } else {
-    // /blog-slug.html → /blog/slug
-    const blogMatch = target.match(/^\/blog-([a-z0-9-]+)\.html$/);
-    // /page.html → /page (only for known HTML pages, not assets)
-    const htmlMatch = target.match(/^\/([a-z0-9-]+)\.html$/);
-    if (blogMatch) target = `/blog/${blogMatch[1]}`;
-    else if (htmlMatch) target = `/${htmlMatch[1]}`;
-  }
-
-  // Old WordPress URLs → closest equivalent (also after .html stripping)
-  if (LEGACY_REDIRECTS[target]) target = LEGACY_REDIRECTS[target];
-
-  return target !== pathname ? target : null;
+function sendGone(res) {
+  res.writeHead(410, { 'Content-Type': 'text/plain; charset=utf-8' });
+  res.end('410 Page supprimée');
 }
 
 function serveStatic(req, res, pathname) {
+  if (isGoneUrl(pathname)) {
+    sendGone(res);
+    return;
+  }
+
   const redirect = redirectOldUrl(pathname);
   if (redirect) {
     const qs = req.url.includes('?') ? req.url.slice(req.url.indexOf('?')) : '';
-    const hash = '';
     res.writeHead(301, { Location: redirect + qs });
     res.end();
     return;
@@ -268,6 +264,10 @@ function serveStatic(req, res, pathname) {
 const server = http.createServer((req, res) => {
   const host = (req.headers.host || '').split(':')[0];
   if (host === 'angeliquerobin.com') {
+    if (isGoneUrl(req.url.split('?')[0])) {
+      sendGone(res);
+      return;
+    }
     // Applique aussi les redirections de chemin ici, pour un seul saut vers l'URL finale.
     const q = req.url.indexOf('?');
     const pathname = q === -1 ? req.url : req.url.slice(0, q);
