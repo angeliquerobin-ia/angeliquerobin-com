@@ -193,27 +193,30 @@ const LEGACY_REDIRECTS = {
   '/feed': '/blog',
 };
 
+// Toutes les règles sont appliquées d'un coup pour renvoyer une seule 301
+// vers l'URL finale (Google déconseille les chaînes de redirections).
 function redirectOldUrl(pathname) {
+  let target = pathname;
+
   // Trailing slash → strip it (/lotus/ → /lotus)
-  if (pathname !== '/' && pathname.endsWith('/')) {
-    return pathname.slice(0, -1);
+  if (target !== '/' && target.endsWith('/')) target = target.slice(0, -1);
+
+  if (target === '/accueil.html' || target === '/index.html') {
+    // /accueil.html or /index.html → /
+    target = '/';
+  } else {
+    // /blog-slug.html → /blog/slug
+    const blogMatch = target.match(/^\/blog-([a-z0-9-]+)\.html$/);
+    // /page.html → /page (only for known HTML pages, not assets)
+    const htmlMatch = target.match(/^\/([a-z0-9-]+)\.html$/);
+    if (blogMatch) target = `/blog/${blogMatch[1]}`;
+    else if (htmlMatch) target = `/${htmlMatch[1]}`;
   }
 
-  // /accueil.html or /index.html → /
-  if (pathname === '/accueil.html' || pathname === '/index.html') return '/';
+  // Old WordPress URLs → closest equivalent (also after .html stripping)
+  if (LEGACY_REDIRECTS[target]) target = LEGACY_REDIRECTS[target];
 
-  // Old WordPress URLs → closest equivalent
-  if (LEGACY_REDIRECTS[pathname]) return LEGACY_REDIRECTS[pathname];
-
-  // /blog-slug.html → /blog/slug
-  const blogMatch = pathname.match(/^\/blog-([a-z0-9-]+)\.html$/);
-  if (blogMatch) return `/blog/${blogMatch[1]}`;
-
-  // /page.html → /page (only for known HTML pages, not assets)
-  const htmlMatch = pathname.match(/^\/([a-z0-9-]+)\.html$/);
-  if (htmlMatch) return `/${htmlMatch[1]}`;
-
-  return null;
+  return target !== pathname ? target : null;
 }
 
 function serveStatic(req, res, pathname) {
@@ -265,7 +268,12 @@ function serveStatic(req, res, pathname) {
 const server = http.createServer((req, res) => {
   const host = (req.headers.host || '').split(':')[0];
   if (host === 'angeliquerobin.com') {
-    res.writeHead(301, { Location: `https://www.angeliquerobin.com${req.url}` });
+    // Applique aussi les redirections de chemin ici, pour un seul saut vers l'URL finale.
+    const q = req.url.indexOf('?');
+    const pathname = q === -1 ? req.url : req.url.slice(0, q);
+    const qs = q === -1 ? '' : req.url.slice(q);
+    const finalPath = redirectOldUrl(pathname) || pathname;
+    res.writeHead(301, { Location: `https://www.angeliquerobin.com${finalPath}${qs}` });
     res.end();
     return;
   }
