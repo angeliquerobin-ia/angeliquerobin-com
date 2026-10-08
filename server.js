@@ -200,9 +200,17 @@ function isGoneUrl(pathname) {
   return GONE_PATHS.has(p) || /\.(html|php)$/.test(p);
 }
 
-// Trailing slash → strip it (/lotus/ → /lotus) : même page, simple normalisation.
+// Pages renommées : l'ancienne adresse renvoie en 301 vers la nouvelle.
+const MOVED_PATHS = {
+  '/lotus': '/lotus-coaching-personnel',
+};
+
+// Trailing slash → strip it (/lotus-coaching-personnel/ → /lotus-coaching-personnel),
+// puis renvoi des pages renommées, en un seul saut.
 function redirectOldUrl(pathname) {
-  if (pathname !== '/' && pathname.endsWith('/')) return pathname.slice(0, -1);
+  const stripped = pathname !== '/' && pathname.endsWith('/') ? pathname.slice(0, -1) : pathname;
+  if (MOVED_PATHS[stripped]) return MOVED_PATHS[stripped];
+  if (stripped !== pathname) return stripped;
   return null;
 }
 
