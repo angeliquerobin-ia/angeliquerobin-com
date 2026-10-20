@@ -44,9 +44,15 @@
   </url>
   <url>
     <loc>https://www.angeliquerobin.com/blog</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.angeliquerobin.com/blog/guerir-traumas-therapeute</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.angeliquerobin.com/blog/suivre-son-coeur</loc>
