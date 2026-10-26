@@ -153,7 +153,9 @@ async function handleSubscribe(req, res) {
     return;
   }
 
-  const lumailPayload = { email, tags: [tag] };
+  // Inscription directe, sans mail de confirmation : depuis le 15 septembre 2026,
+  // Lumail n'envoie plus les mails du double opt-in. À retirer quand Lumail aura corrigé.
+  const lumailPayload = { email, tags: [tag], skipDoubleOptIn: true };
   if (name) lumailPayload.name = name;
 
   try {
