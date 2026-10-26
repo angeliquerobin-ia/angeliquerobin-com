@@ -205,6 +205,7 @@ function isGoneUrl(pathname) {
 // Pages renommées : l'ancienne adresse renvoie en 301 vers la nouvelle.
 const MOVED_PATHS = {
   '/lotus': '/lotus-coaching-personnel',
+  '/colette-ia': '/cleobule-academie',
   // accueil.html est servie à la racine : /accueil serait un doublon de /.
   '/accueil': '/',
 };
