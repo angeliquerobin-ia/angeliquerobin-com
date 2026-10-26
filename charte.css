@@ -98,3 +98,19 @@ h1.lead, h2.lead { font-weight: 600; }
 /* Pied de page : titres de colonnes en jaune beurre */
 footer .kicker { color: var(--jaune) !important; }
 .fond-vert li::before { color: var(--jaune) !important; }
+
+/* Sommaire du haut : bandeau sauge, liens en Playfair jaune beurre */
+header:has(> nav) { background: var(--sauge) !important; backdrop-filter: none !important; -webkit-backdrop-filter: none !important; border-bottom: none !important; }
+header:has(> nav) a.navlink,
+header:has(> nav) .dd-menu a { font-family: var(--titre) !important; color: var(--jaune) !important; letter-spacing: 0.02em !important; }
+header:has(> nav) a.navlink { font-size: 18px !important; }
+header:has(> nav) .dd-menu { background: var(--sauge) !important; border: none !important; }
+header:has(> nav) .dd-menu a { font-size: 17px !important; }
+header:has(> nav) .mobile-menu-btn span { background: var(--jaune) !important; }
+@media (max-width: 1024px) {
+  header:has(> nav) a.navlink { font-size: 16px !important; }
+}
+@media (max-width: 768px) {
+  header:has(> nav) .nav-links { background: var(--sauge) !important; border-top: none !important; }
+  header:has(> nav) .nav-links a.navlink { font-size: 19px !important; }
+}
