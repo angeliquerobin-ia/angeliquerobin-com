@@ -17,9 +17,17 @@
 <script src="cookie-consent.js" defer></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Lotus Traversée · Angélique Robin</title>
+<title>Lotus Traversée, coaching individuel en 8 séances · Angélique Robin</title>
+<meta name="description" content="Lotus Traversée, un accompagnement individuel de deux mois pour les entrepreneur·es conscient·es qui traversent une crise existentielle ou une perte de sens : comprendre ce qui change, retrouver tes repères et te remettre en route, à ton rythme.">
 <meta name="author" content="Angélique Robin">
-<meta name="robots" content="noindex">
+<link rel="canonical" href="https://www.angeliquerobin.com/lotus-traversee">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Angélique Robin">
+<meta property="og:title" content="Lotus Traversée, coaching individuel en 8 séances · Angélique Robin">
+<meta property="og:description" content="Lotus Traversée, un accompagnement individuel de deux mois pour les entrepreneur·es conscient·es qui traversent une crise existentielle ou une perte de sens : comprendre ce qui change, retrouver tes repères et te remettre en route, à ton rythme.">
+<meta property="og:url" content="https://www.angeliquerobin.com/lotus-traversee">
+<meta property="og:image" content="https://www.angeliquerobin.com/assets/og-lotus-2026.jpg">
 <link rel="icon" type="image/png" href="/assets/favicon-lotus.png?v=20261007">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=20261007">
 <link rel="stylesheet" href="_ds/une-vie-plus-grande-design-system-55308bf9-9a1f-4dd5-ae4e-b82edcf37e06/tokens/fonts.css">
@@ -28,7 +36,7 @@
 <link rel="stylesheet" href="_ds/une-vie-plus-grande-design-system-55308bf9-9a1f-4dd5-ae4e-b82edcf37e06/tokens/spacing.css">
 <link rel="stylesheet" href="_ds/une-vie-plus-grande-design-system-55308bf9-9a1f-4dd5-ae4e-b82edcf37e06/styles.css">
 <link rel="stylesheet" href="responsive.css?v=20260926">
-  <link rel="stylesheet" href="charte.css?v=20261026b">
+  <link rel="stylesheet" href="charte.css?v=20261026d">
 <script src="mobile-nav.js?v=2" defer></script>
 <script src="lumail-forms.js" defer></script>
 <script src="image-slot.js"></script>
@@ -84,15 +92,44 @@
   .faq summary::after { content: "+"; position: absolute; right: 0; top: 0; color: var(--vert-profond); }
   .faq[open] summary::after { content: "–"; }
   .faq p { font-family: var(--font-corps); font-size: 15px; line-height: 1.75; color: var(--vert-profond); margin: 16px 0 0; }
+
+  /* Pages de vente : héro botanique (univers des Ateliers) */
+  .hero-bota { max-width: 1240px; margin: 0 auto; padding: 48px 40px 0; }
+  .hero-bota .cadre { background: var(--vert-profond); padding: 96px 64px; min-height: 540px; display: flex; align-items: center; }
+  .hero-bota .cadre.botanique { background: var(--vert-profond) url(assets/fond-botanique.webp) right center / cover no-repeat; }
+  .hero-bota .txt { max-width: 720px; }
+  .hero-bota .botanique .txt { max-width: 560px; }
+  .hero-bota h1 { font-size: 52px; line-height: 1.15; margin: 28px 0 26px; }
+  .hero-bota .mention { font-size: 13px !important; letter-spacing: 0.04em; margin: 22px 0 0; }
+  .btn-pf { font-family: var(--titre) !important; text-transform: none !important; letter-spacing: 0.01em !important; font-size: 21px !important; font-weight: 600 !important; padding: 16px 32px !important; }
+  .h2v { font-size: clamp(28px, 2.8vw, 38px); margin: 0; }
+  .benef-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 36px 56px; }
+  .benef { border-left: 4px solid var(--sauge); padding: 2px 0 2px 24px; }
+  .benef h3 { font-family: var(--titre); font-weight: 600; font-size: 22px; line-height: 1.3; margin: 0 0 10px; }
+  .benef p { margin: 0; }
+  .fond-aura .benef, .fond-sauge .benef { border-color: var(--jaune); }
+  .infos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 16px; }
+  .info { background: var(--creme); padding: 24px 22px; }
+  .info .lbl { font-size: 12px !important; letter-spacing: 0.22em; text-transform: uppercase; margin: 0 0 12px; }
+  .info .val { font-family: var(--titre) !important; font-size: 22px !important; line-height: 1.3; margin: 0; }
+  :is(.fond-sauge, .fond-aura) .info .val { color: var(--vert-nuit) !important; }
+  :is(.fond-sauge, .fond-aura) .info .lbl { color: var(--vert-profond) !important; }
+  @media (max-width: 820px) {
+    .hero-bota { padding: 24px 16px 0; }
+    .hero-bota .cadre { padding: 56px 28px; min-height: 0; }
+    .hero-bota .cadre.botanique { background-size: 175% auto; background-position: 75% bottom; padding-bottom: 300px; }
+    .hero-bota h1 { font-size: 38px; }
+    .benef-grid { grid-template-columns: 1fr; }
+  }
 </style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Service",
   "serviceType": "Coaching de vie",
-  "name": "Lotus éclosion",
-  "description": "Lotus éclosion, coaching individuel en 8 séances pour faire éclore ton projet : revenir à ce qui compte vraiment pour toi, débloquer ce qui te retient et avancer avec un plan concret.",
-  "url": "https://www.angeliquerobin.com/lotus-coaching-personnel",
+  "name": "Lotus Traversée",
+  "description": "Accompagnement individuel en 8 séances sur 2 mois pour les entrepreneur·es conscient·es qui traversent une crise existentielle ou une perte de sens.",
+  "url": "https://www.angeliquerobin.com/lotus-traversee",
   "provider": {
     "@type": "Person",
     "name": "Angélique Robin",
@@ -103,7 +140,7 @@
     "@type": "Offer",
     "price": "660",
     "priceCurrency": "EUR",
-    "url": "https://www.angeliquerobin.com/lotus-coaching-personnel",
+    "url": "https://www.angeliquerobin.com/lotus-traversee",
     "availability": "https://schema.org/InStock"
   }
 }
@@ -134,10 +171,256 @@
   </nav>
 </header>
 
-<!-- Page en préparation : contenu à écrire avec Angélique. -->
-<section style="max-width: 1080px; margin: 0 auto; padding: 96px 40px 120px; text-align: center;">
-  <h1 class="lead" style="font-size: 52px; margin: 0;">Lotus Traversée</h1>
+<style>
+  .lt-large > .in { max-width: 1040px; margin: 0 auto; padding: 112px 40px; }
+  .lt-court { max-width: 1240px; margin: 0 auto; padding: 0 40px; }
+  .lt-court > .in { max-width: 1040px; margin: 0 auto; padding: 88px 60px; }
+  .lt-beige { max-width: 1040px; margin: 0 auto; padding: 112px 40px; }
+  .lt-court + .lt-large, .lt-large + .lt-court { margin-top: 112px; }
+  .lt-tete { max-width: 44rem; margin: 0 auto 56px; text-align: center; }
+  .lt-tete h2 { margin-bottom: 30px !important; }
+  .lt-phrase { font-size: clamp(22px, 2.4vw, 28px) !important; line-height: 1.45; margin: 72px auto 0; max-width: 40rem; text-align: center; }
+  .benef-grid .benef.plein { grid-column: 1 / -1; }
+  .benef-grid.benef-3 { grid-template-columns: repeat(3, 1fr); gap: 36px 40px; }
+  .lt-faq h3 { font-family: var(--titre); font-weight: 600; font-size: 22px; line-height: 1.3; margin: 0 0 10px; }
+  .lt-faq > div { padding: 28px 0; border-bottom: 2px solid var(--sauge); }
+  .lt-faq > div:first-child { border-top: 2px solid var(--sauge); }
+  .lt-faq p { margin: 0; }
+  .fond-aura .lt-faq > div { border-color: var(--jaune); }
+  .lt-prix { text-align: center; }
+  .lt-court + .lt-court { margin-top: 112px; }
+  .lt-infos { display: grid; grid-template-columns: 1.3fr 1fr; gap: 56px; align-items: center; }
+  .lt-liste { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 14px 24px; }
+  .lt-liste dt { font-family: var(--titre); font-weight: 600; font-size: 19px; color: var(--jaune); margin: 0; }
+  .lt-liste dd { margin: 0; font-size: 15px; color: var(--vert-nuit); }
+  @media (max-width: 820px) { .lt-infos, .lt-liste { grid-template-columns: 1fr; } .lt-liste { gap: 4px; } .lt-liste dd { margin-bottom: 12px; } }
+  .lt-pourqui { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; }
+  .lt-pourqui ul { margin: 0; padding: 0 0 0 20px; }
+  .lt-pourqui li { margin: 0 0 14px; }
+  @media (max-width: 820px) {
+    .lt-large > .in, .lt-beige { padding: 80px 24px; }
+    .lt-court { padding: 0 16px; }
+    .lt-court > .in { padding: 56px 28px; }
+    .benef-grid.benef-3, .lt-pourqui { grid-template-columns: 1fr; }
+  }
+</style>
+
+<section class="hero-bota">
+  <div class="cadre" style="background: none; padding-left: 0; padding-right: 0; min-height: 0; justify-content: center; padding-top: 16px; padding-bottom: 16px;">
+    <div class="txt" style="max-width: 760px; margin: 0 auto; text-align: center;">
+      <h1 class="lead">Lotus Traversée</h1>
+      <p class="lead" style="font-size: clamp(24px, 2.6vw, 32px); line-height: 1.3; margin: 0 0 28px;">Quand ce qui te portait <em>ne t’anime plus</em></p>
+      <p class="body" style="margin: 0 auto 36px; max-width: 40rem;">Un accompagnement individuel de deux mois pour les entrepreneur·es conscient·es qui traversent une crise existentielle, une perte de sens dans leur vie ou dans leur activité. Pour comprendre ce qui change en toi, retrouver tes repères et te remettre en route, à ton rythme.</p>
+      <a href="#reservation" class="btn btn-pf" style="background: var(--sauge) !important; color: var(--jaune) !important;">Mon diagnostic offert</a>
+    </div>
+  </div>
 </section>
+
+<section class="fond-aura lt-large" style="margin-top: 48px;">
+  <div class="in">
+    <div class="lt-tete">
+      <h2 class="lead h2v">Ton automne <em>et ton hiver intérieur</em></h2>
+      <p class="body" style="margin: 0;">Si je te parle de perte de sens, tu penses certainement&nbsp;:</p>
+    </div>
+    <div class="benef-grid">
+      <div class="benef"><h3>Au brouillard</h3><p class="body">Après un bouleversement, tes pensées tournent en rond et tout te semble flou. <em>«&nbsp;Je ne sais plus où j’en suis.&nbsp;»</em></p></div>
+      <div class="benef"><h3>Au «&nbsp;à quoi bon&nbsp;»</h3><p class="body">Tu ne vois plus le sens de ce que tu as construit, dans ta vie, ton travail ou ton entreprise.</p></div>
+      <div class="benef"><h3>Au miroir qui ne te renvoie plus la même personne</h3><p class="body">Tes valeurs ont bougé avec ce que tu as traversé. Tu ne sais plus vraiment qui tu es.</p></div>
+      <div class="benef"><h3>Au futur qui n’est plus très clair</h3><p class="body">Tu as du mal à te projeter, et chaque pas te demande un effort.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="lt-beige">
+  <div style="max-width: 44rem; margin: 0 auto; text-align: center;">
+    <h2 class="lead h2v" style="margin-bottom: 32px;">Pourquoi certain·es retrouvent leur élan, <em>et d’autres restent dans le brouillard&#8202;?</em></h2>
+    <p class="body" style="margin: 0 0 22px;">Pourquoi certaines personnes traversent cette saison rapidement et en ressortent avec une nouvelle direction, alors que d’autres tournent en rond pendant des mois&#8202;? Et pourquoi certain·es auront beau lire, écouter des podcasts et enchaîner les contenus de développement personnel, sans parvenir à transformer leurs réflexions en décisions&#8202;?</p>
+    <p class="body" style="margin: 0 0 22px;">Ce n’est pas une question d’âge, même si tu te dis parfois qu’il est trop tard pour recommencer.<br>Ni une question de volonté. Et encore moins de savoir tout de suite quel sera ton prochain projet.</p>
+  </div>
+  <p class="lead lt-phrase"><strong style="font-weight: 800;">La vraie approche, c’est de</strong> <em>prendre cette période difficile à bras le corps au lieu de chercher à la mettre sous le tapis.</em></p>
+</section>
+
+<section class="lt-court">
+  <div class="in fond-sauge">
+    <div class="lt-tete">
+      <h3 class="lead" style="font-size: clamp(24px, 2.4vw, 30px); line-height: 1.35; margin: 0;">Parce que pour retrouver ce qui compte, tu dois faire face à&nbsp;:</h3>
+    </div>
+    <div class="benef-grid">
+      <div class="benef"><h3>Ce qui se termine</h3><p class="body">Encore plus si tu ne l’as pas choisi.</p></div>
+      <div class="benef"><h3>Le poids de ce qui s’est passé</h3><p class="body">Les regrets, les situations du passé, les émotions qui restent là comme un sac trop lourd.</p></div>
+      <div class="benef"><h3>Les jugements sur toi</h3><p class="body">Et les comparaisons avec celles et ceux qui semblent avancer pendant que tu as l’impression de stagner.</p></div>
+      <div class="benef"><h3>La solitude</h3><p class="body">Quand tes proches ne comprennent pas ce que tu vis, ou que tu n’oses pas leur en parler.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="lt-beige">
+  <div>
+  <div class="lt-tete">
+    <h2 class="lead h2v">Imagine si tu pouvais <em>retrouver tes repères</em></h2>
+    <p class="body" style="margin: 0;">Sans te forcer à rebondir tout de suite, et sans devoir déjà savoir ce que tu veux faire ensuite.</p>
+  </div>
+  <div class="benef-grid benef-3">
+    <div class="benef"><h3>Savoir à nouveau qui tu es</h3><p class="body">En redécouvrant tes valeurs telles qu’elles sont aujourd’hui, tu sais à nouveau ce qui compte pour toi.</p></div>
+    <div class="benef"><h3>Regarder ce qui s’est passé avec plus de paix</h3><p class="body">Les charges et les regrets s’allègent, et tu cesses de porter ton histoire comme un poids.</p></div>
+    <div class="benef"><h3>Voir une suite se dessiner</h3><p class="body">Des possibilités s’ouvrent, sans que tu aies besoin d’une grande vision définitive. C’est ce qui rallume le feu intérieur.</p></div>
+  </div>
+  <p class="lead lt-phrase">Il est temps de traverser ton hiver, <em>accompagné·e.</em></p>
+  </div>
+</section>
+
+<section class="fond-aura lt-large">
+  <div class="in">
+    <div class="lt-tete">
+      <div class="label" style="margin-bottom: 22px;">Ma façon de travailler</div>
+      <h2 class="lead h2v">Ma méthode, <em>en six étapes</em></h2>
+      <p class="body" style="margin: 0;">Le programme n’est pas figé&nbsp;: ces six mouvements guident nos huit séances, et je les adapte à ce que tu traverses.</p>
+    </div>
+    <div class="benef-grid">
+      <div class="benef"><h3>01. Comprendre ce que tu vis</h3><p class="body">On observe ta situation actuelle, on prend de la hauteur et je t’aide à voir ce que tu n’avais pas encore vu.</p></div>
+      <div class="benef"><h3>02. Te reconnecter à toi-même</h3><p class="body">On explore tes valeurs, tes besoins et tes envies d’aujourd’hui, on met au jour ta nouvelle identité avec des exercices d’introspection guidée.</p></div>
+      <div class="benef"><h3>03. Retrouver ta boussole</h3><p class="body">Je t’emmène en visualisation pour découvrir une vision vivide à laquelle tu peux te raccrocher.</p></div>
+      <div class="benef"><h3>04. On allège les charges</h3><p class="body">C’est une partie importante de l’accompagnement. On allège les charges qui te pèsent, on lève les blocages, les croyances qui te limitent, et on desserre les jugements qui t’enferment pour retrouver une lecture plus juste de ton parcours. Et te remettre en route, libre de ce qui te pesait.</p></div>
+      <div class="benef"><h3>05. Ouvrir des possibilités</h3><p class="body">Tu mets en lumière tes ressources, tes capacités et tes appuis, et on ouvre plusieurs pistes pour la suite de ton parcours.</p></div>
+      <div class="benef"><h3>06. Donner forme à la suite</h3><p class="body">Tu poses quelques petites actions pour te remettre en mouvement, à ton rythme. Puis on écrit les prochaines étapes à suivre les prochains mois. Tu repars avec un plan clair à suivre.</p></div>
+    </div>
+    <p class="lead lt-phrase">Et dans toutes ces étapes, les réponses ne viennent jamais de moi. <em>C’est toi qui trouves ta vision, tes ressources, ton plan, grâce aux questions que je te pose.</em></p>
+  </div>
+</section>
+
+<section class="lt-beige">
+  <div>
+  <div class="lt-tete">
+    <h2 class="lead h2v">Ce qu’on t’a <em>souvent conseillé</em></h2>
+    <p class="body" style="margin: 0;">Si tu tournes encore en rond, c’est peut-être parce que tu as fait ce qu’on t’a toujours dit de faire&nbsp;:</p>
+  </div>
+  <div class="benef-grid benef-3">
+    <div class="benef"><h3>Rebondir vite</h3><p class="body">Résultat&nbsp;: tu cherches à reconstruire avant d’avoir compris ce que tu traverses. Et ce que tu mets sous le tapis dirige une partie de ta vie, pour refaire surface un jour, car ça n’a pas été guéri.</p></div>
+    <div class="benef"><h3>Trouver ton nouveau projet</h3><p class="body">Résultat&nbsp;: tu te mets la pression de savoir, alors que tu ne sais plus ce que tu veux. Tu finis par y passer beaucoup trop de mois voire d’années car tu prends des chemins de secours qui s’avèrent être des culs-de-sac.</p></div>
+    <div class="benef"><h3>Prendre sur toi, seul·e</h3><p class="body">Résultat&nbsp;: tu restes avec tes questions, sans personne pour t’aider à y voir clair. Accepter de marcher en étant accompagné·e change totalement la manière dont tu vois les choses, et dont tu vis ta situation.</p></div>
+  </div>
+  <p class="lead lt-phrase">Lotus Traversée t’offre un espace pour questionner, prendre de la hauteur et avancer à ton rythme, <em>même si tu n’as pas encore de nouveau projet.</em></p>
+  </div>
+</section>
+
+<section class="lt-court">
+  <div class="in fond-sauge">
+    <div class="lt-tete">
+      <div class="label" style="margin-bottom: 22px;">Ce qui change</div>
+      <h2 class="lead h2v">Ce que Lotus Traversée <em>t’apporte</em></h2>
+    </div>
+    <div class="benef-grid">
+      <div class="benef"><h3>Un espace pour déposer ce que tu vis</h3><p class="body">Tu es enfin écouté·e, sans jugement, par quelqu’un qui comprend ce passage et t’accompagne avec douceur et clarté.</p></div>
+      <div class="benef"><h3>Un apaisement profond</h3><p class="body">Les charges, les regrets et les émotions lourdes s’allègent. Tu regardes ce qui s’est passé avec plus de recul et de paix.</p></div>
+      <div class="benef"><h3>Des perceptions rééquilibrées</h3><p class="body">Tu vois les choses autrement, y compris ce que tu as vécu, et tu cesses de le porter comme un poids.</p></div>
+      <div class="benef"><h3>Des blocages levés</h3><p class="body">Certaines peurs, comme le sentiment qu’il est trop tard ou que rien ne peut changer, perdent de leur emprise.</p></div>
+      <div class="benef"><h3>Une identité retrouvée</h3><p class="body">En redécouvrant tes valeurs telles qu’elles sont aujourd’hui, tu sais à nouveau qui tu es et ce qui compte pour toi.</p></div>
+      <div class="benef"><h3>Tu apprends à écouter ce que te dit ton corps</h3><p class="body">Si tu as certains symptômes, nous regardons ce qu’ils ont à te raconter, car pour moi ils sont des messagers.</p></div>
+      <div class="benef"><h3>Une reconnexion à ton essence</h3><p class="body">Tu renoues avec ce qui te fait vibrer, avec ta foi si elle fait partie de ta vie, et tu retrouves la magie de la vie dans les petites choses.</p></div>
+      <div class="benef"><h3>Une suite qui se dessine</h3><p class="body">Des possibilités s’ouvrent, sans que tu aies besoin d’une grande vision définitive. C’est ce qui rallume l’élan.</p></div>
+      <div class="benef"><h3>Une remise en mouvement en douceur</h3><p class="body">Grâce à des petites actions adaptées à ton niveau d’énergie, tu prends soin de toi et tu te reconnectes à ce qui te fait du bien.</p></div>
+      <div class="benef"><h3>Des prochains pas choisis</h3><p class="body">Tu repars avec une feuille de route pour les mois qui viennent, ni trop ambitieuse ni trop timide, juste à ta mesure.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="lt-beige" style="max-width: 880px; text-align: center;">
+  <p class="lead" style="font-size: clamp(24px, 2.6vw, 32px); line-height: 1.45; margin: 0;"><em>«&nbsp;Les jugements et les comparaisons s’apaisent. Tu retrouves la liberté d’avancer à ton rythme, sur ton propre chemin. Tu repars avec un regard plus doux sur toi et ta vie.&nbsp;»</em></p>
+</section>
+
+<section class="lt-court">
+  <div class="in fond-aura">
+  <div class="lt-infos">
+    <div>
+      <h2 class="lead h2v" style="margin: 0 0 32px;">Les infos <em>pratiques</em></h2>
+      <dl class="lt-liste">
+        <dt>Durée</dt><dd>2 mois</dd>
+        <dt>Séances</dt><dd>8 séances d’une heure en visio, une par semaine</dd>
+        <dt>Entre les séances</dt><dd>Un suivi sur la plateforme</dd>
+        <dt>Pour toi</dt><dd>Ton espace personnel en ligne</dd>
+      </dl>
+    </div>
+    <div class="lt-prix">
+      <div class="lead" style="font-size: clamp(56px, 5.6vw, 76px); line-height: 1; margin-bottom: 18px;">660&nbsp;€</div>
+      <p class="body" style="margin: 0 0 6px;">En une fois&nbsp;: 660&nbsp;€</p>
+      <p class="body" style="margin: 0 0 32px;">En deux fois&nbsp;: 2&nbsp;×&nbsp;335&nbsp;€</p>
+      <a href="#reservation" class="btn btn-pf">Mon diagnostic offert</a>
+    </div>
+  </div>
+  </div>
+</section>
+
+<section class="lt-beige">
+  <div>
+    <div class="lt-pourqui">
+      <div>
+        <h2 class="lead" style="font-size: clamp(24px, 2.4vw, 30px); line-height: 1.35; margin: 0 0 28px;">Lotus Traversée est <em>fait pour toi</em> si&nbsp;:</h2>
+        <ul class="body">
+          <li>Tu es entrepreneur·e, ou tu l’as été, et ce qui te donnait du sens ne porte plus&nbsp;;</li>
+          <li>Tes anciens repères ne te correspondent plus, et tu questionnes tes choix, ta place, ton travail&nbsp;;</li>
+          <li>Tu sens qu’un changement est nécessaire, sans savoir encore lequel&nbsp;;</li>
+          <li>Tu veux être accompagné·e à propos de la personne que tu es, et pas seulement dans ton activité.</li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="lead" style="font-size: clamp(24px, 2.4vw, 30px); line-height: 1.35; margin: 0 0 28px;">Lotus Traversée <em>n’est pas fait pour toi</em> si&nbsp;:</h2>
+        <ul class="body">
+          <li>Tu traverses une détresse profonde ou une dépression&nbsp;: dans ce cas, un·e professionnel·le de santé est la bonne personne pour t’accompagner. (Un accompagnement conjoint est toutefois possible avec l’accord de ce thérapeute)&nbsp;;</li>
+          <li>Tu cherches uniquement à repositionner ton offre ou ton modèle économique&nbsp;;</li>
+          <li>Tu veux qu’on te dise quoi faire, en une séance.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="lt-court">
+  <div class="in fond-sauge" style="max-width: 880px;">
+  <h2 class="lead h2v" style="margin-bottom: 40px; text-align: center;">Ce qu’en dit <em>Karine</em></h2>
+  <figure class="temoignage" style="margin: 0;">
+    <p class="lead" style="font-size: clamp(22px, 2.2vw, 26px); line-height: 1.4; margin: 0 0 22px;"><em>«&nbsp;Aujourd’hui, j’ai le courage de prendre un nouveau départ en toute confiance.&nbsp;»</em></p>
+    <blockquote class="body" style="margin: 0 0 20px;">Merci à Angélique pour son accompagnement en coaching, à un moment charnière de ma vie où j’avais besoin de retrouver mes priorités et mes besoins. Elle m’a aidée avec patience et bienveillance à faire le bilan sur ma situation et ce que je souhaitais vraiment pour la suite. Aujourd’hui, j’ai le courage de prendre un nouveau départ en toute confiance. Merci beaucoup.</blockquote>
+    <figcaption class="body" style="font-weight: 700;">Karine&nbsp;B.</figcaption>
+  </figure>
+  <p class="body" style="margin: 32px 0 0;"><a href="/temoignages" style="border-bottom: 1px solid currentColor;">Lire tous les témoignages</a></p>
+  </div>
+</section>
+
+<section class="lt-beige">
+  <div style="max-width: 920px; margin: 0 auto; text-align: center;">
+    <h2 class="lead h2v" style="margin-bottom: 30px;">Si tu hésites <em>encore</em></h2>
+    <p class="body" style="margin: 0 auto 22px; max-width: 40rem;">Tu mérites de retrouver ce qui compte pour toi, sans te forcer à rebondir tout de suite.<br>Tu mérites de traverser cette saison sans la porter seul·e.</p>
+    <p class="lead" style="font-size: clamp(22px, 2.4vw, 28px); line-height: 1.45; margin: 40px auto 0; max-width: 40rem;">Demain, est-ce que tu continues à tourner en rond dans tes questions, <em>ou est-ce que tu commences à les traverser, accompagné·e&#8202;?</em></p>
+  </div>
+</section>
+
+<section class="fond-aura lt-large">
+  <div class="in" style="max-width: 880px;">
+  <h2 class="lead h2v" style="margin-bottom: 40px; text-align: center;">Questions <em>fréquentes</em></h2>
+  <div class="lt-faq">
+    <div><h3>Je n’ai pas de nouveau projet en tête, est-ce que c’est pour moi&#8202;?</h3><p class="body">Oui. Lotus Traversée ne te demande pas de savoir où tu vas. On commence par comprendre ce que tu traverses.</p></div>
+    <div><h3>Est-ce que je serai «&nbsp;sorti·e de mon hiver&nbsp;» au bout de deux mois&#8202;?</h3><p class="body">Deux mois ne veulent pas dire que ton hiver doit être fini à la huitième séance. Tu repars avec une autre manière de voir ta situation, beaucoup plus légère, une remise en mouvement et un plan clair pour les prochains mois. Tu peux décider de continuer l’accompagnement si tu as beaucoup de charges à équilibrer, et que tu veux travailler sur certains sujets plus en profondeur.</p></div>
+    <div><h3>Comment se passent les séances&#8202;?</h3><p class="body">Huit séances d’une heure en visio, une par semaine, avec un suivi entre les séances sur ton espace personnel en ligne.</p></div>
+    <div><h3>Est-ce que je peux payer en plusieurs fois&#8202;?</h3><p class="body">Oui, deux fois 335&nbsp;€. J’applique les frais de l’application Go Cardless qui me permet de proposer un paiement automatique en 2 fois, soit 10&nbsp;€ supplémentaires.</p></div>
+  </div>
+  </div>
+</section>
+
+<section id="reservation" class="lt-large">
+  <div class="in" style="text-align: center; padding-bottom: 56px;">
+    <h2 class="lead h2v" style="margin-bottom: 26px;">Commence par <em>un diagnostic offert</em></h2>
+    <p class="body" style="max-width: 38rem; margin: 0 auto;">30 minutes ensemble, sans engagement, pour regarder où tu en es et vérifier si Lotus Traversée correspond à ce que tu recherches.</p>
+  </div>
+  <div style="max-width: 1080px; margin: 0 auto; padding: 0 40px 112px;">
+    <div id="my-cal-inline-diagnostic-clarte" class="cal-embed" style="overflow: auto;"></div>
+  </div>
+</section>
+<script type="text/javascript">
+  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ar); p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+  Cal("init", "diagnostic-clarte", {origin:"https://app.cal.com"});
+  Cal.ns["diagnostic-clarte"]("inline", { elementOrSelector:"#my-cal-inline-diagnostic-clarte", config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"}, calLink: "angelique-robin/diagnostic-clarte" });
+  Cal.ns["diagnostic-clarte"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+</script>
 
 <footer class="fond-vert">
   <div style="max-width: 1240px; margin: 0 auto; padding: 80px 40px 40px;">

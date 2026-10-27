@@ -17,9 +17,17 @@
 <script src="cookie-consent.js" defer></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ateliers Une vie plus grande · Angélique Robin</title>
+<title>Les Ateliers Une vie plus grande · Angélique Robin</title>
+<meta name="description" content="Un atelier d'introspection par mois, en petit groupe sur Zoom, pour mieux te connaître, prendre de la hauteur sur qui tu es et trouver des clés pour dépasser tes défis personnels.">
 <meta name="author" content="Angélique Robin">
-<meta name="robots" content="noindex">
+<link rel="canonical" href="https://www.angeliquerobin.com/ateliers">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Angélique Robin">
+<meta property="og:title" content="Les Ateliers Une vie plus grande · Angélique Robin">
+<meta property="og:description" content="Un atelier d'introspection par mois, en petit groupe sur Zoom, pour mieux te connaître, prendre de la hauteur sur qui tu es et trouver des clés pour dépasser tes défis personnels.">
+<meta property="og:url" content="https://www.angeliquerobin.com/ateliers">
+<meta property="og:image" content="https://www.angeliquerobin.com/assets/fond-botanique.webp">
 <link rel="icon" type="image/png" href="/assets/favicon-lotus.png?v=20261007">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=20261007">
 <link rel="stylesheet" href="_ds/une-vie-plus-grande-design-system-55308bf9-9a1f-4dd5-ae4e-b82edcf37e06/tokens/fonts.css">
@@ -28,7 +36,7 @@
 <link rel="stylesheet" href="_ds/une-vie-plus-grande-design-system-55308bf9-9a1f-4dd5-ae4e-b82edcf37e06/tokens/spacing.css">
 <link rel="stylesheet" href="_ds/une-vie-plus-grande-design-system-55308bf9-9a1f-4dd5-ae4e-b82edcf37e06/styles.css">
 <link rel="stylesheet" href="responsive.css?v=20260926">
-  <link rel="stylesheet" href="charte.css?v=20261026b">
+  <link rel="stylesheet" href="charte.css?v=20261026d">
 <script src="mobile-nav.js?v=2" defer></script>
 <script src="lumail-forms.js" defer></script>
 <script src="image-slot.js"></script>
@@ -84,15 +92,44 @@
   .faq summary::after { content: "+"; position: absolute; right: 0; top: 0; color: var(--vert-profond); }
   .faq[open] summary::after { content: "–"; }
   .faq p { font-family: var(--font-corps); font-size: 15px; line-height: 1.75; color: var(--vert-profond); margin: 16px 0 0; }
+
+  /* Pages de vente : héro botanique (univers des Ateliers) */
+  .hero-bota { max-width: 1240px; margin: 0 auto; padding: 48px 40px 0; }
+  .hero-bota .cadre { background: var(--vert-profond); padding: 96px 64px; min-height: 540px; display: flex; align-items: center; }
+  .hero-bota .cadre.botanique { background: var(--vert-profond) url(assets/fond-botanique.webp) right center / cover no-repeat; }
+  .hero-bota .txt { max-width: 720px; }
+  .hero-bota .botanique .txt { max-width: 560px; }
+  .hero-bota h1 { font-size: 52px; line-height: 1.15; margin: 28px 0 26px; }
+  .hero-bota .mention { font-size: 13px !important; letter-spacing: 0.04em; margin: 22px 0 0; }
+  .btn-pf { font-family: var(--titre) !important; text-transform: none !important; letter-spacing: 0.01em !important; font-size: 21px !important; font-weight: 600 !important; padding: 16px 32px !important; }
+  .h2v { font-size: clamp(28px, 2.8vw, 38px); margin: 0; }
+  .benef-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 36px 56px; }
+  .benef { border-left: 4px solid var(--sauge); padding: 2px 0 2px 24px; }
+  .benef h3 { font-family: var(--titre); font-weight: 600; font-size: 22px; line-height: 1.3; margin: 0 0 10px; }
+  .benef p { margin: 0; }
+  .fond-aura .benef, .fond-sauge .benef { border-color: var(--jaune); }
+  .infos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 16px; }
+  .info { background: var(--creme); padding: 24px 22px; }
+  .info .lbl { font-size: 12px !important; letter-spacing: 0.22em; text-transform: uppercase; margin: 0 0 12px; }
+  .info .val { font-family: var(--titre) !important; font-size: 22px !important; line-height: 1.3; margin: 0; }
+  :is(.fond-sauge, .fond-aura) .info .val { color: var(--vert-nuit) !important; }
+  :is(.fond-sauge, .fond-aura) .info .lbl { color: var(--vert-profond) !important; }
+  @media (max-width: 820px) {
+    .hero-bota { padding: 24px 16px 0; }
+    .hero-bota .cadre { padding: 56px 28px; min-height: 0; }
+    .hero-bota .cadre.botanique { background-size: 175% auto; background-position: 75% bottom; padding-bottom: 300px; }
+    .hero-bota h1 { font-size: 38px; }
+    .benef-grid { grid-template-columns: 1fr; }
+  }
 </style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Service",
-  "serviceType": "Coaching de vie",
-  "name": "Lotus éclosion",
-  "description": "Lotus éclosion, coaching individuel en 8 séances pour faire éclore ton projet : revenir à ce qui compte vraiment pour toi, débloquer ce qui te retient et avancer avec un plan concret.",
-  "url": "https://www.angeliquerobin.com/lotus-coaching-personnel",
+  "serviceType": "Ateliers de coaching en groupe",
+  "name": "Les Ateliers Une vie plus grande",
+  "description": "Un atelier d'introspection par mois, en direct sur Zoom, replay inclus.",
+  "url": "https://www.angeliquerobin.com/ateliers",
   "provider": {
     "@type": "Person",
     "name": "Angélique Robin",
@@ -101,10 +138,9 @@
   "areaServed": "FR",
   "offers": {
     "@type": "Offer",
-    "price": "660",
+    "price": "22",
     "priceCurrency": "EUR",
-    "url": "https://www.angeliquerobin.com/lotus-coaching-personnel",
-    "availability": "https://schema.org/InStock"
+    "url": "https://www.angeliquerobin.com/ateliers"
   }
 }
 </script>
@@ -134,10 +170,101 @@
   </nav>
 </header>
 
-<!-- Page en préparation : contenu à écrire avec Angélique. -->
-<section style="max-width: 1080px; margin: 0 auto; padding: 96px 40px 120px; text-align: center;">
-  <h1 class="lead" style="font-size: 52px; margin: 0;">Ateliers Une vie plus grande</h1>
+<style>
+  .hero-bota .botanique .txt { max-width: 600px; }
+  .duo-btn { display: flex; gap: 12px; flex-wrap: nowrap; }
+  .btn-atelier { font-family: var(--titre) !important; text-transform: none !important; letter-spacing: 0.01em !important; font-size: 16px !important; font-weight: 600 !important; padding: 12px 20px !important; border-radius: 6px !important; white-space: nowrap; }
+  @media (max-width: 820px) { .duo-btn { flex-wrap: wrap; } }
+</style>
+<section class="hero-bota">
+  <div class="cadre fond-vert botanique">
+    <div class="txt">
+      <div class="label">Les Ateliers Une vie plus grande</div>
+      <h1 class="lead">Un atelier par mois pour <em>mieux te connaître</em></h1>
+      <p class="body" style="margin: 0 0 36px;">Des ateliers d’introspection en petit groupe pour te découvrir sous d’autres jours, prendre de la hauteur sur qui tu es et trouver des clés pour dépasser tes défis personnels, comme la confiance ou l’estime de soi.</p>
+      <div class="duo-btn"><a href="https://angelique-robin-coach.systeme.io/prochain-atelier" target="_blank" rel="noopener" class="btn btn-atelier">Je réserve le prochain atelier</a><a href="https://angelique-robin-coach.systeme.io/replays" target="_blank" rel="noopener" class="btn btn-atelier">Je regarde un atelier passé</a></div>
+      <p class="body mention">En direct sur Zoom · 22&nbsp;€ l’atelier · Replay inclus</p>
+    </div>
+  </div>
 </section>
+
+<section style="max-width: 880px; margin: 0 auto; padding: 112px 40px 96px; text-align: center;">
+  <h2 class="lead h2v" style="margin-bottom: 36px;">Chaque mois, <em>une nouvelle facette de toi</em></h2>
+  <p class="body" style="margin: 0 auto 22px; max-width: 40rem;">Chaque atelier explore une thématique différente, avec un exercice pour l’appliquer à ta propre vie. Le fil rouge reste le même&nbsp;: la connaissance de soi.</p>
+  <p class="body" style="margin: 0 auto; max-width: 40rem;">C’est un moment pour porter un regard nouveau sur toi et ouvrir des possibilités que tu n’avais peut-être pas envisagées. Les prises de conscience s’additionnent, mois après mois.</p>
+</section>
+
+<section class="fond-aura">
+  <div style="padding: 112px 40px; max-width: 1040px; margin: 0 auto;">
+  <div style="max-width: 44rem; margin: 0 0 56px;">
+    <h2 class="lead h2v">Ce que t’apportent <em>les ateliers</em></h2>
+  </div>
+  <div class="benef-grid">
+    <div class="benef"><h3>Te découvrir sous un autre angle</h3><p class="body">Les exercices font émerger ce qu’on ne voit pas seul·e en réfléchissant dans son coin&nbsp;: tes valeurs, tes envies, tes élans, ce qui te retient.</p></div>
+    <div class="benef"><h3>Passer de l’écoute à l’expérience</h3><p class="body">Tu ne restes plus dans la théorie&nbsp;: tu vis le travail intérieur pour de vrai, avec des exercices guidés appliqués à ta vie.</p></div>
+    <div class="benef"><h3>La force du groupe</h3><p class="body">Tu partages un moment avec des personnes qui te ressemblent, tu entends d’autres vécus qui font écho au tien et tu te sens moins seul·e sur ton chemin.</p></div>
+    <div class="benef"><h3>Un rendez-vous pour toi</h3><p class="body">Une fois par mois, tu t’offres un temps dédié, une respiration dans un quotidien souvent tourné vers les autres.</p></div>
+    <div class="benef"><h3>Un vrai temps de coaching</h3><p class="body">Pour 22&nbsp;€, un coaching de groupe animé par moi, depuis chez toi, sans engagement sur la durée.</p></div>
+    <div class="benef"><h3>La liberté du replay</h3><p class="body">Si tu ne peux pas être là en direct, tu retrouves l’atelier sur la plateforme et tu refais les exercices à ton rythme.</p></div>
+  </div>
+  </div>
+</section>
+
+<section style="max-width: 1240px; margin: 0 auto; padding: 112px 40px;">
+  <div class="fond-vert" style="max-width: 920px; margin: 0 auto; padding: 88px 60px; text-align: center;">
+  <h2 class="lead h2v" style="margin-bottom: 36px;">Pour qui <em>sont les ateliers&#8202;?</em></h2>
+  <p class="body" style="margin: 0 auto; max-width: 40rem; color: var(--jaune) !important;">Pour les auditeurs et auditrices du podcast Une vie plus grande, les entrepreneur·es conscient·es, les thérapeutes, et toutes celles et ceux qui aiment le travail intérieur et ont envie de mieux se connaître.</p>
+  </div>
+</section>
+
+<section id="prochain" style="max-width: 1040px; margin: 0 auto; padding: 0 40px 120px; text-align: center;">
+  <h2 class="lead h2v" style="margin-bottom: 48px;">Rejoindre <em>les ateliers</em></h2>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; text-align: left; margin-bottom: 24px;">
+    <div class="fond-sauge" style="padding: 44px 36px; display: flex; flex-direction: column;">
+      <h3 class="lead" style="font-size: 26px; margin: 0 0 16px;">Les prochains ateliers</h3>
+      <p class="body" style="margin: 0 0 32px; flex: 1;">Réserve ta place pour le prochain atelier, ou pour les trois prochains, annoncés à l’avance, à prix réduit.</p>
+      <div><a href="https://angelique-robin-coach.systeme.io/prochain-atelier" target="_blank" rel="noopener" class="btn btn-atelier">Je réserve le prochain atelier</a></div>
+    </div>
+    <div class="fond-sauge" style="padding: 44px 36px; display: flex; flex-direction: column;">
+      <h3 class="lead" style="font-size: 26px; margin: 0 0 16px;">Les ateliers passés</h3>
+      <p class="body" style="margin: 0 0 32px; flex: 1;">Tu as manqué un atelier&#8202;? Retrouve les ateliers archivés en replay, et fais les exercices à ton rythme.</p>
+      <div><a href="https://angelique-robin-coach.systeme.io/replays" target="_blank" rel="noopener" class="btn btn-atelier">Je regarde un atelier passé</a></div>
+    </div>
+  </div>
+  <div style="padding: 64px 0 0;">
+    <h3 class="lead" style="font-size: 26px; margin: 0 0 16px;">Être prévenu·e <em>des prochaines dates</em></h3>
+    <p class="body" style="margin: 0 auto 28px; max-width: 34rem;">Chaque atelier est annoncé dans Le Café du Dimanche, ma lettre du dimanche.</p>
+    <form id="atelier-form" style="display: flex; gap: 12px; max-width: 30rem; margin: 0 auto; flex-wrap: wrap;">
+      <input id="atelier-email" name="email" type="email" required placeholder="Ton e-mail" class="champ body" style="flex: 1 1 220px; min-width: 0; padding: 14px 4px; color: var(--vert-nuit); border-color: var(--vert-nuit); outline: none;">
+      <button type="submit" class="btn btn-atelier" style="flex: 0 0 auto;">Me prévenir</button>
+    </form>
+    <p id="atelier-success" class="body" style="display: none; margin: 0;">Merci, c’est noté. À dimanche&nbsp;!</p>
+    <p id="atelier-error" class="body" style="display: none; margin: 16px 0 0;"></p>
+  </div>
+</section>
+<script>
+  (function () {
+    var form = document.getElementById('atelier-form');
+    if (!form) return;
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var btn = form.querySelector('button');
+      var err = document.getElementById('atelier-error');
+      btn.disabled = true;
+      fetch('/api/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: document.getElementById('atelier-email').value.trim(), tag: 'Le Café du Dimanche' }) })
+        .then(function (r) {
+          if (!r.ok) throw r;
+          form.style.display = 'none';
+          document.getElementById('atelier-success').style.display = 'block';
+        })
+        .catch(function () {
+          err.textContent = 'Une erreur est survenue. Réessaie dans un instant.';
+          err.style.display = 'block';
+          btn.disabled = false;
+        });
+    });
+  })();
+</script>
 
 <footer class="fond-vert">
   <div style="max-width: 1240px; margin: 0 auto; padding: 80px 40px 40px;">

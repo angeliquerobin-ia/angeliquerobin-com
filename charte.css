@@ -41,10 +41,10 @@ h1.lead, h2.lead { font-weight: 600; }
 }
 .label::after { content: "\00a0]"; }
 
-/* Boutons. Jamais de contour, jamais de coins arrondis, jamais d'ombre. */
+/* Boutons. Jamais de contour ni d'ombre, coins légèrement arrondis (6 px). */
 .btn {
   border: none !important;
-  border-radius: 0 !important;
+  border-radius: 6px !important;
   box-shadow: none !important;
   letter-spacing: 0.22em;
   min-height: 56px;
@@ -94,6 +94,19 @@ h1.lead, h2.lead { font-weight: 600; }
 
 /* Sur vert profond : boutons en indigo aura, texte jaune (choix d'Angélique) */
 .fond-vert .btn:not(footer *) { background: var(--aura) !important; color: var(--jaune) !important; font-weight: 700 !important; }
+
+/* Boutons indigo à texte jaune : en Playfair, sans capitales */
+.btn:not(.btn--clair):not(.fond-aura .btn), .fond-vert .btn:not(footer *) {
+  font-family: var(--titre) !important;
+  text-transform: none !important;
+  letter-spacing: 0.01em !important;
+  font-weight: 600 !important;
+}
+.btn:not(.btn--clair):not(.fond-aura .btn):not(.btn-pf):not(.btn-atelier) { font-size: 17px !important; }
+@media (max-width: 820px) {
+  .btn:not(.btn--clair):not(.fond-aura .btn), .fond-vert .btn:not(footer *) { letter-spacing: 0.01em !important; }
+  .btn:not(.btn--clair):not(.fond-aura .btn):not(.btn-atelier) { font-size: 16px !important; }
+}
 
 /* Pied de page : titres de colonnes en jaune beurre */
 footer .kicker { color: var(--jaune) !important; }
