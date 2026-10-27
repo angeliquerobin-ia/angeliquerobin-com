@@ -97,6 +97,12 @@
     .offer-card { padding: 42px 44px 52px; display: flex; flex-direction: column; }
     .offer-card .offer-cta { margin-top: auto; padding-top: 30px; }
     @media (min-width: 769px) { .hero-photo { aspect-ratio: auto !important; height: 100%; } }
+    .hero-trois { list-style: none; margin: 0 0 36px; padding: 0; }
+    .hero-trois li { font-family: var(--font-titre); font-size: clamp(19px, 1.7vw, 23px); line-height: 1.4; color: var(--vert-profond); padding: 0 0 0 38px; margin: 0 0 14px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M12 22V11' stroke='%23899273' stroke-width='1.6' stroke-linecap='round'/%3E%3Cpath d='M12 13C12 8.5 8.8 5.5 4 5.5 4 10 7.2 13 12 13Z' fill='%23899273'/%3E%3Cpath d='M12 11C12 7 14.8 4 19.5 3.5 19.5 7.8 16.6 11 12 11Z' fill='%23BAAFDE'/%3E%3C/svg%3E") left 0.05em / 26px 26px no-repeat; }
+    .duo-offres { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+    .duo-offres > div { padding: 48px 44px; display: flex; flex-direction: column; }
+    .duo-offres .offer-cta { margin-top: auto; padding-top: 30px; }
+    @media (max-width: 820px) { .duo-offres { grid-template-columns: 1fr; } .duo-offres > div { padding: 40px 28px; } }
   </style>
 </helmet>
 
@@ -128,10 +134,15 @@
   <section id="top" style="max-width: 1240px; margin: 0 auto; padding: 96px 40px 112px; display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 56px; align-items: stretch;">
     <div>
       <div class="kicker label" style=" margin-bottom: 34px;">Coach certifiée</div>
-      <h1 class="lead" style="font-size: clamp(22px, 2.1vw, 29px); line-height: 1.35; margin: 0 0 34px; color: var(--ink);">J’accompagne les entrepreneur·es conscient·es à faire éclore une vie et un projet qui ont du sens, à retrouver ce sens quand il s’est perdu, et à bâtir une entreprise qui préserve leur équilibre.</h1>
+      <h1 class="lead" style="font-size: clamp(32px, 3.4vw, 46px); line-height: 1.18; margin: 0 0 30px; color: var(--ink);">J’accompagne les entrepreneur·es <em>conscient·es</em></h1>
+      <ul class="hero-trois">
+        <li>à faire éclore une vie et un projet qui ont du sens,</li>
+        <li>à retrouver ce sens quand il s’est perdu,</li>
+        <li>et à bâtir une entreprise qui préserve leur équilibre.</li>
+      </ul>
       <p class="body" style="margin: 0 0 36px; color: var(--vert-profond);">Il y a des saisons où l’on sent qu’une vie plus grande nous attend, d’autres où l’on cherche à retrouver le fil, et d’autres encore où l’on aimerait que son entreprise nous porte au lieu de prendre toute la place. Je t’accompagne dans chacune d’elles, avec une même conviction&nbsp;: ton chemin intérieur et ton aventure entrepreneuriale se nourrissent l’un l’autre.</p>
       <div style="display: flex; gap: 16px; flex-wrap: wrap;">
-        <a href="/quatre-saisons" class="btn">Découvre ta saison</a>
+        <a href="/quatre-saisons" class="btn">Fais le quiz des 4 saisons</a>
       </div>
     </div>
     <div class="hero-photo" style="position: relative; aspect-ratio: 4/5; width: 100%;">
@@ -140,26 +151,28 @@
   </section>
 
   <section style="max-width: 1240px; margin: 0 auto; padding: 0 40px 112px;">
-    <div class="fond-sauge" style="padding: 96px 60px;">
+    <div class="fond-vert" style="padding: 88px 60px; max-width: 1040px; margin: 0 auto; text-align: center;">
+      <div class="kicker label" style=" margin-bottom: 28px; justify-content: center;">Par où commencer</div>
+      <h2 class="lead" style="font-size: clamp(30px, 3vw, 42px); margin: 0 0 28px;">Découvre ta <em>saison de vie</em></h2>
+      <p class="body" style="margin: 0 auto 20px; max-width: 40rem;">En quelques minutes et une douzaine de questions, le quiz des Quatre Saisons t’aide à identifier ta saison de vie dominante. Tu reçois ensuite par e-mail ton analyse personnalisée et des conseils pour traverser ta saison avec plus de justesse.</p>
+      <p class="body" style="margin: 0 auto 40px; max-width: 40rem;">C’est une belle porte d’entrée pour mettre des mots sur ce que tu vis, et savoir de quoi tu as besoin maintenant.</p>
+      <a href="/quatre-saisons" class="btn">Fais le quiz des 4 saisons</a>
+    </div>
+  </section>
+
+  <section style="max-width: 1240px; margin: 0 auto; padding: 0 40px 112px;">
+    <div style="padding: 0 20px;">
       <div style="max-width: 720px; margin: 0 auto;">
-        <div class="kicker label" style=" margin-bottom: 48px; text-align: center; --filet: var(--aura);">Un de mes postulats</div>
-        <p class="lead" style="font-size: clamp(28px, 2.8vw, 36px); line-height: 1.3; margin: 0 0 40px; color: var(--blanc); text-align: center;"><strong>Change ton monde intérieur</strong><br><em>pour transformer ta vie.</em></p>
-        <p class="body" style="color: var(--blanc); margin: 0 0 22px; text-align: center;">Parce que ta vie extérieure est souvent le reflet de tes croyances, des autorisations que tu te donnes et de ce que tu portes encore de ton passé.</p>
-        <p class="body" style="color: var(--blanc); margin: 0 0 22px; text-align: center;">Dans chacun de mes accompagnements, je t’aide à équilibrer tes perceptions sur tes expériences passées. Tu changes de regard sur ton histoire, les charges émotionnelles s’apaisent et tu retrouves davantage de liberté pour créer la suite de ton histoire.</p>
-        <p class="body" style="color: var(--blanc); margin: 0 0 44px; text-align: center;">C’est depuis cet espace intérieur plus apaisé que tu peux recommencer à construire sur des bases solides.</p>
-        <div style="text-align: center;"><a href="/lotus-coaching-personnel" class="btn">Découvrir Lotus</a></div>
+        <div class="kicker label" style=" margin-bottom: 48px; text-align: center;">Un de mes postulats</div>
+        <p class="lead" style="font-size: clamp(28px, 2.8vw, 36px); line-height: 1.3; margin: 0 0 40px; color: var(--vert-nuit); text-align: center;"><strong>Change ton monde intérieur</strong><br><em>pour transformer ta vie.</em></p>
+        <p class="body" style="color: var(--vert-nuit); margin: 0 0 22px; text-align: center;">Parce que ta vie extérieure est souvent le reflet de tes croyances, des autorisations que tu te donnes et de ce que tu portes encore de ton passé.</p>
+        <p class="body" style="color: var(--vert-nuit); margin: 0 0 22px; text-align: center;">Dans chacun de mes accompagnements, je t’aide à équilibrer tes perceptions sur tes expériences passées. Tu changes de regard sur ton histoire, les charges émotionnelles s’apaisent et tu retrouves davantage de liberté pour créer la suite de ton histoire.</p>
+        <p class="body" style="color: var(--vert-nuit); margin: 0 0 44px; text-align: center;">C’est depuis cet espace intérieur plus apaisé que tu peux recommencer à construire sur des bases solides.</p>
+        <div style="text-align: center;"><a href="/lotus-coaching-personnel" class="btn" style="background: var(--sauge) !important; color: var(--jaune) !important;">Découvrir Lotus</a></div>
       </div>
     </div>
   </section>
 
-  <section style="max-width: 760px; margin: 0 auto; padding: 40px 40px 112px; text-align: center;">
-    <div class="kicker label" style=" margin-bottom: 28px;">Qui je suis</div>
-    <h2 class="lead" style="font-size: clamp(28px, 2.8vw, 38px); margin: 0 0 32px; color: var(--ink);">De la quête de moi-même à <em>l'alignement</em></h2>
-    <p class="body" style="color: var(--vert-profond); margin: 0 0 20px;">Pendant longtemps, j'ai cru que je devais rentrer dans le moule.</p>
-    <p class="body" style="color: var(--vert-profond); margin: 0 0 20px;">Jusqu'à ce que je comprenne que mes particularités étaient en réalité <strong>ma boussole</strong>.</p>
-    <p class="body" style="color: var(--vert-profond); margin: 0 0 36px;">Mon chemin m'a menée de la quête de moi-même à ma raison d'être, jusqu'à la sortie du mode pilote automatique. C'est depuis cette connaissance de moi-même que j'ai créé plusieurs entreprises, et ce depuis 2011.</p>
-    <a href="/qui-suis-je" class="navlink" style="font-family: var(--font-titre); font-style: italic; font-size: 20px; color: var(--ink); border-bottom: 1px solid var(--vert-profond); padding-bottom: 4px;">Découvrir mon histoire →</a>
-  </section>
 
   <section class="fond-aura">
     <div style="max-width: 1240px; margin: 0 auto; padding: 112px 40px;">
@@ -170,51 +183,58 @@
       <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px;">
         <div class="offer-card carte" style="--bandeau: var(--sauge);">
           <div class="offer-num" style="font-size: 36px; color: var(--sauge); margin-bottom: 28px;">01</div>
-          <h3 class="lead" style="font-size: 26px; margin: 0 0 18px; color: var(--vert-nuit);">Lotus</h3>
+          <h3 class="lead" style="font-size: 26px; margin: 0 0 18px; color: var(--vert-nuit);">Lotus Éclosion</h3>
           <p class="body" style="color: var(--vert-profond); margin: 0 0 22px;">Un accompagnement de coaching personnel pour oser faire ce qui te tient à cœur. Nous explorons tes valeurs, clarifions ta vision et travaillons sur ce qui te retient, pour avancer vers un projet ou un changement important pour toi.</p>
           <p class="kicker" style="color: var(--vert-profond); margin: 0;">8 séances de coaching individuelles</p>
           <div class="offer-cta"><a href="/lotus-coaching-personnel" class="navlink" style="font-family: var(--font-titre); font-style: italic; font-size: 18px; color: var(--vert-profond); border-bottom: 1px solid var(--vert-profond); padding-bottom: 3px;">En savoir plus →</a></div>
         </div>
         <div class="offer-card carte" style="--bandeau: var(--sauge);">
           <div class="offer-num" style="font-size: 36px; color: var(--sauge); margin-bottom: 28px;">02</div>
+          <h3 class="lead" style="font-size: 26px; margin: 0 0 18px; color: var(--vert-nuit);">Lotus Traversée</h3>
+          <p class="body" style="color: var(--vert-profond); margin: 0 0 22px;">Un accompagnement individuel de deux mois pour les entrepreneur·es conscient·es qui traversent une crise existentielle, une perte de sens dans leur vie ou dans leur activité. Pour comprendre ce qui change en toi, retrouver tes repères et te remettre en route, à ton rythme.</p>
+          <p class="kicker" style="color: var(--vert-profond); margin: 0;">8 séances de coaching individuelles</p>
+          <div class="offer-cta"><a href="/lotus-traversee" class="navlink" style="font-family: var(--font-titre); font-style: italic; font-size: 18px; color: var(--vert-profond); border-bottom: 1px solid var(--vert-profond); padding-bottom: 3px;">En savoir plus →</a></div>
+        </div>
+        <div class="offer-card carte" style="--bandeau: var(--sauge);">
+          <div class="offer-num" style="font-size: 36px; color: var(--sauge); margin-bottom: 28px;">03</div>
           <h3 class="lead" style="font-size: 26px; margin: 0 0 18px; color: var(--vert-nuit);">Coaching d’impact</h3>
           <p class="body" style="color: var(--vert-profond); margin: 0 0 22px;">Une séance de coaching personnel pour débloquer ce qui t’empêche d’avancer&nbsp;: une peur, un doute, une décision que tu repousses ou un comportement qui se répète. Ensemble, nous explorons ce qui se joue pour dépasser ce blocage et te permettre de te remettre en mouvement.</p>
           <p class="kicker" style="color: var(--vert-profond); margin: 0;">Une séance &middot; un déblocage</p>
           <div class="offer-cta"><a href="/coaching-impact" class="navlink" style="font-family: var(--font-titre); font-style: italic; font-size: 18px; color: var(--vert-profond); border-bottom: 1px solid var(--vert-profond); padding-bottom: 3px;">En savoir plus →</a></div>
         </div>
-        <div class="offer-card carte" style="--bandeau: var(--sauge);">
-          <div class="offer-num" style="font-size: 36px; color: var(--sauge); margin-bottom: 28px;">03</div>
-          <h3 class="lead" style="font-size: 26px; margin: 0 0 18px; color: var(--vert-nuit);">Colette IA</h3>
-          <p class="body" style="color: var(--vert-profond); margin: 0 0 22px;">Colette est une formation de groupe en ligne et en direct, pour les coachs et thérapeutes&nbsp;: je t'aide à installer ton <strong>Second cerveau</strong> et ton ruissellement de contenu assisté par l'IA. Pendant 2 mois, tu crées ton équipe IA qui travaille pour toi pendant que tu accompagnes.</p>
-          <p class="kicker" style="color: var(--vert-profond); margin: 0;">Version bêta &middot; octobre</p>
-          <div class="offer-cta"><a href="/cleobule-academie" class="navlink" style="font-family: var(--font-titre); font-style: italic; font-size: 18px; color: var(--vert-profond); border-bottom: 1px solid var(--vert-profond); padding-bottom: 3px;">En savoir plus →</a></div>
-        </div>
       </div>
+      <p class="body" style="text-align: center; margin: 72px auto 0; max-width: 44rem; color: var(--vert-nuit);">Envie de commencer en douceur&#8202;? <a href="/ateliers" style="font-family: var(--font-titre); font-style: italic; font-size: 19px; color: var(--jaune) !important; border-bottom: 1px solid var(--jaune); padding-bottom: 2px;">Les Ateliers Une vie plus grande, un atelier par mois pour mieux te connaître →</a></p>
     </div>
   </section>
 
   <section style="max-width: 1240px; margin: 0 auto; padding: 112px 40px;">
-    <div style="text-align: center; max-width: 40rem; margin: 0 auto 68px;">
-      <div class="kicker label" style=" margin-bottom: 24px; --filet: var(--sauge);">Retour de coaching</div>
-      <h2 class="lead" style="font-size: clamp(28px, 2.8vw, 38px); margin: 0 0 20px; color: var(--ink);">Les mots de <em>mes clients</em></h2>
+    <div style="text-align: center; max-width: 42rem; margin: 0 auto 64px;">
+      <div class="kicker label" style=" margin-bottom: 24px;">Pour les entrepreneur·es</div>
+      <h2 class="lead" style="font-size: clamp(28px, 2.8vw, 38px); margin: 0; color: var(--ink);">Te former <em>et t’équiper</em></h2>
     </div>
-    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;">
-      <figure class="temoignage" style="border-left-color: var(--sauge); margin: 0; display: flex; flex-direction: column;">
-        <blockquote class="body" style="margin: 0 0 24px; color: var(--vert-nuit); flex: 1 0 auto;">« Je vous recommande Angélique, <em>pépite de coach</em> qui vous accompagne à aborder vos projets de manière efficace, avec en bonus un pas de plus vers la découverte de vous-même. »</blockquote>
-        <figcaption><div class="kicker" style="font-size: 12px; color: var(--vert-profond);">Sarah&nbsp;P.</div></figcaption>
-      </figure>
-      <figure class="temoignage" style="border-left-color: var(--sauge); margin: 0; display: flex; flex-direction: column;">
-        <blockquote class="body" style="margin: 0 0 24px; color: var(--vert-nuit); flex: 1 0 auto;">« Je remercie Angélique pour son <em>écoute attentive</em>, son professionnalisme, toutes les ressources et connaissances qu'elle a pu mettre à mon service. Ce fut un travail riche et intense qui porte ses fruits. »</blockquote>
-        <figcaption><div class="kicker" style="font-size: 12px; color: var(--vert-profond);">Laure&nbsp;P.</div></figcaption>
-      </figure>
-      <figure class="temoignage" style="border-left-color: var(--sauge); margin: 0; display: flex; flex-direction: column;">
-        <blockquote class="body" style="margin: 0 0 24px; color: var(--vert-nuit); flex: 1 0 auto;">« Elle m'a aidée avec <em>patience et bienveillance</em> à faire le bilan sur ma situation et ce que je souhaitais vraiment pour la suite. Aujourd'hui, j'ai le courage de prendre un nouveau départ en toute confiance. »</blockquote>
-        <figcaption><div class="kicker" style="font-size: 12px; color: var(--vert-profond);">Karine&nbsp;B.</div></figcaption>
-      </figure>
+    <div class="duo-offres" style="max-width: 1040px; margin: 0 auto;">
+      <div class="fond-vert">
+        <div class="kicker label" style=" margin-bottom: 22px;">Formation</div>
+        <h3 class="lead" style="font-size: 28px; margin: 0 0 18px;">Cléobule Académie</h3>
+        <p class="body" style="margin: 0;">La formation pour construire ton propre système IA, créer ta communication, ton site web, ton marketing facilement. En petit groupe, pendant deux mois.</p>
+        <div class="offer-cta"><a href="/cleobule-academie" class="btn">Découvrir Cléobule Académie</a></div>
+      </div>
+      <div class="fond-vert">
+        <div class="kicker label" style=" margin-bottom: 22px;">Application</div>
+        <h3 class="lead" style="font-size: 28px; margin: 0 0 18px;">Cléobule</h3>
+        <p class="body" style="margin: 0;">L’application de visio pour accueillir tes clients et alléger le suivi de tes séances, grâce à une IA intégrée. Pensée pour les coachs et thérapeutes, en prenant en compte les règlementations RGPD.</p>
+        <div class="offer-cta"><a href="/cleobule" class="btn">Découvrir Cléobule</a></div>
+      </div>
     </div>
-    <div style="text-align: center; margin-top: 52px;">
-      <a href="/temoignages" class="navlink" style="font-family: var(--font-titre); font-style: italic; font-size: 20px; color: var(--ink); border-bottom: 1px solid var(--sauge); padding-bottom: 4px;">Voir tous les témoignages →</a>
-    </div>
+  </section>
+
+  <section style="max-width: 760px; margin: 0 auto; padding: 0 40px 112px; text-align: center;">
+    <div class="kicker label" style=" margin-bottom: 28px;">Qui je suis</div>
+    <h2 class="lead" style="font-size: clamp(28px, 2.8vw, 38px); margin: 0 0 32px; color: var(--ink);">De la quête de moi-même à <em>l'alignement</em></h2>
+    <p class="body" style="color: var(--vert-profond); margin: 0 0 20px;">Pendant longtemps, j'ai cru que je devais rentrer dans le moule.</p>
+    <p class="body" style="color: var(--vert-profond); margin: 0 0 20px;">Jusqu'à ce que je comprenne que mes particularités étaient en réalité <strong>ma boussole</strong>.</p>
+    <p class="body" style="color: var(--vert-profond); margin: 0 0 36px;">Mon chemin m'a menée de la quête de moi-même à ma raison d'être, jusqu'à la sortie du mode pilote automatique. C'est depuis cette connaissance de moi-même que j'ai créé plusieurs entreprises, et ce depuis 2011.</p>
+    <a href="/qui-suis-je" class="navlink" style="font-family: var(--font-titre); font-style: italic; font-size: 20px; color: var(--ink); border-bottom: 1px solid var(--vert-profond); padding-bottom: 4px;">Découvrir mon histoire →</a>
   </section>
 
   <section style="max-width: 1240px; margin: 0 auto; padding: 40px 40px 112px;">
@@ -231,6 +251,11 @@
         </div>
       </div>
     </div>
+  </section>
+
+  <section style="max-width: 760px; margin: 0 auto; padding: 0 40px 120px; text-align: center;">
+    <p class="lead" style="font-size: clamp(26px, 2.6vw, 34px); line-height: 1.35; margin: 0 0 36px; color: var(--ink);">Et toi, dans quelle saison de ta vie <em>te trouves-tu en ce moment&#8202;?</em></p>
+    <a href="/quatre-saisons" class="btn">Fais le quiz des 4 saisons</a>
   </section>
 
   <footer class="fond-vert">
