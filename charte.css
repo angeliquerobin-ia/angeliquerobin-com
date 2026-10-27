@@ -126,4 +126,6 @@ header:has(> nav) .mobile-menu-btn span { background: var(--jaune) !important; }
 @media (max-width: 768px) {
   header:has(> nav) .nav-links { background: var(--sauge) !important; border-top: none !important; }
   header:has(> nav) .nav-links a.navlink { font-size: 17px !important; }
+  /* Menus déroulants : filet sur toute la largeur, comme les autres liens */
+  header:has(> nav) .has-dd > a.navlink { display: block; width: 100%; border-bottom: 1px solid rgba(33,43,19,0.08); }
 }
