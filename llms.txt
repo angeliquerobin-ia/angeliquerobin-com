@@ -13,18 +13,20 @@
 
 ## Offres d'accompagnement
 
-### Lotus — Accompagnement individuel · 660 €
+### Lotus Éclosion — Accompagnement individuel · 660 €
 - **URL** : https://www.angeliquerobin.com/lotus-coaching-personnel
 - **Format** : 8 séances individuelles d'1 heure en visio, une par semaine, sur 8 semaines
-- **Prix** : 660 € (paiement en 2x possible)
-- **Inclus** : espace personnel (résumés + replays), suivi Telegram du lundi au vendredi 9h–17h
-- **Pour qui** : personnes en transition (divorce, deuil, crise de vie, quête de sens), personnes qui répètent des schémas, qui vivent pour les autres plus que pour elles, qui ont l'impression de passer à côté de leur vie
-- **Méthode en 5 étapes** :
-  1. Tu te découvres en profondeur (introspection guidée, questionnement socratique)
-  2. Tu sais exactement ce que tu veux (visualisation immersive)
-  3. Tu te libères de ce qui te retenait (équilibre des perceptions)
-  4. Shift d'identité (nouvelle façon d'être et d'agir)
-  5. Tu as toutes les clefs pour avancer (plan d'action)
+- **Prix** : 660 € (ou 2 × 335 €)
+- **Inclus** : espace personnel (résumés de séances, replays, notes), suivi entre les séances sur la plateforme
+- **Pour qui** : entrepreneur·es conscient·es et salarié·es qui veulent faire éclore un projet qui a du sens
+- **Méthode en 4 temps** : introspection, vision, déblocage, stratégie
+
+### Lotus Traversée — Accompagnement individuel · 660 €
+- **URL** : https://www.angeliquerobin.com/lotus-traversee
+- **Format** : 8 séances d'1 heure en visio, une par semaine, sur 2 mois, avec un suivi entre les séances
+- **Prix** : 660 € (ou 2 × 335 €)
+- **Pour qui** : entrepreneur·es conscient·es qui traversent une crise existentielle ou une perte de sens, dans leur vie ou leur activité
+- **Ce n'est pas** : un accompagnement pour une détresse profonde ou une dépression (orientation vers un·e professionnel·le de santé)
 
 ### Coaching d'impact — Séance unique · 90 €
 - **URL** : https://www.angeliquerobin.com/coaching-impact
@@ -36,16 +38,30 @@
 ### Pack 3 séances — 260 €
 - Trois séances d'1 heure pour traverser une problématique circonscrite
 
-### Diagnostic clarté — 20 min offertes
+### Diagnostic clarté — 30 min offertes
 - **URL** : https://www.angeliquerobin.com/lotus-coaching-personnel#reservation
-- **Format** : 20 minutes gratuites en visio, sans engagement
+- **Format** : 30 minutes gratuites en visio, sans engagement
 - **Objectif** : faire le point sur ta situation et voir si l'accompagnement Lotus est fait pour toi
 
-### Cléobule Académie, programme bêta pour coachs & thérapeutes
+### Ateliers Une vie plus grande — 22 € l'atelier
+- **URL** : https://www.angeliquerobin.com/ateliers
+- **Format** : un atelier d'introspection par mois, en direct sur Zoom, replay inclus
+- **Fil rouge** : la connaissance de soi
+
+### Cléobule Académie — Formation IA pour coachs et thérapeutes
 - **URL** : https://www.angeliquerobin.com/cleobule-academie
-- **Pour qui** : coachs, thérapeutes, accompagnant·es qui veulent rester visibles en ligne sans y passer leurs journées
-- **4 piliers** : Second cerveau, ruissellement de contenu, assistante IA (Colette), Cockpit (application d'organisation de contenu)
-- **Statut** : bêta à 690 €, liste d’attente ouverte
+- **Format** : en petit groupe, pendant deux mois
+- **Contenu** : second cerveau, agents et automatisations, système de communication sur mesure, l'application Cléobule, site web ou landing pages avec l'IA
+- **Statut** : version bêta à 690 €
+
+### Cléobule — L'application des coachs et thérapeutes
+- **URL** : https://www.angeliquerobin.com/cleobule
+- **Ce que c'est** : l'application de visio pour accueillir ses client·es et alléger le suivi des séances, grâce à une IA intégrée, installée sur son propre serveur, en tenant compte du RGPD
+- **Statut** : bientôt disponible, échange de 20 minutes pour en parler
+
+### Quiz des Quatre Saisons — gratuit
+- **URL** : https://www.angeliquerobin.com/quatre-saisons
+- **Objectif** : identifier sa saison de vie et trouver l'accompagnement adapté à ce que l'on vit en ce moment
 
 ## Podcast
 
