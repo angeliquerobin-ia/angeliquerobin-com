@@ -136,6 +136,10 @@
     "url": "https://www.angeliquerobin.com/qui-suis-je"
   },
   "areaServed": "FR",
+  "image": [
+    "https://www.angeliquerobin.com/assets/og-lotus-traversee.jpg",
+    "https://www.angeliquerobin.com/assets/lotus-traversee-accompagnement-perte-de-sens.webp"
+  ],
   "offers": {
     "@type": "Offer",
     "price": "660",
@@ -177,6 +181,10 @@
   .lt-court > .in { max-width: 1040px; margin: 0 auto; padding: 88px 60px; }
   .lt-beige { max-width: 1040px; margin: 0 auto; padding: 112px 40px; }
   .lt-court + .lt-large, .lt-large + .lt-court { margin-top: 112px; }
+  .lt-hero { display: grid !important; grid-template-columns: 1.15fr 0.85fr; gap: 64px; align-items: center; }
+  .lt-hero .txt { max-width: none; }
+  .lt-visuel { width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; display: block; }
+  @media (max-width: 820px) { .lt-hero { grid-template-columns: 1fr; gap: 40px; } }
   .lt-tete { max-width: 44rem; margin: 0 auto 56px; text-align: center; }
   .lt-tete h2 { margin-bottom: 30px !important; }
   .lt-phrase { font-size: clamp(22px, 2.4vw, 28px) !important; line-height: 1.45; margin: 72px auto 0; max-width: 40rem; text-align: center; }
@@ -206,13 +214,14 @@
 </style>
 
 <section class="hero-bota">
-  <div class="cadre" style="background: none; padding-left: 0; padding-right: 0; min-height: 0; justify-content: center; padding-top: 16px; padding-bottom: 16px;">
-    <div class="txt" style="max-width: 760px; margin: 0 auto; text-align: center;">
+  <div class="cadre lt-hero" style="background: none; padding-left: 0; padding-right: 0; min-height: 0; padding-top: 16px; padding-bottom: 16px;">
+    <div class="txt">
       <h1 class="lead">Lotus Traversée</h1>
       <p class="lead" style="font-size: clamp(24px, 2.6vw, 32px); line-height: 1.3; margin: 0 0 28px;">Quand ce qui te portait <em>ne t’anime plus</em></p>
-      <p class="body" style="margin: 0 auto 36px; max-width: 40rem;">Un accompagnement individuel de deux mois pour les entrepreneur·es conscient·es qui traversent une crise existentielle, une perte de sens dans leur vie ou dans leur activité. Pour comprendre ce qui change en toi, retrouver tes repères et te remettre en route, à ton rythme.</p>
+      <p class="body" style="margin: 0 0 36px;">Un accompagnement individuel de deux mois pour les entrepreneur·es conscient·es qui traversent une crise existentielle, une perte de sens dans leur vie ou dans leur activité. Pour comprendre ce qui change en toi, retrouver tes repères et te remettre en route, à ton rythme.</p>
       <a href="#reservation" class="btn btn-pf" style="background: var(--sauge) !important; color: var(--jaune) !important;">Mon diagnostic offert</a>
     </div>
+    <img class="lt-visuel" src="assets/lotus-traversee-accompagnement-perte-de-sens.webp" width="750" height="1000" alt="Un lotus blanc dont la tige monte du fond de l’eau jusqu’à la lumière, entouré de boutons encore immergés" fetchpriority="high">
   </div>
 </section>
 
