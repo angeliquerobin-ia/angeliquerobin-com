@@ -1,5 +1,6 @@
 'use strict';
 
+const crypto = require('crypto');
 const http = require('http');
 const https = require('https');
 const fs = require('fs');
@@ -30,7 +31,15 @@ try {
 
 const PORT = process.env.PORT || 80;
 const LUMAIL_API_TOKEN = process.env.LUMAIL_API_TOKEN || '';
-const LUMAIL_ENDPOINT = 'https://lumail.io/api/v1/subscribers';
+const LUMAIL_BASE = process.env.LUMAIL_BASE || 'https://lumail.io';
+const LUMAIL_ENDPOINT = `${LUMAIL_BASE}/api/v1/subscribers`;
+
+// Démo de Cléobule : DEMO_LIEN porte la clé d'accès, il n'est jamais dans le code.
+const DEMO_LIEN = process.env.DEMO_LIEN || '';
+const DEMO_TAG = 'Démo Cléobule';
+const DEMO_EXPEDITEUR = 'Angélique Robin <contact@angeliquerobin.com>';
+const DEMO_APPEL = 'https://cal.com/angelique-robin/ton-organisation-ia-20mn';
+const SITE = 'https://www.angeliquerobin.com';
 
 // Un tag = une liste Lumail. On restreint volontairement aux tags connus
 // pour empêcher un appel /api/subscribe forgé d'écrire vers une liste arbitraire.
@@ -91,13 +100,14 @@ function readJsonBody(req, maxBytes) {
   });
 }
 
-function callLumail(payload) {
+function callLumail(payload, url = LUMAIL_ENDPOINT, method = 'POST') {
   return new Promise((resolve, reject) => {
     const data = JSON.stringify(payload);
-    const req = https.request(
-      LUMAIL_ENDPOINT,
+    const client = url.startsWith('https:') ? https : http;
+    const req = client.request(
+      url,
       {
-        method: 'POST',
+        method,
         headers: {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${LUMAIL_API_TOKEN}`,
@@ -161,6 +171,170 @@ async function handleSubscribe(req, res) {
   try {
     const { status, body } = await callLumail(lumailPayload);
     sendJson(res, status, body);
+  } catch (err) {
+    sendJson(res, 502, { success: false, error: 'upstream_unreachable' });
+  }
+}
+
+// Limites en mémoire : assez pour un seul serveur, et pour éviter qu'on se serve
+// du formulaire pour bombarder une adresse.
+const compteurs = new Map();
+function depasseLimite(cle, max, dureeMs) {
+  const maintenant = Date.now();
+  const recent = (compteurs.get(cle) || []).filter((t) => maintenant - t < dureeMs);
+  if (recent.length >= max) return true;
+  recent.push(maintenant);
+  compteurs.set(cle, recent);
+  return false;
+}
+
+function adresseIp(req) {
+  // La dernière valeur est celle du proxy : les précédentes viennent du visiteur.
+  return String(req.headers['x-forwarded-for'] || req.socket.remoteAddress || '').split(',').pop().trim();
+}
+
+// Le lien de désinscription est signé : personne ne peut désinscrire une autre adresse.
+function signatureDemo(email) {
+  return crypto.createHmac('sha256', LUMAIL_API_TOKEN).update(`demo:${email}`).digest('base64url');
+}
+
+function emailDemo(prenom, lienDesinscription) {
+  return `Bonjour ${prenom},
+
+Voici ton accès à la démo de Cléobule, l’application que j’ai créée pour alléger le suivi de tes séances.
+
+[Ouvrir la démo](${DEMO_LIEN})
+
+Tu y découvres l’accompagnement fictif de Nora, suivie par sa coach Camille. Tu arrives dans l’interface de la coach et, depuis le bandeau en haut de page, tu peux ouvrir l’espace de sa cliente. Tout est en lecture seule : explore à ton rythme, tu ne peux rien casser.
+
+Si tu as envie qu’on en parle, réserve un appel de 20 minutes avec moi :
+
+[Réserver mon appel](${DEMO_APPEL})
+
+À très vite,
+Angélique
+
+Tu reçois cet email parce que tu as demandé l’accès à la démo de Cléobule. [Me désinscrire](${lienDesinscription})`;
+}
+
+async function handleDemoInscription(req, res) {
+  if (!LUMAIL_API_TOKEN || !DEMO_LIEN) {
+    sendJson(res, 500, { success: false, error: 'server_not_configured' });
+    return;
+  }
+
+  let payload;
+  try {
+    payload = await readJsonBody(req, 10 * 1024);
+  } catch (err) {
+    sendJson(res, 400, { success: false, error: 'invalid_request' });
+    return;
+  }
+
+  // Champ invisible : seul un robot le remplit. On lui répond comme à tout le monde.
+  if (payload.site) {
+    sendJson(res, 200, { success: true });
+    return;
+  }
+
+  const email = typeof payload.email === 'string' ? payload.email.trim().toLowerCase() : '';
+  const prenom = typeof payload.prenom === 'string'
+    ? payload.prenom.replace(/[\[\]()<>\r\n]/g, '').trim().slice(0, 80)
+    : '';
+
+  if (!EMAIL_RE.test(email) || email.length > 254) {
+    sendJson(res, 400, { success: false, error: 'invalid_email' });
+    return;
+  }
+  if (!prenom) {
+    sendJson(res, 400, { success: false, error: 'invalid_name' });
+    return;
+  }
+  if (payload.consentement !== true) {
+    sendJson(res, 400, { success: false, error: 'consent_required' });
+    return;
+  }
+  if (depasseLimite(`ip:${adresseIp(req)}`, 5, 3600000) || depasseLimite(`email:${email}`, 3, 86400000)) {
+    sendJson(res, 429, { success: false, error: 'too_many_requests' });
+    return;
+  }
+
+  try {
+    const inscription = await callLumail({
+      email,
+      name: prenom,
+      tags: [DEMO_TAG],
+      skipDoubleOptIn: true,
+      triggerWorkflows: false,
+    });
+    if (inscription.status >= 300) {
+      console.error('[demo] inscription refusée par Lumail :', inscription.status);
+      sendJson(res, 502, { success: false, error: 'upstream_error' });
+      return;
+    }
+
+    // Preuve du consentement : date et texte accepté, gardés avec la fiche.
+    await callLumail(
+      {
+        eventType: 'consentement_demo_cleobule',
+        subscriber: email,
+        data: { date: new Date().toISOString(), texte: String(payload.texteConsentement || '').slice(0, 500) },
+      },
+      `${LUMAIL_BASE}/api/v1/events`,
+    ).catch((err) => console.error('[demo] consentement non noté :', err.message));
+
+    const lien = `${SITE}/demo-desinscription?e=${encodeURIComponent(email)}&s=${signatureDemo(email)}`;
+    const envoi = await callLumail(
+      {
+        from: DEMO_EXPEDITEUR,
+        to: email,
+        subject: 'Ton accès à la démo de Cléobule',
+        markdown: emailDemo(prenom, lien),
+        reply_to: 'contact@angeliquerobin.com',
+        tags: ['demo-cleobule'],
+      },
+      `${LUMAIL_BASE}/api/v2/emails`,
+    );
+    if (envoi.status >= 300) {
+      console.error('[demo] email refusé par Lumail :', envoi.status);
+      sendJson(res, 502, { success: false, error: 'upstream_error' });
+      return;
+    }
+    sendJson(res, 200, { success: true });
+  } catch (err) {
+    sendJson(res, 502, { success: false, error: 'upstream_unreachable' });
+  }
+}
+
+async function handleDemoDesinscription(req, res) {
+  let payload;
+  try {
+    payload = await readJsonBody(req, 2 * 1024);
+  } catch (err) {
+    sendJson(res, 400, { success: false, error: 'invalid_request' });
+    return;
+  }
+  const email = typeof payload.email === 'string' ? payload.email : '';
+  const signature = Buffer.from(typeof payload.signature === 'string' ? payload.signature : '');
+  const attendue = Buffer.from(signatureDemo(email));
+  if (!LUMAIL_API_TOKEN || signature.length !== attendue.length || !crypto.timingSafeEqual(signature, attendue)) {
+    sendJson(res, 403, { success: false, error: 'invalid_link' });
+    return;
+  }
+
+  // Seule la liste de la démo est quittée : la newsletter, si elle existe, ne bouge pas.
+  const tags = encodeURIComponent(JSON.stringify([DEMO_TAG]));
+  try {
+    const { status } = await callLumail(
+      {},
+      `${LUMAIL_BASE}/api/v1/subscribers/${encodeURIComponent(email)}/tags?tags=${tags}`,
+      'DELETE',
+    );
+    if (status >= 300 && status !== 404) {
+      sendJson(res, 502, { success: false, error: 'upstream_error' });
+      return;
+    }
+    sendJson(res, 200, { success: true });
   } catch (err) {
     sendJson(res, 502, { success: false, error: 'upstream_unreachable' });
   }
@@ -302,6 +476,16 @@ const server = http.createServer((req, res) => {
 
   if (url.pathname === '/api/subscribe' && req.method === 'POST') {
     handleSubscribe(req, res);
+    return;
+  }
+
+  if (url.pathname === '/api/demo-cleobule' && req.method === 'POST') {
+    handleDemoInscription(req, res);
+    return;
+  }
+
+  if (url.pathname === '/api/demo-desinscription' && req.method === 'POST') {
+    handleDemoDesinscription(req, res);
     return;
   }
 
