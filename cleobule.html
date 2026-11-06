@@ -177,7 +177,7 @@
   .demo-carte { background: var(--creme); padding: 40px 36px; }
   .demo-champ { font-family: var(--font-corps); font-size: 15px; padding: 12px 14px; background: transparent; color: var(--vert-nuit); border: 1px solid var(--sauge); border-radius: 0; width: 100%; box-sizing: border-box; }
   #demo-form { text-align: left; }
-  #demo-form .btn { background: var(--aura) !important; color: var(--vert-nuit) !important; }
+  #demo-form .btn { background: var(--sauge) !important; color: var(--creme) !important; }
   .fond-aura .demo-carte .num.num { font-family: var(--titre); font-style: italic; font-size: 28px; margin: 0 0 14px; color: var(--vert-profond) !important; }
   .fond-aura .demo-carte h3.h3, .fond-aura .demo-carte h3:not(.x):not(.y) { font-family: var(--titre); font-weight: 600; font-size: 24px; line-height: 1.3; margin: 0 0 12px; color: var(--vert-nuit) !important; }
   .fond-aura .demo-carte p:not(.x) { margin: 0; color: var(--vert-nuit) !important; }
@@ -356,7 +356,7 @@
       <div class="demo-carte"><div class="num">02</div><h3>Ton interface d’administration</h3><p class="body">Ce que tu vois, toi&nbsp;: tes séances, ton suivi client et l’IA intégrée.</p></div>
     </div>
     <p class="body" style="margin: 56px auto 40px; max-width: 40rem;">La démo contient des exemples de cas clients fictifs, pour que tu voies Cléobule en situation sans qu’aucune vraie donnée ne soit exposée.</p>
-    <form id="demo-form" class="demo-carte" style="max-width: 30rem; margin: 0 auto; display: grid; gap: 18px;">
+    <form id="demo-form" class="demo-carte" style="max-width: 38rem; margin: 0 auto; display: grid; gap: 18px;">
       <div style="display: grid; gap: 6px;">
         <label for="demo-prenom" class="body">Ton prénom</label>
         <input id="demo-prenom" name="prenom" type="text" required maxlength="80" autocomplete="given-name" class="demo-champ">
@@ -377,7 +377,7 @@
         <label for="demo-site">Ne pas remplir</label>
         <input id="demo-site" name="site" type="text" tabindex="-1" autocomplete="off">
       </div>
-      <label class="body" style="display: flex; gap: 10px; align-items: flex-start; font-size: 14px; cursor: pointer;">
+      <label class="body" style="display: flex; gap: 10px; align-items: flex-start; font-size: 13px !important; line-height: 1.5; cursor: pointer;">
         <input id="demo-consentement" type="checkbox" required style="margin-top: 4px; flex: 0 0 auto;">
         <span id="demo-consentement-texte">J’accepte de recevoir par e-mail mon accès à la démo de Cléobule et un lien pour réserver un appel, et qu’Angélique me contacte par téléphone au sujet de Cléobule. Je peux me désinscrire à tout moment. <a href="/mentions-legales">En savoir plus sur mes données</a>.</span>
       </label>
