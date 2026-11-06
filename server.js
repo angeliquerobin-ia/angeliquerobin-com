@@ -39,6 +39,7 @@ const DEMO_LIEN = process.env.DEMO_LIEN || '';
 const DEMO_TAG = 'Démo Cléobule';
 const DEMO_EXPEDITEUR = 'Angélique Robin <contact@angeliquerobin.com>';
 const DEMO_APPEL = 'https://cal.com/angelique-robin/visio-cleobule';
+const DEMO_ALERTE = 'contact@angeliquerobin.com';
 const SITE = 'https://www.angeliquerobin.com';
 
 // Un tag = une liste Lumail. On restreint volontairement aux tags connus
@@ -316,6 +317,24 @@ async function handleDemoInscription(req, res) {
       sendJson(res, 502, { success: false, error: 'upstream_error' });
       return;
     }
+
+    // Alerte pour Angélique : si elle échoue, l'inscription reste valable.
+    await callLumail(
+      {
+        from: DEMO_EXPEDITEUR,
+        to: DEMO_ALERTE,
+        subject: `Nouvelle inscription à la démo : ${prenom} ${nom}`,
+        markdown: `${prenom} ${nom} vient de demander l’accès à la démo de Cléobule.\n\nE-mail : ${email}\n\nTéléphone : ${telephone}`,
+        reply_to: email,
+        tags: ['demo-cleobule-alerte'],
+      },
+      `${LUMAIL_BASE}/api/v2/emails`,
+    )
+      .then((alerte) => {
+        if (alerte.status >= 300) console.error('[demo] alerte refusée par Lumail :', alerte.status);
+      })
+      .catch((err) => console.error('[demo] alerte non envoyée :', err.message));
+
     sendJson(res, 200, { success: true });
   } catch (err) {
     sendJson(res, 502, { success: false, error: 'upstream_unreachable' });
