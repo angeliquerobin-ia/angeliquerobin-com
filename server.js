@@ -308,7 +308,6 @@ async function handleDemoInscription(req, res) {
         subject: 'Ton accès à la démo de Cléobule',
         markdown: emailDemo(prenom, lien),
         reply_to: 'contact@angeliquerobin.com',
-        tags: ['demo-cleobule'],
       },
       `${LUMAIL_BASE}/api/v2/emails`,
     );
@@ -326,7 +325,6 @@ async function handleDemoInscription(req, res) {
         subject: `Nouvelle inscription à la démo : ${prenom} ${nom}`,
         markdown: `${prenom} ${nom} vient de demander l’accès à la démo de Cléobule.\n\nE-mail : ${email}\n\nTéléphone : ${telephone}`,
         reply_to: email,
-        tags: ['demo-cleobule-alerte'],
       },
       `${LUMAIL_BASE}/api/v2/emails`,
     )
