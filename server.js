@@ -38,7 +38,7 @@ const LUMAIL_ENDPOINT = `${LUMAIL_BASE}/api/v1/subscribers`;
 const DEMO_LIEN = process.env.DEMO_LIEN || '';
 const DEMO_TAG = 'Démo Cléobule';
 const DEMO_EXPEDITEUR = 'Angélique Robin <contact@angeliquerobin.com>';
-const DEMO_APPEL = 'https://cal.com/angelique-robin/ton-organisation-ia-20mn';
+const DEMO_APPEL = 'https://cal.com/angelique-robin/visio-cleobule';
 const SITE = 'https://www.angeliquerobin.com';
 
 // Un tag = une liste Lumail. On restreint volontairement aux tags connus
