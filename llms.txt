@@ -54,10 +54,11 @@
 - **Contenu** : second cerveau, agents et automatisations, système de communication sur mesure, l'application Cléobule, site web ou landing pages avec l'IA
 - **Statut** : version bêta à 690 €
 
-### Cléobule — L'application des coachs et thérapeutes
+### Cléobule — L'application des coachs
 - **URL** : https://www.angeliquerobin.com/cleobule
 - **Ce que c'est** : l'application de visio pour accueillir ses client·es et alléger le suivi des séances, grâce à une IA intégrée, installée sur son propre serveur, en tenant compte du RGPD
 - **Statut** : bientôt disponible, échange de 20 minutes pour en parler
+- **Tarif** : version bêta à 490 € (5 places), puis 690 € (10 places), puis 990 €
 
 ### Quiz des Quatre Saisons — gratuit
 - **URL** : https://www.angeliquerobin.com/quatre-saisons
