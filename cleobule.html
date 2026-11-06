@@ -177,6 +177,7 @@
   .demo-carte { background: var(--creme); padding: 40px 36px; }
   .demo-champ { font-family: var(--font-corps); font-size: 15px; padding: 12px 14px; background: transparent; color: var(--vert-nuit); border: 1px solid var(--sauge); border-radius: 0; width: 100%; box-sizing: border-box; }
   #demo-form { text-align: left; }
+  #demo-form .btn { background: var(--aura) !important; color: var(--vert-nuit) !important; }
   .fond-aura .demo-carte .num.num { font-family: var(--titre); font-style: italic; font-size: 28px; margin: 0 0 14px; color: var(--vert-profond) !important; }
   .fond-aura .demo-carte h3.h3, .fond-aura .demo-carte h3:not(.x):not(.y) { font-family: var(--titre); font-weight: 600; font-size: 24px; line-height: 1.3; margin: 0 0 12px; color: var(--vert-nuit) !important; }
   .fond-aura .demo-carte p:not(.x) { margin: 0; color: var(--vert-nuit) !important; }
@@ -201,7 +202,7 @@
       <p class="lead" style="font-size: clamp(20px, 1.9vw, 24px); line-height: 1.45; margin: 0 0 16px;">Je t’installe le système en 3 heures. Dès ta première séance en visio sur l’application, ton compte rendu t’attend, prêt à être lu.</p>
       <p class="lead" style="font-size: clamp(20px, 1.9vw, 24px); line-height: 1.45; margin: 0 0 26px;">Tes clients retrouvent leur suivi dans leur espace personnel, avec un effet waouh à la clé.</p>
       <p class="body" style="margin: 0 0 36px;">Cléobule est une application à toi, installée sur ton propre serveur, donc sans abonnement Cléobule. Elle réunit ta visio, ton suivi et ton IA, pour offrir à chaque coaché un suivi cinq étoiles.</p>
-      <a href="#reservation" class="btn btn-pf">Parlons-en 20 minutes</a>
+      <a href="#demo" class="btn btn-pf">Découvrir la démo</a>
       <p class="body mention">Visio intégrée, tu n’as plus besoin de Zoom · Séances au cabinet enregistrées sur ton téléphone puis intégrées dans l’application pour le suivi</p>
     </div>
     <img class="hero-visuel" src="assets/cleobule-apercu.webp" width="1200" height="1800" alt="Aperçu de Cléobule : l’espace de suivi de la coach sur ordinateur et le compte rendu de séance reçu par la cliente sur téléphone">
@@ -242,8 +243,8 @@
   </div>
 </section>
 
-<section style="max-width: 1120px; margin: 0 auto; padding: 0 40px;">
-<div class="fond-sauge encart-ia">
+<section class="fond-sauge">
+<div style="max-width: 1040px; margin: 0 auto; padding: 112px 40px;">
   <div style="max-width: 44rem; margin: 0 auto 56px; text-align: center;">
     <h2 class="lead h2v" style="margin-bottom: 32px;">Imagine si tu pouvais enfin <em>regagner ce temps</em></h2>
     <p class="body" style="margin: 0;">Sans te battre avec la technique, et dans le respect de la confidentialité que tu dois à tes clients. Tu pourrais&nbsp;:</p>
@@ -272,8 +273,8 @@
 </div>
 </section>
 
-<section class="fond-aura">
-  <div style="max-width: 1040px; margin: 0 auto; padding: 112px 40px;">
+<section style="max-width: 1120px; margin: 0 auto; padding: 0 40px;">
+  <div class="fond-aura encart-ia">
     <div style="max-width: 44rem; margin: 0 auto 48px; text-align: center;">
       <h3 class="lead" style="font-size: clamp(24px, 2.4vw, 30px); line-height: 1.35; margin: 0;">L’IA seule ne suffit pas. Il te manque souvent&nbsp;:</h3>
     </div>
@@ -290,8 +291,8 @@
   <p class="lead" style="font-size: clamp(22px, 2.4vw, 28px); line-height: 1.45; margin: 0;"><em>La vraie approche, c’est de pouvoir</em> <strong style="font-weight: 800;">utiliser l’IA avec l’accord de tes clients, dans un système qui automatise tout ton suivi, de l’onboarding au CRM en passant par la visio.</strong></p>
 </section>
 
-<section style="max-width: 1120px; margin: 0 auto; padding: 0 40px;">
-  <div class="fond-sauge encart-ia">
+<section class="fond-sauge">
+  <div style="max-width: 1040px; margin: 0 auto; padding: 112px 40px;">
     <div style="max-width: 44rem; margin: 0 auto 56px; text-align: center;">
       <div class="label" style="margin-bottom: 22px;">Avec Cléobule</div>
       <h2 class="lead h2v">Tout ce que Cléobule <em>change pour toi</em></h2>
@@ -305,7 +306,7 @@
       <div class="benef"><h3>Une posture renforcée</h3><p class="body">Ton client évolue dans une interface personnelle tirée à quatre épingles. Tu renforces ta posture professionnelle, tout en procurant un suivi encore plus efficace à tes clients.</p></div>
     </div>
     <div style="text-align: center; margin-top: 64px;">
-      <a href="#reservation" class="btn btn-pf">Parlons-en 20 minutes</a>
+      <a href="#demo" class="btn btn-pf">Découvrir la démo</a>
     </div>
   </div>
 </section>
@@ -349,21 +350,28 @@
 <section class="fond-aura" id="demo">
   <div style="padding: 112px 40px; max-width: 1040px; margin: 0 auto; text-align: center;">
     <h2 class="lead h2v" style="margin-bottom: 30px;">Vois Cléobule <em>de tes propres yeux</em></h2>
-    <p class="body" style="margin: 0 auto 56px; max-width: 40rem;">Cléobule est encore en version bêta. Plutôt que de te promettre des résultats, je te montre l’application telle qu’elle est. Une démo en ligne arrive, avec deux accès&nbsp;:</p>
+    <p class="body" style="margin: 0 auto 56px; max-width: 40rem;">Cléobule est encore en version bêta. Plutôt que de te promettre des résultats, je te montre l’application telle qu’elle est. La démo en ligne te donne deux accès&nbsp;:</p>
     <div class="demo-grid">
       <div class="demo-carte"><div class="num">01</div><h3>L’interface de tes clients</h3><p class="body">Ce que la personne que tu accompagnes voit&nbsp;: son espace, son suivi, ce qu’elle reçoit après chaque séance.</p></div>
       <div class="demo-carte"><div class="num">02</div><h3>Ton interface d’administration</h3><p class="body">Ce que tu vois, toi&nbsp;: tes séances, ton suivi client et l’IA intégrée.</p></div>
     </div>
     <p class="body" style="margin: 56px auto 40px; max-width: 40rem;">La démo contient des exemples de cas clients fictifs, pour que tu voies Cléobule en situation sans qu’aucune vraie donnée ne soit exposée.</p>
-    <!-- Formulaire de démo, à remettre quand la démo sera prête
     <form id="demo-form" class="demo-carte" style="max-width: 30rem; margin: 0 auto; display: grid; gap: 18px;">
       <div style="display: grid; gap: 6px;">
         <label for="demo-prenom" class="body">Ton prénom</label>
         <input id="demo-prenom" name="prenom" type="text" required maxlength="80" autocomplete="given-name" class="demo-champ">
       </div>
       <div style="display: grid; gap: 6px;">
+        <label for="demo-nom" class="body">Ton nom</label>
+        <input id="demo-nom" name="nom" type="text" required maxlength="80" autocomplete="family-name" class="demo-champ">
+      </div>
+      <div style="display: grid; gap: 6px;">
         <label for="demo-email" class="body">Ton e-mail</label>
         <input id="demo-email" name="email" type="email" required maxlength="254" autocomplete="email" class="demo-champ">
+      </div>
+      <div style="display: grid; gap: 6px;">
+        <label for="demo-telephone" class="body">Ton numéro de téléphone</label>
+        <input id="demo-telephone" name="telephone" type="tel" required maxlength="25" autocomplete="tel" class="demo-champ">
       </div>
       <div style="position: absolute; left: -9999px;" aria-hidden="true">
         <label for="demo-site">Ne pas remplir</label>
@@ -371,20 +379,18 @@
       </div>
       <label class="body" style="display: flex; gap: 10px; align-items: flex-start; font-size: 14px; cursor: pointer;">
         <input id="demo-consentement" type="checkbox" required style="margin-top: 4px; flex: 0 0 auto;">
-        <span id="demo-consentement-texte">J’accepte de recevoir par e-mail mon accès à la démo de Cléobule et un lien pour réserver un appel. Je peux me désinscrire à tout moment. <a href="/mentions-legales">En savoir plus sur mes données</a>.</span>
+        <span id="demo-consentement-texte">J’accepte de recevoir par e-mail mon accès à la démo de Cléobule et un lien pour réserver un appel, et qu’Angélique me contacte par téléphone au sujet de Cléobule. Je peux me désinscrire à tout moment. <a href="/mentions-legales">En savoir plus sur mes données</a>.</span>
       </label>
       <button type="submit" class="btn" style="cursor: pointer; justify-self: center;">Recevoir mon accès</button>
       <p id="demo-error" class="body" role="alert" style="display: none; margin: 0;"></p>
     </form>
     <p id="demo-success" class="body" role="status" style="display: none; margin: 0 auto; max-width: 30rem;"></p>
-    -->
-    <div class="label" style="justify-content: center;">Démo bientôt disponible</div>
   </div>
 </section>
 
 <section style="max-width: 1040px; margin: 0 auto; padding: 112px 40px 112px;">
   <div style="max-width: 44rem; margin: 0 auto 56px; text-align: center;">
-    <h2 class="lead h2v" style="margin: 0;">Les questions <em>que tu te poses</em></h2>
+    <h2 class="lead h2v" style="margin: 0;">Les questions <em>que tu te poses peut-être</em></h2>
   </div>
   <div class="benef-grid">
     <div class="benef"><h3>Je ne suis pas à l’aise avec la technique</h3><p class="body">Tu n’as pas à l’être. Je m’occupe de l’installation sur ton serveur, et tu utilises ensuite Cléobule comme n’importe quelle application.</p></div>
@@ -396,8 +402,8 @@
   </div>
 </section>
 
-<section class="fond-sauge">
-  <div style="padding: 112px 40px; max-width: 1040px; margin: 0 auto; text-align: center;">
+<section style="max-width: 1120px; margin: 0 auto; padding: 0 40px;">
+  <div class="fond-sauge encart-ia" style="text-align: center;">
     <h2 class="lead h2v" style="margin-bottom: 30px;">Le tarif de <em>la version bêta</em></h2>
     <p class="lead" style="font-size: clamp(22px, 2.4vw, 28px); line-height: 1.45; margin: 0 auto 32px; max-width: 40rem;">Un coach reposé, pleinement présent en séance, avec un suivi cinq étoiles <em>qui ne lui prend plus ses soirées.</em></p>
     <p class="body" style="margin: 0 auto 56px; max-width: 40rem;">Cléobule est encore en version bêta&nbsp;: les premières places sont proposées moins cher. Posséder ton outil, c’est mieux que de le louer chaque mois&nbsp;: il n’y a pas d’abonnement Cléobule.</p>
@@ -408,7 +414,7 @@
       <div class="demo-carte demo-carte--large"><h3>Ce que tu reçois</h3><ul class="body offre-liste"><li>L’installation sur ton propre serveur, en 3 heures, faite par mes soins.</li><li>Les mises à jour pendant 1 an.</li><li>Le support par e-mail.</li><li>Une garantie satisfait ou remboursé avec un essai de 20 jours, hors installation (90&nbsp;€).</li></ul></div>
       <div class="demo-carte demo-carte--large"><h3>Tu reçois aussi</h3><p class="body" style="margin-bottom: 14px;"><strong>Le kit d’annonce à tes clients.</strong> Un e-mail type et un script de 2 minutes pour leur présenter Cléobule et demander leur accord, sans gêne.</p><p class="body"><strong>L’atelier questions-réponses.</strong> Une fois par mois pendant 3 mois, on se retrouve entre coachs pour répondre à tes questions, partager les ajustements qui accélèrent ton suivi et voir comment d’autres ont gagné leurs premières heures.</p></div>
       <div class="demo-carte demo-carte--large"><h3>Deux façons de régler</h3><p class="body">En une fois, 490&nbsp;€, et je t’installe Cléobule en priorité. Ou en 2 fois, 2&nbsp;×&nbsp;260&nbsp;€, soit 520&nbsp;€ au total.</p></div>
-      <div class="demo-carte demo-carte--large"><h3>En marque blanche</h3><p class="body">Tu peux la garder sous le nom Cléobule, ou la mettre en marque blanche, avec ton nom, ton logo, tes couleurs et même des fonctionnalités personnalisées. Tes clients retrouvent un espace soigné qui te ressemble, gage du sérieux et du soin que tu mets à bien faire les choses pour eux.</p></div>
+      <div class="demo-carte demo-carte--large"><h3>En marque blanche</h3><p class="body">Tu peux la garder sous le nom Cléobule, ou la mettre en marque blanche, avec ton nom, ton logo, tes couleurs et même des fonctionnalités personnalisées. Tes clients retrouvent un espace soigné qui te ressemble, gage du sérieux et du soin que tu mets à bien faire les choses pour eux. Sur devis.</p></div>
     </div>
     <p class="body" style="margin: 40px auto 0; max-width: 40rem;">À prévoir à côté&nbsp;: un abonnement serveur et ton abonnement Claude. De mon côté, le même serveur héberge mon site web et Cléobule.</p>
   </div>
@@ -425,7 +431,7 @@
   <div style="max-width: 760px; margin: 0 auto; padding: 112px 40px; text-align: center;">
     <h2 class="lead h2v" style="margin-bottom: 30px;">Pourquoi <em>maintenant</em></h2>
     <p class="body" style="margin: 0 0 40px;">5 places à 490&nbsp;€, disponibles jusqu’au 20 novembre. Je limite à 5 parce que j’installe chaque application moi-même et que je veux rester disponible pour chaque coach pendant ses 20 premiers jours. À cette date, ou dès la 5<sup>e</sup> place prise, le prix passe à 690&nbsp;€ pour les 10 suivantes, puis à 990&nbsp;€.</p>
-    <a href="#reservation" class="btn btn-pf">Parlons-en 20 minutes</a>
+    <a href="#demo" class="btn btn-pf">Découvrir la démo</a>
   </div>
 </section>
 
@@ -437,22 +443,7 @@
   </div>
 </section>
 
-<section id="reservation" style="max-width: 800px; margin: 0 auto; padding: 0 40px; scroll-margin-top: 112px;">
-<div class="fond-aura encart-ia" style="text-align: center;">
-  <h2 class="lead h2v" style="margin-bottom: 26px;">Parlons de <em>ta pratique</em></h2>
-  <p class="body" style="max-width: 38rem; margin: 0 auto;">Réserve un échange de 20 minutes&nbsp;: tu me racontes ta façon de travailler, et tu me poses toutes tes questions sur Cléobule.</p>
-<p class="lead" style="font-size: clamp(22px, 2.4vw, 28px); line-height: 1.45; margin: 48px auto 0; max-width: 40rem;">Demain, tu continues à faire ton suivi à la main, <em>ou tu commences à tout réunir au même endroit&#8202;?</em></p>
-</div>
-</section>
-
-<section style="max-width: 1080px; margin: 0 auto; padding: 96px 40px 120px;">
-  <div id="my-cal-inline-cleobule" class="cal-embed" style="overflow: auto;"></div>
-</section>
-<script type="text/javascript">
-  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ar); p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-  Cal("init", "visio-cleobule", {origin:"https://app.cal.com"});
-  Cal.ns["visio-cleobule"]("inline", { elementOrSelector:"#my-cal-inline-cleobule", config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"}, calLink: "angelique-robin/visio-cleobule" });
-</script>
+<script src="demo-cleobule.js" defer></script>
 
 <footer class="fond-vert">
   <div style="max-width: 1240px; margin: 0 auto; padding: 80px 40px 40px;">

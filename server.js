@@ -198,6 +198,13 @@ function signatureDemo(email) {
   return crypto.createHmac('sha256', LUMAIL_API_TOKEN).update(`demo:${email}`).digest('base64url');
 }
 
+// Numéro saisi librement : on garde le format international, 06… devient +336….
+function telephoneDemo(valeur) {
+  const brut = typeof valeur === 'string' ? valeur.replace(/[\s.()-]/g, '') : '';
+  const numero = /^0\d{9}$/.test(brut) ? `+33${brut.slice(1)}` : brut.replace(/^00/, '+');
+  return /^\+\d{8,15}$/.test(numero) ? numero : '';
+}
+
 function emailDemo(prenom, lienDesinscription) {
   return `Bonjour ${prenom},
 
@@ -241,13 +248,21 @@ async function handleDemoInscription(req, res) {
   const prenom = typeof payload.prenom === 'string'
     ? payload.prenom.replace(/[\[\]()<>\r\n]/g, '').trim().slice(0, 80)
     : '';
+  const nom = typeof payload.nom === 'string'
+    ? payload.nom.replace(/[\[\]()<>\r\n]/g, '').trim().slice(0, 80)
+    : '';
+  const telephone = telephoneDemo(payload.telephone);
 
   if (!EMAIL_RE.test(email) || email.length > 254) {
     sendJson(res, 400, { success: false, error: 'invalid_email' });
     return;
   }
-  if (!prenom) {
+  if (!prenom || !nom) {
     sendJson(res, 400, { success: false, error: 'invalid_name' });
+    return;
+  }
+  if (!telephone) {
+    sendJson(res, 400, { success: false, error: 'invalid_phone' });
     return;
   }
   if (payload.consentement !== true) {
@@ -262,7 +277,8 @@ async function handleDemoInscription(req, res) {
   try {
     const inscription = await callLumail({
       email,
-      name: prenom,
+      name: `${prenom} ${nom}`,
+      phone: telephone,
       tags: [DEMO_TAG],
       skipDoubleOptIn: true,
       triggerWorkflows: false,

@@ -7,6 +7,7 @@
 
   function messageErreur(code) {
     if (code === 'invalid_email') return 'Cette adresse e-mail ne semble pas valide.';
+    if (code === 'invalid_phone') return 'Ce numéro de téléphone ne semble pas valide.';
     if (code === 'too_many_requests') return 'Tu as déjà fait plusieurs demandes. Regarde dans ta boîte mail, ton accès y est peut-être déjà.';
     return 'Ta demande n’est pas passée. Réessaie dans un instant ou écris-moi à contact@angeliquerobin.com.';
   }
@@ -24,6 +25,8 @@
       headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
       body: JSON.stringify({
         prenom: prenom,
+        nom: form.querySelector('#demo-nom').value.trim(),
+        telephone: form.querySelector('#demo-telephone').value.trim(),
         email: form.querySelector('#demo-email').value.trim(),
         consentement: form.querySelector('#demo-consentement').checked,
         texteConsentement: document.getElementById('demo-consentement-texte').textContent,
